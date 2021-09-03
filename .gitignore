@@ -113,6 +113,7 @@ package-lock.json
 !bundle*.css
 .sass-cache/
 scss/*.css
+pug/*.html
 *.log
 .*
 !*/*.babelrc.js

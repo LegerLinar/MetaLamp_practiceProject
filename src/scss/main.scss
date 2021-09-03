@@ -1,0 +1,56 @@
+@import 'functions';
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+@import 'pages/colors_types';
+
+body{
+  font-family: 'Montserrat_Medium', sans-serif;
+  color: #{$shade75};
+  font-size: vw(14);
+  padding-top: vw(30);
+  padding-left: vw(30);
+  margin: 0;
+}
+p{
+  line-height: vw(24);
+}
+h1{
+  font-family: 'Montserrat_Bold', sans-serif;
+  color: #{$shade100};
+  font-size: vw(24);
+  line-height: vw(29.26);
+  font-weight: 700;
+  margin: 0;
+
+}
+h2{
+  font-family: 'Montserrat_Bold', sans-serif;
+  color: #{$shade100};
+  font-size: vw(19);
+  line-height: vw(23.16);
+  //letter-spacing: 0.04em;
+  margin: 0;
+}
+h3{
+  font-family: 'Montserrat_Bold', sans-serif;
+  color: #{$shade100};
+  font-size: vw(12);
+  text-transform: uppercase;
+  line-height: vw(14.63);
+  font-weight: 700;
+  margin: 0;
+}
+p{
+  margin: 0;
+}
+
+span{
+  color: #{$shade25};
+  font-family: Montserrat_Thin, sans-serif;
+}
+a{
+  text-decoration: none;
+}
+
+

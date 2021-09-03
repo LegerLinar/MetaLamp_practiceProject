@@ -1,0 +1,13 @@
+- var text = 'это текст'
+- var menuValues = ['Main', 'About us', 'Works', 'Contacts'];
+
+
+header.header
+	if text
+		p #{text}
+	else
+		p Это хедер
+	nav.nav
+		ul
+			each value in menuValues
+				li= value

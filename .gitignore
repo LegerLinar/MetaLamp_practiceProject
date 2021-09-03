@@ -104,6 +104,7 @@ dist
 .tern-port
 
 # My Own Template
+bundle/
 .DS_Store
 .idea/
 dist

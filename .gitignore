@@ -107,6 +107,7 @@ dist
 bundle/
 .DS_Store
 .idea/
+development/
 dist
 node_modules/
 package-lock.json

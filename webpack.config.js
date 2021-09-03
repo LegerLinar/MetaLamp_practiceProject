@@ -12,7 +12,7 @@ const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
 const filename = (ext) => isDev ? `[name].${ext}` : `[name].[hash].${ext}`;
-const dirname = () => isDev ? `bundle` : `bundle.production`
+const dirname = () => isDev ? `development/bundle` : `production/bundle.production[modulehash]`
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),

@@ -2,7 +2,7 @@
 @import 'vars';
 @import 'mixins';
 @import 'fonts';
-
+@import 'pages/form_elements';
 body{
   font-family: 'Montserrat_Medium', sans-serif;
   color: #{$shade75};
@@ -45,12 +45,15 @@ p{
 }
 
 span{
-  color: #{$shade25};
+  color: #{$shade50};
   font-family: Montserrat_Thin, sans-serif;
+  padding: 0;
+  margin: 0;
 }
 a{
   text-decoration: none;
 }
+@include formMixin(vw(320))
 
 //@import 'pages/colors_types';
 

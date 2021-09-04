@@ -9,9 +9,10 @@ mixin logoGroup(color)
 
 mixin formCommon(formType, mission, placed, styleClass, explicitSpan)
 	div
-		form.commonForm(class= styleClass)
-			h3= mission
-			if explicitSpan
-				h3
-					span= explicitSpan
+		form.form(class= styleClass)
+			div
+				h3= mission
+				if explicitSpan
+					h3.form_explain
+						span= explicitSpan
 			input(type=formType placeholder=placed)

@@ -1,2 +1,24 @@
 
-<!--+formCommon('email', 'Text field', 'Email')-->
+<div>
+  section.form
+  	section.form_elements__commonForms
+  		+formCommon('email', 'Text field', 'Email', 'emailInput', 'Default')
+  		+formCommon('email', 'Text field', 'Email', ['hoverFocus', 'Text'], 'Hover/Focus')
+  		+formCommon('text', 'Dropdown', 'Сколько гостей', ['dropdown', 'dropdown_Guests'])
+  		+formCommon('text', 'Masked Text Field', '', ['date'])
+  		+formCommon('text', 'Date Dropdown', '', ['date', 'dropdown_Date'])
+  		+formCommon('text', 'Date Dropdown', '', ['date', 'dropdown_Date', 'dropdown_Date_checked'])
+  		+formCommon('text', 'Filter Date Dropdown', '', ['date', 'dropdown_Date', 'dropdown_Date_filter'])
+  		+formCommon('text', 'Subscription text field', 'Email', ['emailInput', 'emailInput_subscribe'])
+  section.form_elements
+  	section.form_elements__checkboxes
+  		+formCheckbox('Checkbox Buttons', 'Example_buttons','Можно курить', 'Можно с питомцами', 'Можно пригласить гостей')
+  	section.form_elements__radio
+  		+formRadio('Radio Buttons', 'Example_radio', 'Мужчина', 'Женщина')
+  	section.form_elements__toggle
+  		+formToggle('Toggle', 'Example', 'Получать спецпредложения', 'Получать спецпредложения')
+  	section.form_elements__likes
+  		+buttonLike(1, 'blabla')
+  	section.form_elements__rate
+  		+buttonRate('Rate button', 5)
+</div>

@@ -69,3 +69,11 @@ mixin buttonRate(legend, stars)
 					|</linearGradient>
 					|</defs>
 					|</svg>
+
+mixin formRate(min, max, legend)
+	form.formRate
+		div.formRate__legend
+			h3= legend
+			h3!= min + '&#x20bd' + ' - ' + max + '&#x20bd'
+		input.formRate__item(type='range' min=min max=max)
+

@@ -16,3 +16,16 @@ mixin formCommon(formType, mission, placed, styleClass, explicitSpan)
 					h3.form_explain
 						span= explicitSpan
 			input(type=formType placeholder=placed)
+
+//mixin checkForm(value, boolean)
+//	input(type= 'checkbox' value= value
+//		if boolean
+//			checked)
+
+mixin formCheckbox(legend, name, ...values)
+	-var idForCheck = 1
+	form.checkbox
+		h3= legend
+		for option in values
+			input(type= 'checkbox' class= 'checkbox__item_' + name + '_' + idForCheck++)
+			label= option

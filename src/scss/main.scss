@@ -53,7 +53,28 @@ span{
 a{
   text-decoration: none;
 }
-@include formMixin(vw(320))
+.form {
+  div {
+    display:         flex;
+    justify-content: space-between;
+    margin-bottom: vw(5);
+    padding:         0 0 0 vw(0.6);
+  }
 
+  input {
+    margin: 0;
+    height:        vw(42);
+    border-width:  vw(1);
+    border-color:  #{$shade25};
+    border-radius: vw(4);
+    padding: 0 0 0 vw(17);
+    &::-moz-placeholder{
+      color: #{$shade25};
+    }
+    &::-webkit-input-placeholder{
+      color: #{$shade25};
+    }
+  }
+}
 //@import 'pages/colors_types';
 

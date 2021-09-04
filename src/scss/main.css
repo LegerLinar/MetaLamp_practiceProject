@@ -67,26 +67,21 @@ span {
 a {
   text-decoration: none; }
 
-form {
-  width: 22.2222222222vw; }
-  form div {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.3472222222vw;
-    padding: 0 0 0 0.0416666667vw; }
-    form div .form_explain {
-      align-self: flex-end; }
-  form input {
-    margin: 0;
-    height: 2.9166666667vw;
-    border-width: 0.0694444444vw;
-    border-color: rgba(31, 32, 65, 0.25);
-    border-radius: 0.2777777778vw;
-    width: 20.9236111111vw;
-    padding: 0 0 0 1.1805555556vw; }
-    form input::-moz-placeholder {
-      color: rgba(31, 32, 65, 0.25); }
-    form input::-webkit-input-placeholder {
-      color: rgba(31, 32, 65, 0.25); }
+.form div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.3472222222vw;
+  padding: 0 0 0 0.0416666667vw; }
+.form input {
+  margin: 0;
+  height: 2.9166666667vw;
+  border-width: 0.0694444444vw;
+  border-color: rgba(31, 32, 65, 0.25);
+  border-radius: 0.2777777778vw;
+  padding: 0 0 0 1.1805555556vw; }
+  .form input::-moz-placeholder {
+    color: rgba(31, 32, 65, 0.25); }
+  .form input::-webkit-input-placeholder {
+    color: rgba(31, 32, 65, 0.25); }
 
 /*# sourceMappingURL=main.css.map */

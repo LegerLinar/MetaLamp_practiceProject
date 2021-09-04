@@ -77,3 +77,7 @@ mixin formRate(min, max, legend)
 			h3!= min + '&#x20bd' + ' - ' + max + '&#x20bd'
 		input.formRate__item(type='range' min=min max=max)
 
+mixin buttonCommon(label, ...classes)
+	div.buttonCommon_wrapper
+	button.buttonCommon__button(class= classes)
+		h3.buttonCommon__button_label= label

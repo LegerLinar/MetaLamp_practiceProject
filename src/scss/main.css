@@ -148,14 +148,14 @@ li {
       border-radius: 0.2777777778vw; }
   .checkbox input:checked + label:before {
     content: '';
-    border: 1px solid #BC9CFFFF;
+    border: 1px solid #BC9CFF;
     background: url("../images/Confirm_check.svg") no-repeat center center; }
   .checkbox input:not(:checked) + label:hover::before {
     background-image: linear-gradient(#6FCF97, #66D2EA);
     border-color: #BC9CFF; }
   .checkbox input:checked + label:hover::before {
-    background-color: lightcoral;
-    border-color: darksalmon; }
+    background-color: #F08080;
+    border-color: #E9967A; }
 
 .radio__item {
   cursor: pointer;
@@ -178,11 +178,38 @@ li {
       background-size: 70% 70%; }
   .radio__item:checked + .radio__item_label::before {
     border-color: #BC9CFF;
-    background: url("../images/radio_circle.svg") no-repeat center;
+    background: url("../images/circle_calored.svg") no-repeat center;
     background-size: 60% 60%; }
   .radio__item:not(:checked) + .radio__item_label:hover::before {
     background: linear-gradient(#6FCF97, #66D2EA);
     background-size: 70% 70%;
-    border-color: #bc9cff; }
+    border-color: #BC9CFF; }
+
+.toggle__item {
+  cursor: pointer;
+  position: absolute;
+  z-index: -1;
+  opacity: 0; }
+  .toggle__item_label {
+    cursor: pointer;
+    display: inline-block; }
+    .toggle__item_label::before {
+      display: inline-block;
+      content: '';
+      width: 2.7777777778vw;
+      height: 1.3888888889vw;
+      border: 1px solid rgba(31, 32, 65, 0.25);
+      border-radius: 10px;
+      margin-right: 0.6944444444vw;
+      background: url("../images/circle_grey.svg") no-repeat 2px 50%; }
+  .toggle__item:checked + .toggle__item_label::before {
+    border: 1px solid #BC9CFF;
+    background: url("../images/circle_calored.svg") no-repeat 18px 50%; }
+  .toggle__item:not(:checked) + .toggle__item_label:hover::before {
+    border-color: #6FCF97;
+    background: url("../images/circle_green.svg") no-repeat 2px 50%; }
+  .toggle__item:checked + .toggle__item_label:hover::before {
+    border-color: #E9967A;
+    background: url("../images/circle_red.svg") no-repeat 18px 50%; }
 
 /*# sourceMappingURL=main.css.map */

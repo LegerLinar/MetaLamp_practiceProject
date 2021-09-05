@@ -28,8 +28,8 @@ mixin formCheckbox(legend, itemName, ...values)
 		ul
 		for option in values
 			li.checkbox__group
-				input.checkbox__item(type= 'checkbox' id=itemName + '_' + (idForCheck) class=itemName + '_' + idForCheck++)
-				label.checkbox__item__label(for=itemName + '_' + (idForCheck))
+				input.checkbox__item(type= 'checkbox' id=itemName + '_' + (idForCheck) class=itemName + '_' + idForCheck)
+				label.checkbox__item__label(for=itemName + '_' + (idForCheck++))
 					p!= option
 
 mixin formRadio(legend, itemName, ...values)
@@ -37,16 +37,16 @@ mixin formRadio(legend, itemName, ...values)
 	form.radio
 		h3= legend
 		for value in values
-			input.radio__item(type= 'radio' name= itemName id=itemName + '_' + idForCheck class=itemName + '_' + idForCheck++)
-			label.radio__item_label(for=itemName + '_' + idForCheck)= value
+			input.radio__item(type= 'radio' name= itemName id=itemName + '_' + idForCheck class=itemName + '_' + idForCheck)
+			label.radio__item_label(for=itemName + '_' + idForCheck++)= value
 
-mixin formToggle(legend, description, ...values)
+mixin formToggle(value, mission, legend)
 	- var idForCheck = 1
 	form.toggle
-		h3= legend
-		for value in values
-			input.toggle__item(type= 'checkbox' class= description + '_' + idForCheck++)
-			label.toggle__item_label= value
+		if legend
+			h3= legend
+		input.toggle__item(type= 'checkbox' id=mission + '_' + idForCheck class= mission + '_' + idForCheck)
+		label.toggle__item_label(for= mission + '_' + idForCheck++)= value
 
 
 mixin buttonLike(amount, description)

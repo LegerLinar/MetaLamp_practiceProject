@@ -114,8 +114,8 @@ package-lock.json
 !bundle/*.html
 !bundle*.css
 .sass-cache/
-scss/*.css
-pug/*.html
+main.css
+index.html
 *.log
 .*
 !*/*.babelrc.js

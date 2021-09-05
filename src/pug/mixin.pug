@@ -37,8 +37,8 @@ mixin formRadio(legend, itemName, ...values)
 	form.radio
 		h3= legend
 		for value in values
-			input.radio__item(type= 'radio' class=itemName + '_' + idForCheck++)
-			label.radio__item= value
+			input.radio__item(type= 'radio' name= itemName id=itemName + '_' + idForCheck class=itemName + '_' + idForCheck++)
+			label.radio__item_label(for=itemName + '_' + idForCheck)= value
 
 mixin formToggle(legend, description, ...values)
 	- var idForCheck = 1

@@ -295,6 +295,59 @@ li {
         margin-right: vw(4);
       }
   }
-    &:checked + &_label
+    &:checked + &_label{
+      border-color: #BC9CFF;
+      color: #BC9CFF;
+      svg{
+        content: '';
+        background: url('../images/like_after.svg');
+        border-color: #BC9CFF;
+      }
+    }
+  }
+}
+
+.rangeRate {
+  padding: 0;
+  display: inline-block;
+  direction: rtl;
+
+  &__item {
+    cursor:             pointer;
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+    padding:            0;
+    margin:             0;
+
+    &_label {
+      cursor:   pointer;
+      position: relative;
+      display:  inline-block;
+      padding:  0;
+      margin:   0;
+      width:    vw(24);
+      height:   vw(24);
+
+
+      &::before {
+        position:   absolute;
+        content:    '';
+        width:      vw(24);
+        height:     vw(24);
+        background: url('../images/star_def.svg') no-repeat center center;
+      }
+    }
+
+    &:checked ~ &_label::before {
+      background: url('../images/star_clicked.svg') no-repeat center center;
+    }
+
+    &:not(:checked) ~ &_label:hover::before {
+      background: url('../images/star_provokate_green.svg') no-repeat center center;
+    }
+    &:checked ~ &_label:hover::before {
+      background: url('../images/star_provokate_red.svg') no-repeat center center;
+    }
   }
 }

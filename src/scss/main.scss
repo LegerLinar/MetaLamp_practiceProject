@@ -271,3 +271,30 @@ li {
   }
 }
 
+.buttonLike{
+
+  &__item{
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+  &_label{
+    position: relative;
+    display: block;
+    width: vw(38.72);
+    height: vw(20);
+    //vertical-align: center;
+    text-align: center;
+    //margin: 0;
+    border: 1px solid #{$shade25};
+    color: #{$shade25};
+    border-radius: 30px;
+    cursor: pointer;
+      svg{
+        margin-right: vw(4);
+      }
+  }
+    &:checked + &_label
+  }
+}

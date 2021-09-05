@@ -1,215 +1,46 @@
-@font-face {
-  font-family: 'Montserrat_Medium';
-  src: url("../fonts/montserrat/Montserrat_Medium.woff") format("woff"); }
-@font-face {
-  font-family: 'Montserrat_Thin';
-  src: url("../fonts/montserrat/Montserrat_Thin.woff") format("woff"); }
-@font-face {
-  font-family: 'Montserrat_Light';
-  src: url("../fonts/montserrat/Montserrat_Light.woff") format("woff"); }
-@font-face {
-  font-family: 'Montserrat_Bold';
-  src: url("../fonts/montserrat/Montserrat_Bold.woff") format("woff"); }
-@font-face {
-  font-family: 'Quicksand-Regular';
-  src: url("../fonts/quicksand/Quicksand-Regular.woff") format("woff"); }
-@font-face {
-  font-family: 'Quicksand-Bold';
-  src: url("../fonts/quicksand/Quicksand-Bold.woff") format("woff"); }
-.first_row {
-  display: flex;
-  padding-top: 4.3055555556vw;
-  justify-content: space-between; }
+/*
+Error: Invalid CSS after "...ecked + &_label": expected "{", was "}"
+        on line 299 of main.scss
 
-.first_row_forms {
-  padding-left: 7.7083333333vw; }
+294:       svg{
+295:         margin-right: vw(4);
+296:       }
+297:   }
+298:     &:checked + &_label
+299:   }
+300: }
 
-.dropdown_date_wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 1.3888888889vw; }
-
-body {
-  font-family: 'Montserrat_Medium', sans-serif;
-  color: rgba(31, 32, 65, 0.75);
-  font-size: 0.9722222222vw;
-  padding-top: 2.0833333333vw;
-  padding-left: 2.0833333333vw;
-  margin: 0; }
-
-p {
-  line-height: 1.6666666667vw; }
-
-h1 {
-  font-family: 'Montserrat_Bold', sans-serif;
-  color: #1f2041;
-  font-size: 1.6666666667vw;
-  line-height: 2.0319444444vw;
-  font-weight: 700;
-  margin: 0; }
-
-h2 {
-  font-family: 'Montserrat_Bold', sans-serif;
-  color: #1f2041;
-  font-size: 1.3194444444vw;
-  line-height: 1.6083333333vw;
-  margin: 0; }
-
-h3 {
-  font-family: 'Montserrat_Bold', sans-serif;
-  color: #1f2041;
-  font-size: 0.8333333333vw;
-  text-transform: uppercase;
-  line-height: 1.0159722222vw;
-  font-weight: 700;
-  margin: 0; }
-
-p {
-  margin: 0; }
-
-span {
-  color: rgba(31, 32, 65, 0.5);
-  font-family: Montserrat_Thin, sans-serif;
-  padding: 0;
-  margin: 0; }
-
-a {
-  text-decoration: none; }
-
-ul {
-  text-decoration: none; }
-
-li {
-  list-style: none; }
-
-.form {
-  padding-bottom: 1.5vw; }
-  .form .form__wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.3472222222vw;
-    padding: 0 0 0 0.0416666667vw; }
-  .form input {
-    margin: 0;
-    height: 2.9166666667vw;
-    border-width: 0.0694444444vw;
-    border-color: rgba(31, 32, 65, 0.25);
-    border-radius: 0.2777777778vw;
-    padding: 0 0 0 1.1805555556vw;
-    cursor: pointer; }
-    .form input::-moz-placeholder {
-      color: rgba(31, 32, 65, 0.25); }
-    .form input::-webkit-input-placeholder {
-      color: rgba(31, 32, 65, 0.25); }
-
-.textForm input {
-  width: 20.9375vw; }
-
-.dropdown_guests input {
-  width: 20.9375vw; }
-
-.date {
-  padding-bottom: 2.9166666667vw; }
-  .date input {
-    width: 9.1319444444vw; }
-
-.dropdown_date_filter input {
-  width: 17.1875vw; }
-
-.subscribe_form input {
-  width: 17.2569444444vw; }
-
-.checkbox {
-  position: relative;
-  padding-left: 0.6944444444vw; }
-  .checkbox li {
-    color: rgba(31, 32, 65, 0.5);
-    margin-bottom: 0.7333333333vw; }
-    .checkbox li:last-child {
-      margin-bottom: 0; }
-  .checkbox input {
-    cursor: pointer; }
-    .checkbox input[type=checkbox] {
-      position: absolute;
-      z-index: -1;
-      opacity: 0; }
-  .checkbox label {
-    cursor: pointer; }
-    .checkbox label p {
-      display: inline-block; }
-    .checkbox label:before {
-      content: '';
-      display: inline-block;
-      vertical-align: top;
-      margin-right: 0.6763888889vw;
-      height: 1.3888888889vw;
-      width: 1.3888888889vw;
-      border: 1px solid rgba(31, 32, 65, 0.25);
-      border-radius: 0.2777777778vw; }
-  .checkbox input:checked + label:before {
-    content: '';
-    border: 1px solid #BC9CFF;
-    background: url("../images/Confirm_check.svg") no-repeat center center; }
-  .checkbox input:not(:checked) + label:hover::before {
-    background-image: linear-gradient(#6FCF97, #66D2EA);
-    border-color: #BC9CFF; }
-  .checkbox input:checked + label:hover::before {
-    background-color: #F08080;
-    border-color: #E9967A; }
-
-.radio__item {
-  cursor: pointer;
-  position: absolute;
-  z-index: -1;
-  opacity: 0; }
-  .radio__item_label {
-    display: inline-block; }
-    .radio__item_label::before {
-      content: '';
-      display: inline-block;
-      width: 1.3888888889vw;
-      height: 1.3888888889vw;
-      vertical-align: middle;
-      border: 1px solid rgba(31, 32, 65, 0.25);
-      border-radius: 50%;
-      margin-right: 0.6944444444vw;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 70% 70%; }
-  .radio__item:checked + .radio__item_label::before {
-    border-color: #BC9CFF;
-    background: url("../images/circle_calored.svg") no-repeat center;
-    background-size: 60% 60%; }
-  .radio__item:not(:checked) + .radio__item_label:hover::before {
-    background: linear-gradient(#6FCF97, #66D2EA);
-    background-size: 70% 70%;
-    border-color: #BC9CFF; }
-
-.toggle__item {
-  cursor: pointer;
-  position: absolute;
-  z-index: -1;
-  opacity: 0; }
-  .toggle__item_label {
-    cursor: pointer;
-    display: inline-block; }
-    .toggle__item_label::before {
-      display: inline-block;
-      content: '';
-      width: 2.7777777778vw;
-      height: 1.3888888889vw;
-      border: 1px solid rgba(31, 32, 65, 0.25);
-      border-radius: 10px;
-      margin-right: 0.6944444444vw;
-      background: url("../images/circle_grey.svg") no-repeat 2px 50%; }
-  .toggle__item:checked + .toggle__item_label::before {
-    border: 1px solid #BC9CFF;
-    background: url("../images/circle_calored.svg") no-repeat 18px 50%; }
-  .toggle__item:not(:checked) + .toggle__item_label:hover::before {
-    border-color: #6FCF97;
-    background: url("../images/circle_green.svg") no-repeat 2px 50%; }
-  .toggle__item:checked + .toggle__item_label:hover::before {
-    border-color: #E9967A;
-    background: url("../images/circle_red.svg") no-repeat 18px 50%; }
-
-/*# sourceMappingURL=main.css.map */
+Backtrace:
+main.scss:299
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:688:in `block'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:758:in `declaration_or_ruleset'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:758:in `declaration_or_ruleset'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:697:in `block_contents'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in `ruleset'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...ecked + &_label\": expected \"{\", was \"}\"\A         on line 299 of main.scss\A \A 294:       svg{\A 295:         margin-right: vw(4);\A 296:       }\A 297:   }\A 298:     &:checked + &_label\A 299:   }\A 300: }"; }

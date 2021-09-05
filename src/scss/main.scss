@@ -3,6 +3,7 @@
 @import 'mixins';
 @import 'fonts';
 @import 'pages/form_elements';
+//@import 'pages/colors_types';
 body{
   font-family: 'Montserrat_Medium', sans-serif;
   color: #{$shade75};
@@ -54,7 +55,8 @@ a{
   text-decoration: none;
 }
 .form {
-  div {
+  padding-bottom: vw(21.6);
+  .form__wrapper {
     display:         flex;
     justify-content: space-between;
     margin-bottom: vw(5);
@@ -68,6 +70,8 @@ a{
     border-color:  #{$shade25};
     border-radius: vw(4);
     padding: 0 0 0 vw(17);
+    cursor: pointer;
+
     &::-moz-placeholder{
       color: #{$shade25};
     }
@@ -76,5 +80,90 @@ a{
     }
   }
 }
-//@import 'pages/colors_types';
+ul{
+  text-decoration: none;
+
+}
+li {
+  list-style: none;
+}
+//specific input forms block
+.textForm{
+  input{
+    width: vw(320) - vw(18.5);
+  }
+}
+
+.dropdown_guests{
+  input{
+    width: vw(320) - vw(18.5);
+  }
+}
+
+
+.date{
+  padding-bottom: vw(42);
+  input{
+    width: vw(150) - vw(18.5);
+  }
+}
+
+.dropdown_date_filter{
+  input{
+    width: vw(266) - vw(18.5)
+  }
+}
+
+.subscribe_form{
+  input{
+    width: vw(267) - vw(18.5)
+  }
+}
+
+.checkbox{
+  li {
+    color: #{$shade50};
+    margin-bottom: vw(10.56);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  position: relative;
+  padding-left: vw(10);
+  input{
+    cursor: pointer;
+
+
+    &[type=checkbox]{
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+  }
+
+  label{
+
+    cursor: pointer;
+
+    &:before{
+      content:'';
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: vw(9.74);
+      height: vw(20);
+      width: vw(20);
+      border: 1px solid #{$shade25};
+      border-radius: vw(4);
+    }
+  }
+  input:checked + label:before {
+      content: '';
+      border:   1px solid rgba(188, 156, 255, 1);
+      background: url('../images/Confirm_check.svg') no-repeat center center;
+
+  }
+  }
+
+
 

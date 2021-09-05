@@ -8,14 +8,13 @@ mixin logoGroup(color)
 		|<path d="M24 48C10.7647 48 0 37.2353 0 24C0 10.7647 10.7647 0 24 0C37.2353 0 48 10.7647 48 24C48 37.2353 37.2353 48 24 48ZM24 2.82353C12.3176 2.82353 2.82353 12.3176 2.82353 24C2.82353 35.6824 12.3176 45.1765 24 45.1765C35.6824 45.1765 45.1765 35.6824 45.1765 24C45.1765 12.3176 35.6824 2.82353 24 2.82353Z" fill=#{color} fill-opacity="0.25"/>
 
 mixin formCommon(formType, mission, placed, styleClass, explicitSpan)
-	div
-		form.form(class= styleClass)
-			div
-				h3= mission
-				if explicitSpan
-					h3.form_explain
-						span= explicitSpan
-			input.form__item(type=formType placeholder=placed)
+	form.form(class= styleClass)
+		div.form__wrapper
+			h3= mission
+			if explicitSpan
+				h3.form_explain
+					span= explicitSpan
+		input.form__item(type=formType placeholder=placed)
 
 //mixin checkForm(value, boolean)
 //	input(type= 'checkbox' value= value
@@ -26,9 +25,11 @@ mixin formCheckbox(legend, itemName, ...values)
 	-var idForCheck = 1
 	form.checkbox
 		h3= legend
+		ul
 		for option in values
-			input.checkbox__item(type= 'checkbox' class=itemName + '_' + idForCheck++)
-			label.checkbox__item__label= option
+			li.checkbox__group
+				input.checkbox__item(type= 'checkbox' id=itemName + '_' + (idForCheck) class=itemName + '_' + idForCheck++)
+				label.checkbox__item__label(for=itemName + '_' + (idForCheck))= option
 
 
 mixin formRadio(legend, itemName, ...values)

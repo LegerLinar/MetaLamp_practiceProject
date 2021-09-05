@@ -1,4 +1,15 @@
-.form_elements{
+.first_row{
+  display: flex;
   padding-top: vw(62);
-  padding-left: vw(110.5);
+  justify-content: space-between;
 }
+.first_row_forms{
+  padding-left: vw(111);
+}
+
+.dropdown_date_wrapper{
+  display: flex;
+  justify-content: space-between;
+  padding-top: vw(20);
+}
+

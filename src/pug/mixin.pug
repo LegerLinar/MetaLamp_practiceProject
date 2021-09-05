@@ -29,8 +29,8 @@ mixin formCheckbox(legend, itemName, ...values)
 		for option in values
 			li.checkbox__group
 				input.checkbox__item(type= 'checkbox' id=itemName + '_' + (idForCheck) class=itemName + '_' + idForCheck++)
-				label.checkbox__item__label(for=itemName + '_' + (idForCheck))= option
-
+				label.checkbox__item__label(for=itemName + '_' + (idForCheck))
+					p!= option
 
 mixin formRadio(legend, itemName, ...values)
 	- var idForCheck = 1

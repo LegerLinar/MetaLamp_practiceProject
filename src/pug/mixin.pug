@@ -68,6 +68,10 @@ mixin rangeSlider(min, max)
 	- var rangeDif = max/1.5
 	script(src='./js/scripts/range_slider.js')
 	form.rangeSlider
+		div.rangeSlider__values
+			span(id='range1') 0
+			span .
+			span(id='range2') 100
 		div.rangeSlider_wrapper
 			div.rangeSlider_slider-track
 			input.rangeSlider__item(type='range' id='slider-1' min=min max=max value= min + rangeDif/2)

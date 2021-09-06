@@ -407,7 +407,7 @@ li {
     cursor: pointer;
     border-radius: 50%;
     margin-top: -5px;
-    //pointer-events: auto;
+    pointer-events: auto;
 }
   &__item::-moz-range-thumb{
     -moz-appearance: none;
@@ -416,6 +416,7 @@ li {
     width: 15px;
     background-color: #BC9CFF;
     border-radius: 50%;
+    pointer-events: auto;
   }
   &__item::-ms-thumb{
     appearance: none;
@@ -424,5 +425,10 @@ li {
     width: 15px;
     background-color: #BC9CFF;
     border-radius: 50%;
+    pointer-events: auto;
+  }
+  &__item:active::-webkit-slider-thumb{
+    background-color: #6fcf97;
+    border: 3px solid #BC9CFF;
   }
 }

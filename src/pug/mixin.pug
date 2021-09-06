@@ -66,7 +66,6 @@ mixin rangeRate(name)
 
 mixin rangeSlider(min, max)
 	- var rangeDif = max/1.5
-	script(src='./js/scripts/range_slider.js')
 	form.rangeSlider
 		div.rangeSlider__values
 			span(id='range1') 0
@@ -74,8 +73,10 @@ mixin rangeSlider(min, max)
 			span(id='range2') 100
 		div.rangeSlider_wrapper
 			div.rangeSlider_slider-track
-			input.rangeSlider__item(type='range' id='slider-1' min=min max=max value= min + rangeDif/2 oninput='slideOne()')
-			input.rangeSlider__item(type='range' id='slider-2' min=min max=max value=rangeDif oninput='slideTwo()')
+			input.rangeSlider__item(type='range' id='slider-1' min=min max=max value='150' oninput=slideOne())
+			input.rangeSlider__item(type='range' id='slider-2' min=min max=max value='400' oninput=slideTwo())
+
+
 
 mixin buttonCommon(label, ...classes)
 	div.buttonCommon_wrapper

@@ -60,16 +60,18 @@ mixin buttonLike(amount, uniqueId, ...values)
 mixin rangeRate(name)
 	form.rangeRate(name= name)
 			each item in [5, 4, 3, 2, 1]
-				input.rangeRate__item(type= 'radio' name= name id= 'chunk_' + item value= item)
-				label.rangeRate__item_label(for= 'chunk_' + item)
+				input.rangeRate__item(type= 'radio' name= name id= 'chunk_' + name + '_' + item value= item)
+				label.rangeRate__item_label(for= 'chunk_' + name + '_' + item)
 
 
-mixin formRate(min, max, legend)
-	form.formRate
-		div.formRate__legend
-			h3= legend
-			h3!= min + '&#x20bd' + ' - ' + max + '&#x20bd'
-		input.formRate__item(type='range' min=min max=max)
+mixin rangeSlider(min, max)
+	- var rangeDif = max/1.5
+	script(src='./js/scripts/range_slider.js')
+	form.rangeSlider
+		div.rangeSlider_wrapper
+			div.rangeSlider_slider-track
+			input.rangeSlider__item(type='range' id='slider-1' min=min max=max value= min + rangeDif/2)
+			input.rangeSlider__item(type='range' id='slider-2' min=min max=max value=rangeDif)
 
 mixin buttonCommon(label, ...classes)
 	div.buttonCommon_wrapper

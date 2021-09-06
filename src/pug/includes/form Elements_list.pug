@@ -26,17 +26,20 @@ div.first_row
 		section.form_elements__rate
 			h3 Rate button
 			+rangeRate('Rate_button')
-	//section.first_row_assets
-	//	section.form_elements__range
-	//		+formRate(0, 100, 'Range Slider')
-	//	section.form_elements_buttonCommon
-	//		h3 Buttons
-	//		+buttonCommon('Click me')
-	//		+buttonCommon('Click me')
-	//		+buttonCommon('Click me')
-	//		+buttonCommon('Click me')
-	//		+buttonCommon('Click me')
-	//		+buttonCommon('Click me')
-	//		+buttonCommon('Перейти к оплате')
-	//	section.form_elements_pagination
-	//		+pagination(4)
+			+rangeRate('Rate_button_example')
+	section.first_row_assets
+		section.form_elements__range
+			h3 Range slider
+			div
+				+rangeSlider(0, 500)
+		//section.form_elements_buttonCommon
+		//	h3 Buttons
+		//	+buttonCommon('Click me')
+		//	+buttonCommon('Click me')
+		//	+buttonCommon('Click me')
+		//	+buttonCommon('Click me')
+		//	+buttonCommon('Click me')
+		//	+buttonCommon('Click me')
+		//	+buttonCommon('Перейти к оплате')
+		//section.form_elements_pagination
+		//	+pagination(4)

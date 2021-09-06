@@ -8,8 +8,8 @@ let sliderTwo = document.getElementById('slider-2');
 let displayValOne = document.getElementById('range1');
 let displayValTwo = document.getElementById('range2');
 let minGap = 5;
-let sliderTrack = document.querySelector('.rangeSlider_slider-track')
-let sliderMaxValue = document.getElementById('slider-1').max
+let sliderTrack = document.querySelector('.rangeSlider_slider-track');
+let sliderMaxValue = document.getElementById('slider-1').max;
 
 
 function slideOne(){
@@ -17,6 +17,7 @@ function slideOne(){
     sliderOne.value = parseInt(sliderTwo.value) - minGap;
   }
   displayValOne.textContent= sliderOne.value;
+  fillColor();
 }
 
 function slideTwo(){
@@ -24,5 +25,14 @@ function slideTwo(){
     sliderTwo.value = parseInt(sliderOne.value) + minGap
   }
   displayValTwo.textContent = sliderTwo.value;
+  fillColor();
 }
 
+function fillColor(){
+  percent1 = (sliderOne.value / sliderMaxValue) * 100;
+  percent2 = (sliderTwo.value / sliderMaxValue) * 100;
+  sliderTrack.style.background =
+    `linear-gradient(to right, #dadae5 ${percent1}%, #3264fe ${percent1}%, #3264fe
+    ${percent2}%, #dadae5 ${percent2}%)`;
+
+}

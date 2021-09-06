@@ -432,6 +432,9 @@ li {
     border: 3px solid #BC9CFF;
   }
   &__values{
-
+    width: 32%;
+    position: relative;
+    margin: auto;
+    text-align: center;
   }
 }

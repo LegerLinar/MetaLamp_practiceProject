@@ -74,8 +74,8 @@ mixin rangeSlider(min, max)
 			span(id='range2') 100
 		div.rangeSlider_wrapper
 			div.rangeSlider_slider-track
-			input.rangeSlider__item(type='range' id='slider-1' min=min max=max value= min + rangeDif/2)
-			input.rangeSlider__item(type='range' id='slider-2' min=min max=max value=rangeDif)
+			input.rangeSlider__item(type='range' id='slider-1' min=min max=max value= min + rangeDif/2 oninput='slideOne()')
+			input.rangeSlider__item(type='range' id='slider-2' min=min max=max value=rangeDif oninput='slideTwo()')
 
 mixin buttonCommon(label, ...classes)
 	div.buttonCommon_wrapper

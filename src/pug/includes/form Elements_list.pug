@@ -31,12 +31,12 @@ div.first_row
 				+rangeSlider(0, 15000, 'Range slider')
 		section.form_elements_buttonCommon
 			h3 Buttons
-			+buttonCommon('Click me', 'button-purple')
-			+buttonCommon('Click me', 'button-purple')
+			+buttonCommon('Click me', 'enable', 'button-purple')
+			+buttonCommon('Click me', 'disabled', 'button-purple')(disabled='disabled')
 			+buttonCommon('Click me', 'button-transparent')
-			+buttonCommon('Click me', 'button-transparent')
+			+buttonCommon('Click me', 'button-transparent')(disabled='disabled')
 			+buttonCommon('Click me', 'button-no-borders')
-			+buttonCommon('Click me', 'button-no-borders')
+			+buttonCommon('Click me', 'button-no-borders')(disabled='disabled')
 			+buttonCommon('Перейти к оплате')
 		//section.form_elements_pagination
 		//	+pagination(4)

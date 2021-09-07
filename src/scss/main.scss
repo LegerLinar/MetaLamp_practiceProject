@@ -469,6 +469,9 @@ li {
     line-height:    vw(14.63);
     font-weight:    700;
     margin:         0;
+    &:disabled{
+      opacity: 0.5;
+    }
     //overflow:       hidden;
 
 
@@ -508,6 +511,8 @@ li {
     border-radius: 22px;
     background: linear-gradient(#BC9CFF, #8BA4F9);
   }
+
+
 }
 .button-no-borders {
   border:           none;

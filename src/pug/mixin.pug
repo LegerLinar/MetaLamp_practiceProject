@@ -63,7 +63,6 @@ mixin rangeRate(name)
 				input.rangeRate__item(type= 'radio' name= name id= 'chunk_' + name + '_' + item value= item)
 				label.rangeRate__item_label(for= 'chunk_' + name + '_' + item)
 
-
 mixin rangeSlider(min, max)
 	- var rangeDif = max/1.5
 	form.rangeSlider

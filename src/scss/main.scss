@@ -427,8 +427,9 @@ li {
     background: linear-gradient(#6FCF97, #66D2EA);
     cursor: pointer;
     border-radius: 50%;
-    margin-top: -5px;
+    margin-top:-5px;
     pointer-events: auto;
+    border: 2px solid white;
 }
   &__item::-moz-range-thumb{
     -moz-appearance: none;

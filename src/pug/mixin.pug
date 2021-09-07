@@ -63,15 +63,17 @@ mixin rangeRate(name)
 				input.rangeRate__item(type= 'radio' name= name id= 'chunk_' + name + '_' + item value= item)
 				label.rangeRate__item_label(for= 'chunk_' + name + '_' + item)
 
-mixin rangeSlider(min, max)
+mixin rangeSlider(min, max, legend)
 	- var rangeDif = max/1.5
 	form.rangeSlider
+		h3= legend
 		div.rangeSlider__values
-			span(id='range1') 0
-			span .
-			span(id='range2') 100
+			span(id='range1')
+			span &#32; - &#32;
+			span(id='range2')
 		div.rangeSlider_wrapper
 			div.rangeSlider_slider-track
+				div.rangeSlider_slider-track_diff
 			input.rangeSlider__item(type='range' id='slider-1' min=min max=max value=rangeDif/2  oninput=('slideOne()'))
 			input.rangeSlider__item(type='range' id='slider-2' min=min max=max value=rangeDif oninput=('slideTwo()'))
 

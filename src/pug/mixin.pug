@@ -80,9 +80,8 @@ mixin rangeSlider(min, max, legend)
 
 
 mixin buttonCommon(label, ...classes)
-	div.buttonCommon_wrapper
-	button.buttonCommon__button(class= classes)
-		h3.buttonCommon__button_label= label
+	div.buttonCommon
+	button.buttonCommon__button(class= classes)= label
 
 mixin pagination(pages)
 	div.paginationwrapper

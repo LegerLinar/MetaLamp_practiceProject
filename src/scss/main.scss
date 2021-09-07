@@ -362,7 +362,7 @@ li {
   &_wrapper{
     position: relative;
     width: 100%;
-    height: vw(55);
+    height: vw(54);
   
   }
   &__values{
@@ -454,4 +454,21 @@ li {
     border: 3px solid #BC9CFF;
   }
 
+}
+
+.buttonCommon{
+  &__button{
+    width:vw(99);
+    height: vw(44);
+    border-radius: 22px;
+    background: linear-gradient(#BC9CFF, #8BA4F9);
+    border: none;
+    font-family: 'Montserrat_Bold', sans-serif;
+    color: #FFFFFF;
+    font-size: vw(12);
+    text-transform: uppercase;
+    line-height: vw(14.63);
+    font-weight: 700;
+    margin: 0;
+  }
 }

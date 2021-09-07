@@ -457,18 +457,42 @@ li {
 }
 
 .buttonCommon{
-  &__button{
-    width:vw(99);
-    height: vw(44);
-    border-radius: 22px;
-    background: linear-gradient(#BC9CFF, #8BA4F9);
-    border: none;
-    font-family: 'Montserrat_Bold', sans-serif;
-    color: #FFFFFF;
-    font-size: vw(12);
+  &__button {
+    position:       relative;
+    width:          vw(97);
+    height:         vw(42);
+    border-radius:  22px;
+    border:         none;
+    font-family:    'Montserrat_Bold', sans-serif;
+    background:     #FFFFFF;
+    color:          #BC9CFF;
+    font-size:      vw(12);
     text-transform: uppercase;
-    line-height: vw(14.63);
-    font-weight: 700;
-    margin: 0;
+    line-height:    vw(14.63);
+    font-weight:    700;
+    margin:         0;
+    //overflow:       hidden;
+
+    &:hover{
+      background: linear-gradient(#BC9CFF, #8BA4F9);
+      color: #FFFFFF;
+    }
+      &:before{
+        left: -1px;
+        right: -1px;
+        top: -1px;
+        bottom: -1px;
+        z-index: -1;
+        position: absolute;
+        content: '';
+        //width: vw(99);
+        //height: vw(44);
+        border-radius: 22px;
+        background: linear-gradient(#BC9CFF, #8BA4F9);
+    }
+    //
+    ////&:hover:before {
+    //  width: 100%
+    //}
   }
 }

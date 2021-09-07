@@ -82,7 +82,6 @@ mixin rangeSlider(min, max, legend)
 mixin buttonCommon(label, ...classes)
 	div.buttonCommon
 		button.buttonCommon__button(class= classes)= label
-			div.buttonCommon__button_border
 mixin pagination(pages)
 	div.paginationwrapper
 		each page, index in Array(pages)

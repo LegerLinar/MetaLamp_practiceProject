@@ -458,6 +458,7 @@ li {
 
 .buttonCommon{
   &__button {
+    cursor: pointer;
     position:       relative;
     width:          vw(97);
     height:         vw(42);
@@ -483,6 +484,7 @@ li {
 }
 
 .button-purple {
+
   background: linear-gradient(#BC9CFF, #8BA4F9);
   color:      #FFFFFF;
   &:hover{
@@ -512,6 +514,21 @@ li {
     background: linear-gradient(#BC9CFF, #8BA4F9);
   }
 
+  &:disabled{
+    color: rgba(168, 156, 255, 0.5);
+    opacity: 1;
+    &:hover{
+      opacity: 0.5;
+    }
+    &:before{
+      opacity: 0.5;
+      &:hover{
+        opacity: 0.4;
+      }
+    }
+  }
+
+
 
 }
 .button-no-borders {
@@ -519,6 +536,29 @@ li {
   background-color: rgba(255, 255, 255, 0);
   color: #BC9CFF;
   &:hover{
+    color: #6FCF97;
+  }
+  &:disabled{
     color: #{$shade50};
+    &:hover{
+      color: #{$shade25};
+    }
+  }
+}
+
+.button-to-pay{
+  position: relative;
+  width: vw(320);
+  background: linear-gradient(#BC9CFF, #8BA4F9);
+  color:      #FFFFFF;
+  &:before{
+    content: '\2192';
+    font-size: vw(24);
+    font-family: Material Icons;
+    font-style: normal;
+    position: absolute;
+    right: 5%;
+    justify-content: center;
+
   }
 }

@@ -551,15 +551,27 @@ li {
 }
 
 .button-to-pay{
-  position: relative;
   width: vw(320);
   background: linear-gradient(#BC9CFF, #8BA4F9);
   color:      #FFFFFF;
-  &:before{
-    font-style: normal;
+  position: relative;
+  svg{
     position: absolute;
     right: 5%;
-    justify-content: center;
-
+    top: vw(5);
+    bottom: vw(5);
+    width: vw(20);
+    fill: #FFFFFF;
+  }
+  &:hover{
+    box-shadow: 0 0 5px #6fcf97;
+    font-size: vw(14);
+    transition:0.5s;
+    svg{
+      width: vw(30);
+      transform: translate(40%);
+      fill:      #a0d7b7;
+      transition: 0.5s;
+    }
   }
 }

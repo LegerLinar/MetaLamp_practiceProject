@@ -13,7 +13,7 @@
 }
 
 .buttons-section{
-  padding-right: vw(164);
+  padding-right: vw(111);
 }
 
 .dropdown_date_wrapper{
@@ -21,4 +21,20 @@
   justify-content: space-between;
   padding-top: vw(20);
 }
+.form_elements_buttonCommon{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 
+  padding-top: vw(20);
+  &_wrapp{
+    display: flex;
+    padding: vw(16) 0;
+    div{
+      margin-right: vw(21.5);
+    }
+  }
+  &_to-pay_wrapp{
+    padding: vw(13) 0;
+  }
+}

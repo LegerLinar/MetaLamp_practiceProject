@@ -4,6 +4,9 @@
 @import 'fonts';
 @import 'pages/form_elements';
 //@import 'pages/colors_types';
+*{
+  box-sizing: border-box;
+}
 body{
   font-family: 'Montserrat_Medium', sans-serif;
   color: #{$shade75};
@@ -57,13 +60,15 @@ a{
   color: #{$shade25};
 }
 ul{
-  text-decoration: none;
-  margin: 0;
+  list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 li {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -582,31 +587,37 @@ li {
   }
 }
 .pagination {
-    //vertical-align: center;
-  li{
-    display: inline-block;
-    width: vw(40);
-    height: vw(40);
-    text-align: center;
-    a{
-      line-height: vw(40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    }
-    &:first-child{
-      background: #{$Purple_gradient};
+  ul{
+    display: flex;
+    justify-content: center;
+    li{
+      width: vw(44);
+      height: vw(44);
+      text-align: center;
+      cursor: pointer;
       border-radius: 50%;
-      a {
-        color: #FFFFFF;
-      }
+      line-height: vw(44);
     }
   }
-  &__button_arrow{
-    display: block;
-    content: '';
-    border-radius: 50%;
+  .first{
     background: #{$Purple_gradient};
-    border: none;
-    width: vw(40);
-    height: vw(40);
+    a {
+      color: #FFFFFF;
+    }
+  }
+  &__item_button{
+    background: #{$Green_gradient};
+    border-radius: 50%;
+    svg{
+      display:block;
+      fill: #FFFFFF;
+      width: vw(24);
+      height: 100%;
+      margin: auto;
+    }
   }
 }

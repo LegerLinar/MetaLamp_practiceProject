@@ -87,15 +87,26 @@ mixin buttonCommon(label, ...classes)
 			if block
 			block
 
-mixin pagination(pages)
+mixin pagination()
 	div.pagination
-		ul.pagination__button_wrapp
-			each page, index in Array(pages)
-				li
-					a.pagination__button_page(href='#')= index + 1
-			li
-				a.pagination__button_next asddas
-			//svg(width="18" height="17" viewBox="0 0 18 17" xmlns="http://www.w3.org/2000/svg")
-			//	| <path d="M9 0.426758L17.0156 8.44238L9 16.458L7.59375 15.0518L13.1719 9.42676H0.984375V7.45801H13.1719L7.59375 1.83301L9 0.426758Z"/>
-		if block
+		ul.pagination__wrapp
+				li.pagination__item(class=['numb', 'first'])
+					a 1
+				li.pagination__item(class='numb')
+					a 2
+				li.pagination__item(class='numb')
+					a 3
+				li.pagination__item(class='dots')
+					a ...
+				li.pagination__item(class='numb')
+					a 15
+				li.pagination__item_button
+					svg(width="18" height="17" viewBox="0 0 18 17" xmlns="http://www.w3.org/2000/svg")
+						|<path d="M9 0.426758L17.0156 8.44238L9 16.458L7.59375 15.0518L13.1719 9.42676H0.984375V7.45801H13.1719L7.59375 1.83301L9 0.426758Z">
+
+
+
+
+
+		//if block
 			block

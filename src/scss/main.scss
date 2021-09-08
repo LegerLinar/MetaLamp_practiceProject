@@ -556,9 +556,6 @@ li {
   background: linear-gradient(#BC9CFF, #8BA4F9);
   color:      #FFFFFF;
   &:before{
-    content: '\2192';
-    font-size: vw(24);
-    font-family: Material Icons;
     font-style: normal;
     position: absolute;
     right: 5%;

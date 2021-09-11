@@ -1,7 +1,8 @@
 $(function () {
-  $('.pagination').css({'width': '200px', 'height':'200px', 'background': 'red'})
-
-
+  $('.numb').click(function (){
+    $('.numb').removeClass('current');
+    $(this).addClass('current')
+  })
 
 
 })

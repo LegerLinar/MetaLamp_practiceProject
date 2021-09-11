@@ -589,7 +589,7 @@ li {
 .pagination {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 
   ul{
     display: flex;
@@ -601,13 +601,14 @@ li {
       cursor: pointer;
       border-radius: 50%;
       line-height: vw(44);
+      &.current, &:hover{
+        background: #{$Purple_gradient};
+        a {
+          color: #FFFFFF;
+        }
     }
   }
-  .current{
-    background: #{$Purple_gradient};
-    a {
-      color: #FFFFFF;
-    }
+
   }
   &__item_button{
     background: #{$Green_gradient};

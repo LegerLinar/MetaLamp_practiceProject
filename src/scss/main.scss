@@ -601,7 +601,7 @@ li {
       cursor: pointer;
       border-radius: 50%;
       line-height: vw(44);
-      &.current, &:hover{
+      &.active, &:hover{
         background: #{$Purple_gradient};
         a {
           color: #FFFFFF;
@@ -610,15 +610,13 @@ li {
   }
 
   }
-  &__item_button{
+  .J-paginationjs-next{
     background: #{$Green_gradient};
     border-radius: 50%;
-    svg{
-      display:block;
-      fill: #FFFFFF;
-      width: vw(24);
-      height: 100%;
-      margin: auto;
+
+    font-size: vw(24);
+    &:before{
+      content: url('../images/arrow_forward.svg');
     }
   }
 }

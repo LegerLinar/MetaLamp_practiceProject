@@ -98,26 +98,26 @@ mixin dropdown(legend)
 		input.dropdown__input
 		div.dropdown__field
 			div.dropdown__field_item(id= legend+ 1)
-				h3 Спальни
+				h3(id='amount_legend_1') Спальни
 				div.calc_wrap
 					div.counter_wrap
-						span.counter(class= ['decrement']) -
-					h3 1
+						span.counter(class= ['decrement'] id='decrement_1') -
+					h3(id='amount_1') 1
 					div.counter_wrap
-						span.counter(class =['increment']) +
+						span.counter(class =['increment'] id='increment_1' ) +
 			div.dropdown__field_item(id= legend+ 2)
-				h3 Кровати
+				h3(id='amount_legend_2') Кровати
 				div.calc_wrap
 					div.counter_wrap
-						span.counter(class =['decrement']) -
-					h3 1
+						span.counter(class =['decrement'] id='decrement_2' ) -
+					h3(id='amount_2') 1
 					div.counter_wrap
-						span.counter(class =['increment']) +
+						span.counter(class =['increment'] id='increment_2' ) +
 			div.dropdown__field_item(id= legend+ 3)
-				h3 Ванные комнаты
+				h3(id='amount_legend_3') Ванные комнаты
 				div.calc_wrap
 					div.counter_wrap
-						span.counter(class =['decrement']) -
-					h3 1
+						span.counter(class =['decrement'] id='decrement_3' ) -
+					h3(id='amount_3') 1
 					div.counter_wrap
-						span.counter(class =['increment']) +
+						span.counter(class =['increment'] id='increment_3' ) +

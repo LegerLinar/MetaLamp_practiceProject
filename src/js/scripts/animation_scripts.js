@@ -49,100 +49,103 @@ $(function () {
 
 
 //slideDown
+function dropDowner(legend) {
+  $(`#dropdown_` + legend).click(function () {
+    $(`.dropdown__field_` + legend).slideToggle()
+  });
 
-    $(`.dropdown__input`).click(function () {
-      $(`.dropdown__field`).slideToggle()
-    });
-
-    let firstAmount = 0
-    let secondAmount = 0
-    let thirdAmount = 0
+  let firstAmount = 0
+  let secondAmount = 0
+  let thirdAmount = 0
 
 
-    $(`#decrement_1`).click(function () {
-        firstAmount--;
-        if (firstAmount < 0) {
-          firstAmount = 0
-        }
-        $(`#amount_1`).html(firstAmount)
+  $(`#decrement_1_` + legend).click(function () {
+      firstAmount--;
+      if (firstAmount < 0) {
+        firstAmount = 0
       }
-    );
-    $('#increment_1').click((function () {
+      $(`#amount_1_` + legend).html(firstAmount)
+    }
+  );
+  $('#increment_1_' + legend).click((function () {
       firstAmount++
-      $('#amount_1').html(firstAmount)
+      $('#amount_1_' + legend).html(firstAmount)
     }
-    ))
+  ))
 //second Amount
-    $('#decrement_2').click(function () {
-        secondAmount--;
-        if (secondAmount < 0) {
-          secondAmount = 0
-        }
-        $('#amount_2').html(secondAmount)
+  $('#decrement_2_' + legend).click(function () {
+      secondAmount--;
+      if (secondAmount < 0) {
+        secondAmount = 0
       }
-    );
-    $('#increment_2').click((function () {
+      $('#amount_2_' + legend).html(secondAmount)
+    }
+  );
+  $('#increment_2_' + legend).click((function () {
       secondAmount++
-      $('#amount_2').html(secondAmount)
+      $('#amount_2_' + legend).html(secondAmount)
     }
-    ))
-    // third Amount
-    $('#decrement_3').click(function () {
-        thirdAmount--;
-        if (thirdAmount < 0) {
-          thirdAmount = 0
-        }
-        $('#amount_3').html(thirdAmount)
+  ))
+  // third Amount
+  $('#decrement_3_' + legend).click(function () {
+      thirdAmount--;
+      if (thirdAmount < 0) {
+        thirdAmount = 0
       }
-    );
-    $('#increment_3').click((function () {
-      thirdAmount++
-      $('#amount_3').html(thirdAmount)
+      $('#amount_3_' + legend).html(thirdAmount)
     }
-    ))
+  );
+  $('#increment_3_' + legend).click((function () {
+      thirdAmount++
+      $('#amount_3_' + legend).html(thirdAmount)
+    }
+  ))
 
 // SlideDown block-end
 
-    $('.counter_wrap').click(function () {
-      $('.dropdown__input').val(function () {
-        function firstOption() {
-          if (firstAmount >= 1) {
-            return firstAmount + ' ' + $('#amount_legend_1').html()
-          } else {
-            return ' '
-          }
-
-
-        }
-
-        function secondOption() {
-          if (secondAmount >= 1) {
-            return secondAmount + ' ' + $('#amount_legend_2').html()
-          } else {
-            return ' '
-          }
-
-        }
-
-        function thirdOption() {
-          if (thirdAmount >= 1) {
-            return thirdAmount + ' ' + $('#amount_legend_3').html()
-          } else {
-            return ' '
-          }
-        }
-
-
-        if (firstOption() == undefined && secondOption() == undefined && thirdOption() == undefined) {
-          return 'Ничего не выбрано'
+  $(`.counter_wrap_` + legend).click(function () {
+    $(`#dropdown_` + legend).val(function () {
+      function firstOption() {
+        if (firstAmount >= 1) {
+          return firstAmount + ' ' + $('#amount_legend_1_' + legend).html()
         }
         else {
-          return firstOption() + ' ' + secondOption() + ' ' + thirdOption()
+          return ' '
         }
-      })
+
+
+      }
+
+      function secondOption() {
+        if (secondAmount >= 1) {
+          return secondAmount + ' ' + $('#amount_legend_2_' + legend).html()
+        }
+        else {
+          return ' '
+        }
+
+      }
+
+      function thirdOption() {
+        if (thirdAmount >= 1) {
+          return thirdAmount + ' ' + $('#amount_legend_3_' + legend).html()
+        }
+        else {
+          return ' '
+        }
+      }
+
+
+      if (firstOption() == undefined && secondOption() == undefined && thirdOption() == undefined) {
+        return 'Ничего не выбрано'
+      }
+      else {
+        return firstOption() + ' ' + secondOption() + ' ' + thirdOption()
+      }
     })
+  })
+}
 
-
-
+dropDowner('field')
 
 })

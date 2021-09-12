@@ -49,16 +49,18 @@ $(function () {
 
 
 //slideDown
-function dropDowner(legend) {
-  $(`#dropdown_` + legend).click(function () {
+function dropDowner(legend) { //dropdown function
+  $(`#dropdown_` + legend).click(function () { //toggle slider
     $(`.dropdown__field_` + legend).slideToggle()
   });
 
+  //variables inside of dropdown
   let firstAmount = 0
   let secondAmount = 0
   let thirdAmount = 0
 
-
+  //calculation functions
+  //first amount
   $(`#decrement_1_` + legend).click(function () {
       firstAmount--;
       if (firstAmount < 0) {
@@ -102,7 +104,7 @@ function dropDowner(legend) {
   ))
 
 // SlideDown block-end
-
+// Input block values
   $(`.counter_wrap_` + legend).click(function () {
     $(`#dropdown_` + legend).val(function () {
       function firstOption() {

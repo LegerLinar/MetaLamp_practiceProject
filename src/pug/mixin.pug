@@ -94,15 +94,24 @@ mixin pagination(legend)
 		p 1-12 из 100+ вариантов аренды
 
 mixin dropdown(legend)
+	//- dropdown wrap
 	div.dropdown
+		//- dropdown input field
 		input.dropdown__input(id='dropdown_'+legend)
+		//- dropdown slide-down-field
 		div.dropdown__field(class=['dropdown__field_' + legend])
+			//- each dropdown line set
 			div.dropdown__field_item
+				//- dropdown line legend
 				h3(id='amount_legend_1_' + legend) Спальни
+				//- calc functions wrap
 				div.calc_wrap
+					//- calc button decrement
 					div.counter_wrap(class=['counter_wrap_' + legend] id='decrement_1_' + legend)
 						span.counter(class= ['decrement'] ) -
+					//- calc results
 					h3(id='amount_1_' + legend) 1
+					//- calc button increment
 					div.counter_wrap(class=['counter_wrap_' + legend] id='increment_1_' + legend)
 						span.counter(class =['increment']  ) +
 			div.dropdown__field_item

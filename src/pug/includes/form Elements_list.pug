@@ -12,7 +12,7 @@ div.first_row
 			+formCommon('text', 'Subscription text field', 'Email', ['emailInput', 'subscribe_form'])
 	section.first_row_wrapper(class= 'checkboxes-section')
 		section.form_elements__checkboxes
-			+formCheckbox('Checkbox Buttons', 'Example_buttons','Можно курить', 'Можно с питомцами', 'Можно пригласить гостей<br>(до 10 гостей)')
+			+formCheckbox('Checkbox Buttons', '', 'Example_buttons','Можно курить', 'Можно с питомцами', 'Можно пригласить гостей<br>(до 10 гостей)')
 		section.form_elements__radio
 			+formRadio('Radio Buttons', 'Example_radio', 'Мужчина', 'Женщина')
 		section.form_elements__toggle
@@ -50,7 +50,10 @@ div.first_row
 div.second_row
 	section.dropdowns
 		div.dropdowns_room-options
-			+dropdown('rooms', 'roomsDefault', 'dropdown', 'default', 'Спальни', 'Кровати','Ванные комнаты')(placeholder = 'Дополнительные опции')
-			+dropdown('rooms', 'roomsExpanded', 'dropdown', 'expanded', 'Спальни', 'Кровати','Ванные комнаты')(placeholder = 'Дополнительные опции')
-		div.dropdowns_guests-options
-			+dropdown('guests', 'guestsExpanded', 'dropdown', ' ', 'Спальни', 'Кровати','Ванные комнаты')(placeholder = 'Сколько гостей')
+			+dropdown('rooms', 'roomsDefault', 'dropdown', 'default', '', 'Спальни', 'Кровати','Ванные комнаты')(placeholder = 'Дополнительные опции')
+			+dropdown('rooms', 'roomsExpanded', 'dropdown', 'expanded', 'expanded', 'Спальни', 'Кровати','Ванные комнаты')(placeholder = 'Дополнительные опции')
+		+dropdown('guests', 'guestsDefault', 'dropdown', ' ', 'expanded', 'Взрослые', 'Дети','Младенцы')(placeholder = 'Сколько гостей')
+		+dropdown('guests', 'guestsExpanded', 'dropdown', ' ', 'expanded', 'Взрослые', 'Дети','Младенцы')(placeholder = 'Сколько гостей')
+div.third_row
+	section.checkboxes-expendable_section
+		+formCheckbox('expandable checkbox list', 'expandable', 'Example_buttons_expandable', 'Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь')

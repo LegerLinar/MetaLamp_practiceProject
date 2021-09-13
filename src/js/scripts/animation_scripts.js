@@ -203,5 +203,6 @@ function dropDownerRooms(legend) { //dropdown function
 dropDownerRooms('roomsDefault');
 dropDownerRooms('roomsExpanded');
 dropDownerRooms('guestsExpanded');
+dropDownerRooms('guestsDefault');
 
 })

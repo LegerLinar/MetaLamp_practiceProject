@@ -93,7 +93,7 @@ mixin pagination(legend)
 		div.pagination
 		p 1-12 из 100+ вариантов аренды
 
-mixin dropdown(legend, mission, explicitSpan, ...legends)
+mixin dropdown(dropdownAim, legend, mission, explicitSpan, ...legends)
 
 	//- dropdown wrap
 	div.dropdown(class= ['form'])
@@ -104,7 +104,7 @@ mixin dropdown(legend, mission, explicitSpan, ...legends)
 					span= explicitSpan
 		//- dropdown input field
 		div.dropdown_input_wrap
-			input.dropdown__input(id='dropdown_'+legend)&attributes(attributes)
+			input.dropdown__input(id='dropdown_input_'+legend)&attributes(attributes)
 			div.expanders_wrap
 				svg.more(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" id='more_'+legend)
 					|<path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.75"/>
@@ -113,7 +113,7 @@ mixin dropdown(legend, mission, explicitSpan, ...legends)
 					|<path d="M1.40625 7.42187L1.74709e-06 6.01562L6 0.0156231L12 6.01562L10.5938 7.42187L6 2.82812L1.40625 7.42187Z" fill="#1F2041" fill-opacity="0.5"/>
 					|</svg>
 		//- dropdown slide-down-field
-		div.dropdown__field(id='dropdown__field_' + legend class=['dropdown__field'+ legend])
+		div.dropdown__field(id='dropdown__field_' + legend class=['dropdown__field'+ legend, 'dropdown__field' + explicitSpan])
 			//- each dropdown line set
 			div.dropdown__field_item
 				//- dropdown line legend
@@ -144,3 +144,9 @@ mixin dropdown(legend, mission, explicitSpan, ...legends)
 					h3(id='amount_3_' + legend) 1
 					div.counter_wrap(class=['counter_wrap_' + legend] id='increment_3_' + legend)
 						span.counter(class =['increment']  ) +
+			if dropdownAim === 'guests'
+				div.dropdown_buttons
+					h3.dropdown_buttons__confirm(id= 'confirm_' + legend) Применить
+					h3.dropdown_buttons__clear(id= 'clear_' + legend) Очистить
+
+

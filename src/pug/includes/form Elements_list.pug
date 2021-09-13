@@ -50,7 +50,7 @@ div.first_row
 div.second_row
 	section.dropdowns
 		div.dropdowns_room-options
-			+dropdown('default', 'dropdown', 'default', 'Спальни', 'Кровати','Ванные комнаты')(placeholder = 'Дополнительные опции')
-			+dropdown('expanded', 'dropdown', 'expanded', 'Спальни', 'Кровати','Ванные комнаты')(placeholder = 'Дополнительные опции')
+			+dropdown('rooms', 'roomsDefault', 'dropdown', 'default', 'Спальни', 'Кровати','Ванные комнаты')(placeholder = 'Дополнительные опции')
+			+dropdown('rooms', 'roomsExpanded', 'dropdown', 'expanded', 'Спальни', 'Кровати','Ванные комнаты')(placeholder = 'Дополнительные опции')
 		div.dropdowns_guests-options
-			+dropdown('expanded', 'dropdown', ' ', 'Спальни', 'Кровати','Ванные комнаты')(placeholder = 'Сколько гостей')
+			+dropdown('guests', 'guestsExpanded', 'dropdown', ' ', 'Спальни', 'Кровати','Ванные комнаты')(placeholder = 'Сколько гостей')

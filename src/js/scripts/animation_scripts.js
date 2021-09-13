@@ -50,7 +50,7 @@ $(function () {
 
 //slideDown
 function dropDownerRooms(legend) { //dropdown function
-  $(`#dropdown_` + legend).click(function () { //toggle slider
+  $(`#dropdown_input_` + legend).click(function () { //toggle slider
     $(`#dropdown__field_` + legend).slideToggle()
     $(`#more_` + legend).toggle()
     $(`#less_` + legend).toggle()
@@ -108,7 +108,7 @@ function dropDownerRooms(legend) { //dropdown function
 // SlideDown block-end
 // Input block values
   $(`.counter_wrap_` + legend).click(function () {
-    $(`#dropdown_` + legend).val(function () {
+    $(`#dropdown_input_` + legend).val(function () {
       function firstOption() {
         if (firstAmount >= 1) {
           return firstAmount + ' ' + $('#amount_legend_1_' + legend).html()
@@ -116,10 +116,7 @@ function dropDownerRooms(legend) { //dropdown function
         else {
           return ' '
         }
-
-
       }
-
       function secondOption() {
         if (secondAmount >= 1) {
           return secondAmount + ' ' + $('#amount_legend_2_' + legend).html()
@@ -129,7 +126,6 @@ function dropDownerRooms(legend) { //dropdown function
         }
 
       }
-
       function thirdOption() {
         if (thirdAmount >= 1) {
           return thirdAmount + ' ' + $('#amount_legend_3_' + legend).html()
@@ -138,8 +134,6 @@ function dropDownerRooms(legend) { //dropdown function
           return ' '
         }
       }
-
-
       if (firstOption() == undefined && secondOption() == undefined && thirdOption() == undefined) {
         return 'Ничего не выбрано'
       }
@@ -150,7 +144,8 @@ function dropDownerRooms(legend) { //dropdown function
   })
 }
 
-dropDownerRooms('default');
-dropDownerRooms('expanded');
+dropDownerRooms('roomsDefault');
+dropDownerRooms('roomsExpanded');
+dropDownerRooms('guestsExpanded');
 
 })

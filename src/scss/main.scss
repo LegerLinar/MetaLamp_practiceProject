@@ -692,7 +692,6 @@ li {
     display: none;
     padding-left: vw(15);
     width: vw(266);
-    height: vw(119);
     border: 1px solid #{$shade50};
     border-radius: 2px;
     &_item{
@@ -718,6 +717,21 @@ li {
           }
         }
         }
+      }
+    }
+    &_buttons{
+      margin-top: 20px;
+      margin-bottom: 13px;
+      padding-right: 4px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      width: initial;
+      h3 {
+        color: #{$Purple};
+      }
+      &__clear{
+        display: none;
       }
     }
   }

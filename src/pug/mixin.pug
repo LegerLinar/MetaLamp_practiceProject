@@ -1,17 +1,17 @@
 mixin img_src(source, ego, identity)
 	img(srcset= source alt= ego class= '' + identity)
 	//for bundle change on img(src=source alt= ego class= '' + identity)
+
+
 mixin logoGroup(color)
 	svg(width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg")
 		|<path d="M23.9989 32.4712C23.2224 32.4712 22.5871 31.8359 22.5871 31.0594C22.5871 25.6241 18.14 21.177 12.7047 21.177C11.9283 21.177 11.293 20.5418 11.293 19.7653C11.293 18.9888 11.9283 18.3535 12.7047 18.3535C19.7283 18.3535 25.4106 24.0359 25.4106 31.0594C25.4106 31.8359 24.7753 32.4712 23.9989 32.4712Z" fill=#{color} fill-opacity="0.25"/>
 		|<path d="M36.7068 19.7653C36.7068 20.5418 36.0715 21.177 35.295 21.177C31.9421 21.177 28.9421 22.8712 27.1774 25.4476C26.7892 24.4594 26.3303 23.5418 25.7656 22.6947C28.095 20.0123 31.5186 18.3535 35.295 18.3535C36.0715 18.3535 36.7068 18.9888 36.7068 19.7653Z" fill=#{color} fill-opacity="0.25"/>
 		|<path d="M24 48C10.7647 48 0 37.2353 0 24C0 10.7647 10.7647 0 24 0C37.2353 0 48 10.7647 48 24C48 37.2353 37.2353 48 24 48ZM24 2.82353C12.3176 2.82353 2.82353 12.3176 2.82353 24C2.82353 35.6824 12.3176 45.1765 24 45.1765C35.6824 45.1765 45.1765 35.6824 45.1765 24C45.1765 12.3176 35.6824 2.82353 24 2.82353Z" fill=#{color} fill-opacity="0.25"/>
-mixin svg(name)
-	svg
-		use(xlink:href=`/images/#${name}.svg`)
+
 mixin formCommon(formType, mission, placed, styleClass, explicitSpan)
 	form.form(class= styleClass)
-		div.form__wrapper
+		div.form__legend_wrapper
 			h3= mission
 			if explicitSpan
 				h3.form_explain
@@ -93,17 +93,31 @@ mixin pagination(legend)
 		div.pagination
 		p 1-12 из 100+ вариантов аренды
 
-mixin dropdown(legend)
+mixin dropdown(legend, mission, explicitSpan, ...legends)
+
 	//- dropdown wrap
-	div.dropdown
+	div.dropdown(class= ['form'])
+		div.form__legend_wrapper
+			h3= mission
+			if explicitSpan
+				h3.form_explain
+					span= explicitSpan
 		//- dropdown input field
-		input.dropdown__input(id='dropdown_'+legend)
+		div.dropdown_input_wrap
+			input.dropdown__input(id='dropdown_'+legend)&attributes(attributes)
+			div.expanders_wrap
+				svg.more(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" id='more_'+legend)
+					|<path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.75"/>
+					|</svg>
+				svg.less(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" id='less_'+legend)
+					|<path d="M1.40625 7.42187L1.74709e-06 6.01562L6 0.0156231L12 6.01562L10.5938 7.42187L6 2.82812L1.40625 7.42187Z" fill="#1F2041" fill-opacity="0.5"/>
+					|</svg>
 		//- dropdown slide-down-field
-		div.dropdown__field(class=['dropdown__field_' + legend])
+		div.dropdown__field(id='dropdown__field_' + legend class=['dropdown__field'+ legend])
 			//- each dropdown line set
 			div.dropdown__field_item
 				//- dropdown line legend
-				h3(id='amount_legend_1_' + legend) Спальни
+				h3(id='amount_legend_1_' + legend)= legends[0]
 				//- calc functions wrap
 				div.calc_wrap
 					//- calc button decrement
@@ -115,7 +129,7 @@ mixin dropdown(legend)
 					div.counter_wrap(class=['counter_wrap_' + legend] id='increment_1_' + legend)
 						span.counter(class =['increment']  ) +
 			div.dropdown__field_item
-				h3(id='amount_legend_2_' + legend) Кровати
+				h3(id='amount_legend_2_' + legend)= legends[1]
 				div.calc_wrap
 					div.counter_wrap(class=['counter_wrap_' + legend] id='decrement_2_' + legend)
 						span.counter(class =['decrement']  ) -
@@ -123,7 +137,7 @@ mixin dropdown(legend)
 					div.counter_wrap(class=['counter_wrap_' + legend] id='increment_2_' + legend)
 						span.counter(class =['increment']  ) +
 			div.dropdown__field_item
-				h3(id='amount_legend_3_' + legend) Ванные комнаты
+				h3(id='amount_legend_3_' + legend)= legends[2]
 				div.calc_wrap
 					div.counter_wrap(class=['counter_wrap_' + legend] id='decrement_3_' + legend)
 						span.counter(class =['decrement']  ) -

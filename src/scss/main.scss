@@ -7,6 +7,23 @@
 *{
   box-sizing: border-box;
 }
+input {
+  margin: 0;
+  height:        vw(42);
+  border-width:  vw(1);
+  border-color:  #{$shade25};
+  border-radius: vw(4);
+  padding: 0 0 0 vw(17);
+  cursor: pointer;
+  color: #{$shade75};
+
+  &::-moz-placeholder{
+    color: #{$shade25};
+  }
+  &::-webkit-input-placeholder{
+    color: #{$shade25};
+  }
+}
 body{
   font-family: 'Montserrat_Medium', sans-serif;
   color: #{$shade75};
@@ -74,7 +91,7 @@ li {
 
 .form {
   padding-bottom: vw(21.6);
-  .form__wrapper {
+  .form__legend_wrapper {
     display:         flex;
     justify-content: space-between;
     margin-bottom: vw(5);
@@ -646,14 +663,33 @@ li {
 }
 
 .dropdown{
-  height: vw(500);
+  width: vw(266);
+  &_input_wrap{
+    position: relative;
+    svg{
+      position: absolute;
+      bottom: 40%;
+      right: 15px;
+    }
+    .less{
+      display: none;
+    }
+  }
+
   &__input{
+    position: relative;
     width: vw(266);
     height: vw(44);
     border: 1px solid #{$shade50};
     border-radius: 2px;
+
   }
   &__field{
+    &expanded{
+      display: block;
+    }
+    //position: absolute;
+    display: none;
     padding-left: vw(15);
     width: vw(266);
     height: vw(119);

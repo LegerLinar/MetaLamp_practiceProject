@@ -49,9 +49,11 @@ $(function () {
 
 
 //slideDown
-function dropDowner(legend) { //dropdown function
+function dropDownerRooms(legend) { //dropdown function
   $(`#dropdown_` + legend).click(function () { //toggle slider
-    $(`.dropdown__field_` + legend).slideToggle()
+    $(`#dropdown__field_` + legend).slideToggle()
+    $(`#more_` + legend).toggle()
+    $(`#less_` + legend).toggle()
   });
 
   //variables inside of dropdown
@@ -148,6 +150,7 @@ function dropDowner(legend) { //dropdown function
   })
 }
 
-dropDowner('field')
+dropDownerRooms('default');
+dropDownerRooms('expanded');
 
 })

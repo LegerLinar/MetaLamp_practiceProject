@@ -104,7 +104,7 @@ mixin dropdown(dropdownAim, legend, mission, explicitSpan, ...legends)
 					span= explicitSpan
 		//- dropdown input field
 		div.dropdown_input_wrap
-			input.dropdown__input(id='dropdown_input_'+legend)&attributes(attributes)
+			input.dropdown__input(id='dropdown_input_'+legend type='text')&attributes(attributes)
 			div.expanders_wrap
 				svg.more(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" id='more_'+legend)
 					|<path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.75"/>
@@ -124,7 +124,7 @@ mixin dropdown(dropdownAim, legend, mission, explicitSpan, ...legends)
 					div.counter_wrap(class=['counter_wrap_' + legend] id='decrement_1_' + legend)
 						span.counter(class= ['decrement'] ) -
 					//- calc results
-					h3(id='amount_1_' + legend) 1
+					h3(id='amount_1_' + legend) 0
 					//- calc button increment
 					div.counter_wrap(class=['counter_wrap_' + legend] id='increment_1_' + legend)
 						span.counter(class =['increment']  ) +
@@ -133,7 +133,7 @@ mixin dropdown(dropdownAim, legend, mission, explicitSpan, ...legends)
 				div.calc_wrap
 					div.counter_wrap(class=['counter_wrap_' + legend] id='decrement_2_' + legend)
 						span.counter(class =['decrement']  ) -
-					h3(id='amount_2_' + legend) 1
+					h3(id='amount_2_' + legend) 0
 					div.counter_wrap(class=['counter_wrap_' + legend] id='increment_2_' + legend)
 						span.counter(class =['increment']  ) +
 			div.dropdown__field_item
@@ -141,7 +141,7 @@ mixin dropdown(dropdownAim, legend, mission, explicitSpan, ...legends)
 				div.calc_wrap
 					div.counter_wrap(class=['counter_wrap_' + legend] id='decrement_3_' + legend)
 						span.counter(class =['decrement']  ) -
-					h3(id='amount_3_' + legend) 1
+					h3(id='amount_3_' + legend) 0
 					div.counter_wrap(class=['counter_wrap_' + legend] id='increment_3_' + legend)
 						span.counter(class =['increment']  ) +
 			if dropdownAim === 'guests'

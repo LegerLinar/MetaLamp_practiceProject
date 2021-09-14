@@ -12,7 +12,7 @@ div.first_row
 			+formCommon('text', 'Subscription text field', 'Email', ['emailInput', 'subscribe_form'])
 	section.first_row_wrapper(class= 'checkboxes-section')
 		section.form_elements__checkboxes
-			+formCheckbox('Checkbox Buttons', '', 'Example_buttons','Можно курить', 'Можно с питомцами', 'Можно пригласить гостей<br>(до 10 гостей)')
+			+formCheckbox('Checkbox Buttons', '', 'Example_buttons','', '', ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей<br>(до 10 гостей)'])
 		section.form_elements__radio
 			+formRadio('Radio Buttons', 'Example_radio', 'Мужчина', 'Женщина')
 		section.form_elements__toggle
@@ -56,4 +56,7 @@ div.second_row
 		+dropdown('guests', 'guestsExpanded', 'dropdown', ' ', 'expanded', 'Взрослые', 'Дети','Младенцы')(placeholder = 'Сколько гостей')
 div.third_row
 	section.checkboxes-expendable_section
-		+formCheckbox('expandable checkbox list', 'expandable', 'Example_buttons_expandable', 'Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь')
+		+formCheckbox('expandable checkbox list', 'expandable', '', 'checkbox_expandable', '', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь'])
+		+formCheckbox('expandable checkbox list', 'expandable', 'expanded','checkbox_expanded', '', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь'])
+	section.checkox_rich
+	+formCheckbox('Checkbox Buttons', '', 'Example_buttons','', 'rich', { 'Можно курить' : 'Можно с питомцами', 'asdsds': 'Можно пригласить гостей<br>(до 10 гостей)'})

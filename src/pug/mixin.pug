@@ -23,24 +23,36 @@ mixin formCommon(formType, mission, placed, styleClass, explicitSpan)
 //		if boolean
 //			checked)
 
-mixin formCheckbox(legend, isExpandable, itemName, ...values)
+mixin formCheckbox(legend, isExpandable, isExpanded, itemName, isRich, values)
 	-var idForCheck = 1
 	form.checkbox
-		h3(id='checkbox_expendable_' + legend)= legend
+		h3(id='checkbox_' + itemName class=['checkbox_main-label'])= legend
 			if isExpandable === 'expandable'
 				div.expanders_wrap
-					svg.more(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" id='more_' + legend)
+					svg.more(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" id='more_' + itemName class=[isExpanded + '_more'])
 						| <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.75"/>
 						| </svg>
-					svg.less(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" id='less_' + legend)
+					svg.less(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" id='less_' + itemName class=[isExpanded + '_less'])
 						| <path d="M1.40625 7.42187L1.74709e-06 6.01562L6 0.0156231L12 6.01562L10.5938 7.42187L6 2.82812L1.40625 7.42187Z" fill="#1F2041" fill-opacity="0.5"/>
 						| </svg>
-		ul(id='checkbox_expendable_field_' + legend)
-		for option in values
-			li.checkbox__group
-				input.checkbox__item(type= 'checkbox' id=itemName + '_' + (idForCheck) class=itemName + '_' + idForCheck)
-				label.checkbox__item__label(for=itemName + '_' + (idForCheck++))
-					p!= option
+		ul(id='checkbox_dropdown_field_' + itemName class = ['checkbox_dropdown_field_' + isExpandable, '' + isExpanded])
+			if(isRich === 'rich')
+
+				for option, key in values
+					li.checkbox__group
+						input.checkbox__item(type= 'checkbox' id=itemName + '_' + (idForCheck
+						) class=itemName + '_' + idForCheck)
+						label.checkbox__item__label(for=itemName + '_' + (idForCheck++
+						))
+							div.checkbox__item__label_wrapp
+								h3= key
+								p!= option
+			else
+				for option in values
+					li.checkbox__group
+						input.checkbox__item(type= 'checkbox' id=itemName + '_' + (idForCheck) class=itemName + '_' + idForCheck)
+						label.checkbox__item__label(for=itemName + '_' + (idForCheck++))
+							p!= option
 
 mixin formRadio(legend, itemName, ...values)
 	- var idForCheck = 1
@@ -114,14 +126,14 @@ mixin dropdown(dropdownAim, legend, mission, explicitSpan, specialClass, ...lege
 		div.dropdown_input_wrap
 			input.dropdown__input(id='dropdown_input_'+legend type='text')&attributes(attributes)
 			div.expanders_wrap
-				svg.more(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" id='more_'+legend)
+				svg.more(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" id='more_'+legend class=[specialClass + '_more'])
 					|<path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.75"/>
 					|</svg>
-				svg.less(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" id='less_'+legend)
+				svg.less(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" id='less_'+legend class=[specialClass + '_less'])
 					|<path d="M1.40625 7.42187L1.74709e-06 6.01562L6 0.0156231L12 6.01562L10.5938 7.42187L6 2.82812L1.40625 7.42187Z" fill="#1F2041" fill-opacity="0.5"/>
 					|</svg>
 		//- dropdown slide-down-field
-		div.dropdown__field(id='dropdown__field_' + legend class=['dropdown__field'+ legend, 'dropdown__field' + specialClass])
+		div.dropdown__field(id='dropdown__field_' + legend class=['dropdown__field'+ legend, '' + specialClass])
 			//- each dropdown line set
 			div.dropdown__field_item
 				//- dropdown line legend

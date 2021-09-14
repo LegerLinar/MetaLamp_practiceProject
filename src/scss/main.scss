@@ -88,6 +88,26 @@ li {
   padding: 0;
 }
 
+//little widget   .expanded{
+//    display: initial;
+//    + .expanders_wrap{
+//
+//
+//    }
+//  }
+
+.expanders_wrap{
+  svg{
+    position: absolute;
+  }
+  .less{
+    display: none;
+  }
+}
+
+//.expanded{
+//  display: block
+//}
 
 .form {
   padding-bottom: vw(21.6);
@@ -150,8 +170,29 @@ li {
 }
 
 .checkbox {
-  li {
-    color:         #{$shade50};
+  &_main-label{
+    margin-bottom: 18px;
+  }
+  .expanders_wrap{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 40px;
+  }
+  &_dropdown_field_expandable{
+    display:none;
+
+  }
+  .expanded{
+    display: block;
+    &_more{
+      display: none;
+    }
+    &_less{
+      display: block;
+    }
+  }
+  &_group {
+
     margin-bottom: vw(10.56);
 
     &:last-child {
@@ -173,11 +214,11 @@ li {
     }
   }
 
-  label {
+  &__item__label {
     cursor: pointer;
-    
+    display: flex;
     p{
-      display: inline-block;
+      color:         #{$shade50};
     }
     &:before {
       content:        '';
@@ -664,16 +705,22 @@ li {
 
 .dropdown{
   width: vw(266);
+  .expanded{
+    display: block;
+    &_more{
+      display: none;
+    }
+    &_less{
+      display: block;
+    }
+  }
   &_input_wrap{
     position: relative;
     svg{
-      position: absolute;
       bottom: 40%;
       right: 15px;
     }
-    .less{
-      display: none;
-    }
+
   }
 
   &__input{
@@ -685,10 +732,7 @@ li {
 
   }
   &__field{
-    &expanded{
-      display: block;
-    }
-    //position: absolute;
+
     display: none;
     padding-left: vw(15);
     width: vw(266);

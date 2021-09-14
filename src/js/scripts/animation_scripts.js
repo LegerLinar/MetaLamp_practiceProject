@@ -200,9 +200,19 @@ function dropDownerRooms(legend) { //dropdown function
 
 }
 
+function checkboxDropDowner(itemName){
+  $(`#checkbox_` + itemName).click(function () { //toggle slider
+    $(`#checkbox_dropdown_field_` + itemName).slideToggle()
+    $(`#more_` + itemName).toggle()
+    $(`#less_` + itemName).toggle()
+  })
+}
+
 dropDownerRooms('roomsDefault');
 dropDownerRooms('roomsExpanded');
 dropDownerRooms('guestsExpanded');
 dropDownerRooms('guestsDefault');
 
+checkboxDropDowner('checkbox_expandable')
+checkboxDropDowner('checkbox_expanded')
 })

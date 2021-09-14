@@ -207,6 +207,13 @@ function checkboxDropDowner(itemName){
     $(`#less_` + itemName).toggle()
   })
 }
+function likeButton(uniqueId) {
+    $(`#buttonLike_` + uniqueId).click(function(){
+        $(this).toggleClass('buttonLike_done');
+      });
+}
+
+
 
 dropDownerRooms('roomsDefault');
 dropDownerRooms('roomsExpanded');
@@ -215,4 +222,6 @@ dropDownerRooms('guestsDefault');
 
 checkboxDropDowner('checkbox_expandable')
 checkboxDropDowner('checkbox_expanded')
+
+likeButton('like_def')
 })

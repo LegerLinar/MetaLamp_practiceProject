@@ -170,3 +170,9 @@ mixin dropdown(dropdownAim, legend, mission, explicitSpan, specialClass, ...lege
 					h3.dropdown_buttons__clear(id= 'clear_' + legend) Очистить
 
 
+mixin bulletList(legend, values)
+	h3.bulletList_main_label= legend
+	ul.bulletList
+		for option in values
+			li.bulletList__item
+				p!=option

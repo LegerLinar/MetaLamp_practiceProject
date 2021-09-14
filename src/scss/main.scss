@@ -24,6 +24,7 @@ input {
     color: #{$shade25};
   }
 }
+
 body{
   font-family: 'Montserrat_Medium', sans-serif;
   color: #{$shade75};
@@ -790,5 +791,36 @@ li {
     }
     &__label_wrap{
       margin-left: vw(10);
+    }
+    &__line{
+      color: #{$shade10};
+      background-color: #{$shade10};
+      height: 1px;
+      border: none;
+    }
+  }
+
+  .comment{
+    &_wrap{
+      width: vw(711);
+      height: vw(133);
+    }
+    &__header{
+      display: flex;
+    }
+    &__body{
+      display: flex;
+    }
+    &__pic{
+      width: 47.67px;
+      height: 48px;
+      margin-right: vw(9.93);
+      border-radius: 50%;
+    }
+    &__like_wrap{
+      margin-right: vw(9.93);
+    }
+    &__text{
+      color:#{$shade75}
     }
   }

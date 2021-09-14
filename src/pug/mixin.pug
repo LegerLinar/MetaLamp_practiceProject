@@ -194,8 +194,14 @@ mixin someGoods(legend, describe)
 				p.good__describe= describe
 		hr.good__line/
 
-mixin comment(name)
+mixin comment(name, imgSrc, date, text)
 	div.comment_wrap
-		div.comment
-			h3.comment__name
-			p.comment_data
+		div.comment__header
+			img.comment__pic(src=imgSrc)
+			div.comment__info
+				h2.comment__name= name
+				p.comment_data= date
+		div.comment__body
+			div.comment__like_wrap
+				+buttonLike('12', 'like_checked_comment_' + name, 'buttonLike_done')
+			p.comment__text= text

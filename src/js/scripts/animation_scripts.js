@@ -244,4 +244,5 @@ checkboxDropDowner('checkbox_expanded')
 
 likeButton('like_def')
 likeButton('like_checked')
+likeButton('like_checked_comment')
 })

@@ -176,3 +176,12 @@ mixin bulletList(legend, values)
 		for option in values
 			li.bulletList__item
 				p!=option
+
+mixin someGoods(legend, describe)
+	div.good
+		if block
+			block.good__pict
+		div.good__label_wrap
+			h3.good__label= legend
+			p.good__describe= describe
+	hr/

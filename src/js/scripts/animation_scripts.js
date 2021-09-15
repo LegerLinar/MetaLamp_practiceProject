@@ -236,21 +236,45 @@ function likeButton(uniqueId) {
 }
 
 function pickDateDropdown(uniqueId){
-  $(`#common_form_input_` + uniqueId).flatpickr(
+  $(`#common_form_input_` + uniqueId).focus(function (){
+    $(`#more_` + uniqueId).toggle()
+    $(`#less_` + uniqueId).toggle()
+    }).blur(function (){
+    $(`#more_` + uniqueId).toggle()
+    $(`#less_` + uniqueId).toggle()
+  })
+  .flatpickr(
     {
       minDate: "today",
       "locale": "ru",
       dateFormat: "d.m.Y",
       input: 'ДД.ММ.ГГГГ',
-      onOpen: [ $(`#more_` + uniqueId).toggle(),
-        $(`#less_` + uniqueId).toggle()
-      ],
-      onClose: [ $(`#more_` + uniqueId).toggle(),
-        $(`#less_` + uniqueId).toggle()]
+
     }
   )
 
 }
+
+  function filterDateDropdown(uniqueId){
+    $(`#common_form_input_` + uniqueId).focus(function (){
+      $(`#more_` + uniqueId).toggle()
+      $(`#less_` + uniqueId).toggle()
+    }).blur(function (){
+      $(`#more_` + uniqueId).toggle()
+      $(`#less_` + uniqueId).toggle()
+    })
+      .flatpickr(
+        {
+          minDate: 'today',
+          "locale": 'ru',
+          dateFormat: 'd.m.Y',
+          input: 'ДД.ММ.ГГГГ',
+          mode:'range',
+
+        }
+      )
+
+  }
 
 dropDownerRooms('roomsDefault');
 dropDownerRooms('roomsExpanded');
@@ -266,4 +290,5 @@ likeButton('like_checked_comment')
 
   pickDateDropdown('date_example_1')
   pickDateDropdown('date_example_2')
+  filterDateDropdown('date-filter_example')
 })

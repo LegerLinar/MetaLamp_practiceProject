@@ -136,11 +136,11 @@ li {
   }
     &__item_wrap {
       position: relative;
-
+      display: inline-block;
 
       .form__item_arrow {
         position: absolute;
-        left: 75%;
+        right: 15px;
         top: 30%;
       }
       svg{
@@ -148,11 +148,7 @@ li {
         right: 15px;
       }
     }
-  //&__item{
-  //  svg{
-  //    top:10px;
-  //  }
-  //}
+
 }
 
 //specific input forms block
@@ -175,6 +171,8 @@ li {
       color: #{$shade75};
     }
   }
+
+
 }
 
 .dropdown_date_filter{

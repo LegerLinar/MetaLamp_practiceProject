@@ -388,11 +388,11 @@ li {
   direction: rtl;
 
   &__item {
+    padding: 0;
     cursor:             pointer;
     -webkit-appearance: none;
     -moz-appearance:    none;
     appearance:         none;
-    padding:            0;
     margin:             0;
 
     &_label {
@@ -454,6 +454,7 @@ li {
     outline: none;
     position: absolute;
     margin: auto;
+    padding: 0;
     top: 0;
     bottom: 0;
     background-color: transparent;

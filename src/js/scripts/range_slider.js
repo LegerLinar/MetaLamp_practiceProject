@@ -11,7 +11,6 @@ let minGap = 5;
 let sliderTrack = document.querySelector('.rangeSlider_slider-track');
 let sliderMaxValue = document.getElementById('slider-1').max;
 
-
 function slideOne(){
   if(parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap){
     sliderOne.value = parseInt(sliderTwo.value) - minGap;
@@ -31,10 +30,9 @@ function slideTwo(){
 }
 
 function fillColor(){
-  let percent1 = (sliderOne.value / sliderMaxValue) * 100;
-  let percent2 = (sliderTwo.value / sliderMaxValue) * 100;
-  sliderTrack.style.background =
-    `linear-gradient(to right, rgba(255, 255, 255, 1)${percent1}%, rgba(255, 255, 255, 0) ${percent1}%, rgba(255, 255, 255, 0) ${percent2}%, rgba(255, 255, 255, 1) ${percent2}%)`;
+  let percent1 = Math.round((sliderOne.value / sliderMaxValue) * 100);
+  let percent2 = Math.round((sliderTwo.value / sliderMaxValue) * 100);
+  sliderTrack.style.background = `linear-gradient(to right, rgba(255, 255, 255, 1) ${percent1}%, rgba(255, 255, 255, 0) ${percent1}%, rgba(255, 255, 255, 0) ${percent2}%, rgba(255, 255, 255, 1) ${percent2}%)`;
 //rgba(255, 255, 255, 0)
 }
 

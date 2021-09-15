@@ -120,8 +120,18 @@ li {
     justify-content: space-between;
     margin-bottom: vw(5);
     padding:         0 0 0 vw(0.6);
-  }
 
+  }
+    &__item_wrap {
+      position: relative;
+
+
+      svg {
+        position: absolute;
+        left: 75%;
+        top: 30%;
+      }
+    }
   input {
     margin: 0;
     height:        vw(42);
@@ -130,7 +140,7 @@ li {
     border-radius: vw(4);
     padding: 0 0 0 vw(17);
     cursor: pointer;
-
+    position: relative;
     &::-moz-placeholder{
       color: #{$shade25};
     }
@@ -147,11 +157,6 @@ li {
   }
 }
 
-.dropdown_guests{
-  input{
-    width: vw(320);
-  }
-}
 
 
 .date{
@@ -696,7 +701,13 @@ li {
 }
 
 .dropdown{
-  width: vw(266);
+  &_guests {
+
+    width: vw(320);
+  }
+  &_rooms{
+    width: vw(266);
+  }
   .expanded{
     display: block;
     &_more{
@@ -717,7 +728,6 @@ li {
 
   &__input{
     position: relative;
-    width: vw(266);
     height: vw(44);
     border: 1px solid #{$shade50};
     border-radius: 2px;
@@ -727,7 +737,7 @@ li {
 
     display: none;
     padding-left: vw(15);
-    width: vw(266);
+    width: initial;
     border: 1px solid #{$shade50};
     border-radius: 2px;
     &_item{

@@ -9,14 +9,24 @@ mixin logoGroup(color)
 		|<path d="M36.7068 19.7653C36.7068 20.5418 36.0715 21.177 35.295 21.177C31.9421 21.177 28.9421 22.8712 27.1774 25.4476C26.7892 24.4594 26.3303 23.5418 25.7656 22.6947C28.095 20.0123 31.5186 18.3535 35.295 18.3535C36.0715 18.3535 36.7068 18.9888 36.7068 19.7653Z" fill=#{color} fill-opacity="0.25"/>
 		|<path d="M24 48C10.7647 48 0 37.2353 0 24C0 10.7647 10.7647 0 24 0C37.2353 0 48 10.7647 48 24C48 37.2353 37.2353 48 24 48ZM24 2.82353C12.3176 2.82353 2.82353 12.3176 2.82353 24C2.82353 35.6824 12.3176 45.1765 24 45.1765C35.6824 45.1765 45.1765 35.6824 45.1765 24C45.1765 12.3176 35.6824 2.82353 24 2.82353Z" fill=#{color} fill-opacity="0.25"/>
 
-mixin formCommon(formType, mission, placed, styleClass, explicitSpan)
+mixin formCommon(mission, styleClass, explicitSpan, isSubscribe)
 	form.form(class= styleClass)
 		div.form__legend_wrapper
 			h3= mission
 			if explicitSpan
 				h3.form_explain
 					span= explicitSpan
-		input.form__item(type=formType placeholder=placed)
+		div.form__item_wrap
+			input.form__item&attributes(attributes)
+			if(isSubscribe=== 'subscribe')
+				svg(width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
+					|<path d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z" fill="url(#paint0_linear)"/>
+					|<defs>
+					|<linearGradient id="paint0_linear" x1="9" y1="-13" x2="9" y2="31" gradientUnits="userSpaceOnUse">
+					|<stop stop-color="#BC9CFF"/>
+					|<stop offset="1" stop-color="#8BA4F9"/>
+					|</linearGradient>
+					|</defs>
 
 //mixin checkForm(value, boolean)
 //	input(type= 'checkbox' value= value
@@ -108,11 +118,12 @@ mixin rangeSlider(min, max, legend)
 
 
 
-mixin buttonCommon(label, ...classes)
+mixin buttonCommon(label, isBuy, ...classes)
 	div.buttonCommon
 		button.buttonCommon__button(class= classes)&attributes(attributes)= label
-			if block
-			block
+			if(isBuy === 'toBuy')
+				svg(width="18" height="17" viewBox="0 0 18 17" xmlns="http://www.w3.org/2000/svg")
+					| <path d="M9 0.426758L17.0156 8.44238L9 16.458L7.59375 15.0518L13.1719 9.42676H0.984375V7.45801H13.1719L7.59375 1.83301L9 0.426758Z"/>
 
 mixin pagination(legend)
 	h3.pagination_wrapper__label= legend
@@ -131,7 +142,7 @@ mixin dropdown(dropdownAim, legend, mission, explicitSpan, specialClass, ...lege
 					span= explicitSpan
 		//- dropdown input field
 		div.dropdown_input_wrap
-			input.dropdown__input(id='dropdown_input_'+legend type='text')&attributes(attributes)
+			input.dropdown__input(id='dropdown_input_'+legend type='text' class=['dropdown_'+dropdownAim])&attributes(attributes)
 			div.expanders_wrap
 				svg.more(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" id='more_'+legend class=[specialClass + '_more'])
 					|<path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.75"/>

@@ -1,3 +1,6 @@
+// const flatpickr= require('flatpickr');
+
+
 $(function () {
   $(function() {
 
@@ -232,7 +235,22 @@ function likeButton(uniqueId) {
 
 }
 
+function pickDateDropdown(uniqueId){
+  $(`#common_form_input_` + uniqueId).flatpickr(
+    {
+      minDate: "today",
+      "locale": "ru",
+      dateFormat: "d.m.Y",
+      input: 'ДД.ММ.ГГГГ',
+      onOpen: [ $(`#more_` + uniqueId).toggle(),
+        $(`#less_` + uniqueId).toggle()
+      ],
+      onClose: [ $(`#more_` + uniqueId).toggle(),
+        $(`#less_` + uniqueId).toggle()]
+    }
+  )
 
+}
 
 dropDownerRooms('roomsDefault');
 dropDownerRooms('roomsExpanded');
@@ -245,4 +263,7 @@ checkboxDropDowner('checkbox_expanded')
 likeButton('like_def')
 likeButton('like_checked')
 likeButton('like_checked_comment')
+
+  pickDateDropdown('date_example_1')
+  pickDateDropdown('date_example_2')
 })

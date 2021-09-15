@@ -1,14 +1,14 @@
 div.first_row
 	section.first_row_wrapper(class='forms-section')
 		section.form_elements__commonForms
-			+formCommon('Text field', ['email-input', 'textForm'], 'Default')(type='email' placeholder='Email')
-			+formCommon('Text field' , ['emailInput', 'textForm', 'hoverFocus'], 'Hover/Focus')(type='email' placeholder='This is pretty awesome')
-			+dropdown('guests', 'guestsDefault_first', 'dropdown', ' ', '', 'Взрослые', 'Дети','Младенцы')(placeholder = 'Сколько гостей')
-			+formCommon('Masked Text Field', ['textForm'])(type='text' placeholder='ДД.ММ.ГГГГ')
+			+formCommon('Text field', [ 'textForm'], 'Default')(type='email' placeholder='Email')
+			+formCommon('Text field' , [ 'textForm',], 'Hover/Focus')(type='email' placeholder='This is pretty awesome')
+			+dropdown('guests', 'guestsDefault_first', 'dropdown', ' ', '', ['Взрослые', 'Дети','Младенцы'])(placeholder = 'Сколько гостей')
+			+formCommon('Masked Text Field', ['textForm'], '', '', 'masked_text_example')(type='text' placeholder='ДД.ММ.ГГГГ')
 			div.dropdown_date_wrapper
-				+formCommon('Date Dropdown', ['date',])(type='date')
-				+formCommon('Date Dropdown', ['date', 'dropdown_date_checked'])(type='date' placeholder='')
-			+formCommon('Filter Date Dropdown', ['date', 'dropdown_date', 'dropdown_date_filter'])(type='text' placeholder='')
+				+formCommon('Date Dropdown', ['date'], '', 'dateDropdown', 'date_example_1')(type='date' placeholder='ДД.ММ.ГГГГ')
+				+formCommon('Date Dropdown', ['date'], '', 'dateDropdown', 'date_example_2')(type='date' placeholder='')
+			+formCommon('Filter Date Dropdown', ['date', 'dropdown_date_filter'])(type='text' placeholder='')
 			+formCommon('Subscription text field', ['emailInput', 'subscribe_form'], '', 'subscribe')(type='text' placeholder='Email')
 	section.first_row_wrapper(class= 'checkboxes-section')
 		section.form_elements__checkboxes
@@ -49,10 +49,10 @@ div.first_row
 div.second_row
 	section.dropdowns
 		div.dropdowns_room-options
-			+dropdown('rooms', 'roomsDefault', 'dropdown', 'default', '', 'Спальни', 'Кровати','Ванные комнаты')(placeholder = 'Дополнительные опции')
-			+dropdown('rooms', 'roomsExpanded', 'dropdown', 'expanded', 'expanded', 'Спальни', 'Кровати','Ванные комнаты')(placeholder = 'Дополнительные опции')
-		+dropdown('guests', 'guestsDefault', 'dropdown', ' ', 'expanded', 'Взрослые', 'Дети','Младенцы')(placeholder = 'Сколько гостей')
-		+dropdown('guests', 'guestsExpanded', 'dropdown', ' ', 'expanded', 'Взрослые', 'Дети','Младенцы')(placeholder = 'Сколько гостей')
+			+dropdown('rooms', 'roomsDefault', 'dropdown', 'default', '', ['Спальни', 'Кровати','Ванные комнаты'])(placeholder = 'Дополнительные опции')
+			+dropdown('rooms', 'roomsExpanded', 'dropdown', 'expanded', 'expanded', ['Спальни', 'Кровати','Ванные комнаты'])(placeholder = 'Дополнительные опции')
+		+dropdown('guests', 'guestsDefault', 'dropdown', ' ', 'expanded', ['Взрослые', 'Дети','Младенцы'])(placeholder = 'Сколько гостей')
+		+dropdown('guests', 'guestsExpanded', 'dropdown', ' ', 'expanded', ['Взрослые', 'Дети','Младенцы'])(placeholder = 'Сколько гостей')
 div.third_row
 	section.checkboxes-expendable_section
 		+formCheckbox('expandable checkbox list', 'expandable', '', 'checkbox_expandable', '', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь'])

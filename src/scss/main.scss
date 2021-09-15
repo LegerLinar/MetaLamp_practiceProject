@@ -138,28 +138,21 @@ li {
       position: relative;
 
 
-      svg {
+      .form__item_arrow {
         position: absolute;
         left: 75%;
         top: 30%;
       }
+      svg{
+        top: 45%;
+        right: 15px;
+      }
     }
-  input {
-    margin: 0;
-    height:        vw(42);
-    border-width:  vw(1);
-    border-color:  #{$shade25};
-    border-radius: vw(4);
-    padding: 0 0 0 vw(17);
-    cursor: pointer;
-    position: relative;
-    //&::-moz-placeholder{
-    //  color: #{$shade25};
-    //}
-    //&::-webkit-input-placeholder{
-    //  color: #{$shade25};
-    //}
-  }
+  //&__item{
+  //  svg{
+  //    top:10px;
+  //  }
+  //}
 }
 
 //specific input forms block
@@ -175,6 +168,12 @@ li {
   padding-bottom: vw(42);
   input{
     width: vw(150);
+    &::-moz-placeholder{
+      color: #{$shade75};
+    }
+    &::-webkit-input-placeholder{
+      color: #{$shade75};
+    }
   }
 }
 
@@ -349,7 +348,7 @@ li {
     &:checked + &_label::before{
       border: 1px solid #{#BC9CFF};
 
-      background: url('../images/circle_calored.svg') no-repeat 18px 50%;
+      background: url('../images/circle_calored.svg') no-repeat vw(28) 50%;
     }
     &:not(:checked) + &_label:hover::before{
       border-color:     #6FCF97;
@@ -357,7 +356,7 @@ li {
     }
     &:checked + &_label:hover::before{
       border-color:     #E9967A;
-      background: url('../images/circle_red.svg') no-repeat 18px 50%;
+      background: url('../images/circle_red.svg') no-repeat vw(28) 50%;
     }
   }
 }

@@ -23,6 +23,18 @@ input {
   &::-webkit-input-placeholder{
     color: #{$shade25};
   }
+  &:hover::-moz-placeholder{
+    color: #{$shade75};
+  }
+  &:hover::-webkit-input-placeholder{
+    color: #{$shade75};
+  }
+  &:focus::-moz-placeholder{
+    color: #{$shade75};
+  }
+  &:focus::-webkit-input-placeholder{
+    color: #{$shade75};
+  }
 }
 
 body{
@@ -141,12 +153,12 @@ li {
     padding: 0 0 0 vw(17);
     cursor: pointer;
     position: relative;
-    &::-moz-placeholder{
-      color: #{$shade25};
-    }
-    &::-webkit-input-placeholder{
-      color: #{$shade25};
-    }
+    //&::-moz-placeholder{
+    //  color: #{$shade25};
+    //}
+    //&::-webkit-input-placeholder{
+    //  color: #{$shade25};
+    //}
   }
 }
 

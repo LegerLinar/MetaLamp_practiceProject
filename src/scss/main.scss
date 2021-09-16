@@ -791,9 +791,8 @@ li {
       justify-content: space-between;
       flex-direction: row-reverse;
       width: initial;
-      h3 {
-        color: #{$Purple};
-      }
+      color: #{$Purple};
+
       &__clear{
         display: none;
       }
@@ -859,4 +858,18 @@ li {
 }
 .arrow_prev_datepicker{
   content: url('../images/arrow_back.svg');
+}
+
+.datepicker__ownButtons{
+  padding: 0 20px 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  width: initial;
+
+  &_confirm, &_clear{
+    font-family: Montserrat_Medium;
+    font-size: 12px;
+    color: #{$Purple};
+  }
 }

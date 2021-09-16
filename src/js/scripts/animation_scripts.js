@@ -1,6 +1,8 @@
 // const flatpickr= require('flatpickr');
 
 
+
+
 $(function () {
   $(function() {
 
@@ -231,50 +233,29 @@ function likeButton(uniqueId) {
         }
       });
 
+    $('#common_form_input_date_example_1').datepicker({
+      toggleSelect: false,
+      position: 'bottom center',
+      // minDate: new Date(),
+      autoClose: true,
+      prevHtml: '<div class="arrow_prev_datepicker"></div>',
+      nextHtml: '<div class="arrow_next_datepicker"></div>',
+      navTitle:{
+        days: '<h3> MM, yyyy</h3>'
+      },
+      inline: true,
+      clearButton: true,
+      range: true,
 
 
-}
 
-function pickDateDropdown(uniqueId){
-  $(`#common_form_input_` + uniqueId).focus(function (){
-    $(`#more_` + uniqueId).toggle()
-    $(`#less_` + uniqueId).toggle()
-    }).blur(function (){
-    $(`#more_` + uniqueId).toggle()
-    $(`#less_` + uniqueId).toggle()
-  })
-  .flatpickr(
-    {
-      minDate: "today",
-      "locale": "ru",
-      dateFormat: "d.m.Y",
-      input: 'ДД.ММ.ГГГГ',
-
-    }
-  )
-
-}
-
-  function filterDateDropdown(uniqueId){
-    $(`#common_form_input_` + uniqueId).focus(function (){
-      $(`#more_` + uniqueId).toggle()
-      $(`#less_` + uniqueId).toggle()
-    }).blur(function (){
-      $(`#more_` + uniqueId).toggle()
-      $(`#less_` + uniqueId).toggle()
     })
-      .flatpickr(
-        {
-          minDate: 'today',
-          "locale": 'ru',
-          dateFormat: 'd.m.Y',
-          input: 'ДД.ММ.ГГГГ',
-          mode:'range',
 
-        }
-      )
+}
 
-  }
+
+
+
 //forms_elements scripts
 dropDownerRooms('roomsDefault');
 dropDownerRooms('roomsExpanded');
@@ -288,7 +269,5 @@ likeButton('like_def')
 likeButton('like_checked')
 likeButton('like_checked_comment')
 
-  pickDateDropdown('date_example_1')
-  pickDateDropdown('date_example_2')
-  filterDateDropdown('date-filter_example')
+
 })

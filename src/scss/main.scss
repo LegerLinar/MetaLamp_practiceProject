@@ -4,6 +4,7 @@
 @import 'fonts';
 @import 'pages/form_elements';
 @import 'pages/cards';
+@import 'blocks/datepicker';
 //@import 'pages/colors_types';
 *{
   box-sizing: border-box;
@@ -40,7 +41,7 @@ input {
 
 body{
   font-family: 'Montserrat_Medium', sans-serif;
-  color: #{$shade75};
+  //color: #{$shade75};
   font-size: vw(14);
   padding-top: vw(30);
   padding-left: vw(30);
@@ -321,6 +322,7 @@ li {
   }
 }
 .toggle{
+  color: #{$shade75};
   &__item{
     cursor:pointer;
 
@@ -850,3 +852,11 @@ li {
       color:#{$shade75}
     }
   }
+
+  //for airdatepicker
+.arrow_next_datepicker{
+  content: url('../images/arrow_forward_purple.svg');
+}
+.arrow_prev_datepicker{
+  content: url('../images/arrow_back.svg');
+}

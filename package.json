@@ -28,6 +28,7 @@
     "webpack-dev-server": "^4.0.0"
   },
   "dependencies": {
+    "air-datepicker": "^2.2.3",
     "flatpickr": "^4.6.9",
     "normalize.css": "^8.0.1"
   }

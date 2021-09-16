@@ -5,9 +5,10 @@ html
 	include pug/vars
 	body
 		+logoGroup("#1F2041")
-		//div.colorsType
-			//include pug/includes/typeStyles
-		include pug/includes/form Elements_list
+			//Pages Block
+			//include pug/includes/pages/typeStyles
+			//include pug/pages/form Elements_list
+			include pug/pages/cards
 	//JavaScript blocks
 	script(src='./js/scripts/range_slider.js')
 	script(type="text/javascript" src='./js/jQuery/jquery-3.6.0.min.js')

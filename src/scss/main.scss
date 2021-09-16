@@ -3,6 +3,7 @@
 @import 'mixins';
 @import 'fonts';
 @import 'pages/form_elements';
+@import 'pages/cards';
 //@import 'pages/colors_types';
 *{
   box-sizing: border-box;
@@ -739,9 +740,14 @@ li {
   &__input{
     position: relative;
     height: vw(44);
-    border: 1px solid #{$shade50};
+    border: 1px solid #{$shade25};
     border-radius: 2px;
-
+    &:hover{
+      border: 1px solid #{$shade50};
+    }
+    &:focus{
+      border: 1px solid #{$shade50};
+    }
   }
   &__field{
 

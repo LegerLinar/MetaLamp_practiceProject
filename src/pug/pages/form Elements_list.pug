@@ -4,7 +4,7 @@ div.first_row
 			+formCommon('Text field', [ 'textForm'], 'Default')(type='email' placeholder='Email')
 			+formCommon('Text field' , [ 'textForm',], 'Hover/Focus')(type='email' placeholder='This is pretty awesome')
 			+dropdown('guests', 'guestsDefault_first', 'dropdown', ' ', '', ['Взрослые', 'Дети','Младенцы'])(placeholder = 'Сколько гостей')
-			+formCommon('Masked Text Field', ['textForm'], '', '', 'masked_text_example')(type='text' placeholder='ДД.ММ.ГГГГ')
+			+formCommon('Masked Text Field', ['textForm'], '', '', 'masked_text_example')(type='password' placeholder='ДД.ММ.ГГГГ')
 			div.dropdown_date_wrapper
 				+formCommon('Date Dropdown', ['date'], '', 'dateDropdown', 'date_example_1')(type='text' placeholder='ДД.ММ.ГГГГ')
 				+formCommon('Date Dropdown', ['date'], '', 'dateDropdown', 'date_example_2')(type='text' placeholder='')

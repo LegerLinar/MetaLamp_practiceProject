@@ -263,9 +263,18 @@ function rangeDateDropdown(uniqueId) {
     myDatePicker.hide()
 
   })
+  $(`#common_form_input_` + uniqueId).click(function () {
+    $(`#more_` + uniqueId).css('display', 'none')
+    $(`#less_` + uniqueId).css('display', 'block')
+
+  }).blur(function () {
+    $(`#less_` + uniqueId).css('display', 'none')
+    $(`#more_` + uniqueId).css('display', 'block')
+
+  })
 }
   function dateDropdown(uniqueId) {
-    let myDatePicker = $(`#common_form_input_`+uniqueId).datepicker({
+    let myDatePicker = $(`#common_form_input_` + uniqueId).datepicker({
       toggleSelect: false,
       position: 'bottom center',
       // minDate: new Date(),
@@ -279,33 +288,41 @@ function rangeDateDropdown(uniqueId) {
       multipleDatesSeparator: ' - ',
     }).data('datepicker')
     $('.datepicker--buttons').replaceWith("<div class='datepicker__ownButtons'><h3 class='datepicker__ownButtons_confirm'>Применить</h3><h3 class='datepicker__ownButtons_clear'>Очистить</h3></div>")
-    $('.datepicker__ownButtons_confirm').addClass( `confirm_`+uniqueId)
-    $('.datepicker__ownButtons_clear').addClass( `clear_`+uniqueId)
-    $(`.clear_`+uniqueId).click(function (){
+    $('.datepicker__ownButtons_confirm').addClass(`confirm_` + uniqueId)
+    $('.datepicker__ownButtons_clear').addClass(`clear_` + uniqueId)
+    $(`.clear_` + uniqueId).click(function () {
       myDatePicker.clear()
     })
-    $(`.confirm_` + uniqueId).click(function(){
+    $(`.confirm_` + uniqueId).click(function () {
       myDatePicker.hide()
+    })
+    $(`#common_form_input_` + uniqueId).click(function () {
+      $(`#more_` + uniqueId).css('display', 'none')
+      $(`#less_` + uniqueId).css('display', 'block')
+
+    }).blur(function () {
+      $(`#less_` + uniqueId).css('display', 'none')
+      $(`#more_` + uniqueId).css('display', 'block')
 
     })
   }
 //*[@id="date_example_2"]
 
 //forms_elements scripts
-dropDownerRooms('roomsDefault');
-dropDownerRooms('roomsExpanded');
-dropDownerRooms('guestsExpanded');
-dropDownerRooms('guestsDefault');
+  dropDownerRooms('roomsDefault');
+  dropDownerRooms('roomsExpanded');
+  dropDownerRooms('guestsExpanded');
+  dropDownerRooms('guestsDefault');
 
-checkboxDropDowner('checkbox_expandable')
-checkboxDropDowner('checkbox_expanded')
+  checkboxDropDowner('checkbox_expandable')
+  checkboxDropDowner('checkbox_expanded')
 
-likeButton('like_def')
-likeButton('like_checked')
-likeButton('like_checked_comment')
+  likeButton('like_def')
+  likeButton('like_checked')
+  likeButton('like_checked_comment')
 
-dateDropdown('date_example_1')
-  //
-dateDropdown('date_example_2')
-rangeDateDropdown('date-filter_example')
+  dateDropdown('date_example_1')
+  dateDropdown('date_example_2')
+  rangeDateDropdown('date-filter_example')
+
 })

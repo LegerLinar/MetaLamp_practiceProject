@@ -2,7 +2,7 @@
 @import 'vars';
 @import 'mixins';
 @import 'fonts';
-@import 'pages/form_elements';
+//@import 'pages/form_elements';
 @import 'pages/cards';
 @import 'blocks/datepicker';
 //@import 'pages/colors_types';
@@ -164,7 +164,7 @@ li {
 
 
 .date{
-  padding-bottom: vw(42);
+  //padding-bottom: vw(42);
   input{
     width: vw(150);
     &::-moz-placeholder{
@@ -629,7 +629,7 @@ li {
   }
 }
 
-.button-to-pay{
+.button-to-do{
   width: vw(320);
   background: linear-gradient(#BC9CFF, #8BA4F9);
   color:      #FFFFFF;
@@ -718,10 +718,15 @@ li {
   &_guests {
 
     width: vw(320);
+
+
   }
+
   &_rooms{
     width: vw(266);
+
   }
+ 
   .expanded{
     display: block;
     &_more{
@@ -733,6 +738,8 @@ li {
   }
   &_input_wrap{
     position: relative;
+    width: content-box;
+    display: inline-block;
     svg{
       bottom: 40%;
       right: 15px;
@@ -753,12 +760,14 @@ li {
     }
   }
   &__field{
-
+    background: #ffffff;
+    position: fixed;
     display: none;
     padding-left: vw(15);
-    width: initial;
     border: 1px solid #{$shade50};
     border-radius: 2px;
+    z-index: 100;
+
     &_item{
       display: flex;
       justify-content: space-between;
@@ -792,8 +801,9 @@ li {
       justify-content: space-between;
       flex-direction: row-reverse;
       width: initial;
-      color: #{$Purple};
-
+      &__confirm, &__clear {
+        color: #{$Purple};
+      }
       &__clear{
         display: none;
       }

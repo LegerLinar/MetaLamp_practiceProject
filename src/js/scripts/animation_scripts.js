@@ -55,13 +55,15 @@ $(function () {
 
 //slideDown
 
-function dropDownerRooms(legend) { //dropdown function
+function dropDowner(legend) { //dropdown function
   $(`#dropdown_input_` + legend).click(function () { //toggle slider
-    $(`#dropdown__field_` + legend).slideToggle()
+    $(`#dropdown__field_` + legend).width($(`#dropdown_input_` + legend).width()).slideToggle()
     $(`#more_` + legend).toggle()
     $(`#less_` + legend).toggle()
   })
-
+  $(`#dropdown_input_` + legend).blur(function (){
+    $(`#dropdown__field_` + legend).slideUp()
+  })
 
   //buttons for guests
   $(`#confirm_` + legend).click(function(){
@@ -308,21 +310,26 @@ function rangeDateDropdown(uniqueId) {
   }
 //*[@id="date_example_2"]
 
-//forms_elements scripts
-  dropDownerRooms('roomsDefault');
-  dropDownerRooms('roomsExpanded');
-  dropDownerRooms('guestsExpanded');
-  dropDownerRooms('guestsDefault');
+//--------------------forms_elements scripts----------------------------------------------------------
+//   dropDowner('roomsDefault');
+//   dropDowner('roomsExpanded');
+//   dropDowner('guestsExpanded');
+//   dropDowner('guestsDefault');
+//
+//   checkboxDropDowner('checkbox_expandable')
+//   checkboxDropDowner('checkbox_expanded')
+//
+//   likeButton('like_def')
+//   likeButton('like_checked')
+//   likeButton('like_checked_comment')
+//
+//   dateDropdown('date_example_1')
+//   dateDropdown('date_example_2')
+//   rangeDateDropdown('date-filter_example')
+//-----------------------CARDS-----------------------------
 
-  checkboxDropDowner('checkbox_expandable')
-  checkboxDropDowner('checkbox_expanded')
+  dateDropdown('search_number__arriving_date')
+  dateDropdown('search_number__departure_date')
 
-  likeButton('like_def')
-  likeButton('like_checked')
-  likeButton('like_checked_comment')
-
-  dateDropdown('date_example_1')
-  dateDropdown('date_example_2')
-  rangeDateDropdown('date-filter_example')
-
+  dropDowner('search_number__guests_dropdown')
 })

@@ -1,3 +1,17 @@
-//body{
-//  background-color: #E5E5E5;
-//}
+body{
+  background-color: #E5E5E5;
+}
+
+.search_number{
+  background: #ffffff;
+  width: vw(380);
+  height: vw(374);
+  padding: vw(40) vw(30) vw(30) vw(30);
+  &__label{
+    margin-bottom: vw(21);
+  }
+  &__dates_wrap{
+    display: flex;
+    justify-content: space-between;
+  }
+}

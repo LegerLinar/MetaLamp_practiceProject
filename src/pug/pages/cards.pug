@@ -1,1 +1,7 @@
-input(id= 'air-datePicker' class="datepicker-here" data-position="right top")
+section.search_number
+	h1.search_number__label Найдем номера под ваши пожелания
+	div.search_number__dates_wrap
+		+formCommon('Прибытие', ['date', 'date_from'], '', 'dateDropdown', 'search_number__arriving_date')(placeholder='ДД.ММ.ГГГГ')
+		+formCommon('Выезд', ['date', 'date_to'], '', 'dateDropdown', 'search_number__departure_date')(placeholder='ДД.ММ.ГГГГ')
+	+dropdown('guests', 'search_number__guests_dropdown', 'гости', '', '', ['Взрослые', 'Дети','Младенцы'])(placeholder='Сколько гостей')
+	+buttonCommon('Подобрать номер', 'toAct', 'button-to-do')

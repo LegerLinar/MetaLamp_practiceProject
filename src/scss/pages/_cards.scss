@@ -2,16 +2,83 @@ body{
   background-color: #E5E5E5;
 }
 
+.cards_page{
+  display: flex;
+}
 .search_number{
   background: #ffffff;
   width: vw(380);
   height: vw(374);
   padding: vw(40) vw(30) vw(30) vw(30);
+  margin: vw(20);
   &__label{
     margin-bottom: vw(21);
   }
   &__dates_wrap{
     display: flex;
     justify-content: space-between;
+  }
+}
+
+.signup{
+  position: relative;
+  z-index: 1;
+  background-color: #ffffff;
+  width: vw(380);
+  height: vw(646);
+  padding: vw(40) vw(30) vw(30) vw(30);
+  margin: vw(20);
+  &__label{
+    margin-bottom: vw(21);
+  }
+  &__sex_radio{
+    margin-bottom: vw(19.56);
+  }
+  &__birthdate{
+    margin-bottom: vw(20);
+  }
+  &__toggle{
+    margin-top: vw(5);
+  }
+  &__button_to-do{
+    margin-top: vw(20);
+  }
+  &__login_wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: vw(30);
+  }
+}
+
+.roomCard{
+  position: relative;
+  z-index: 1;
+  background-color: #ffffff;
+  width: vw(380);
+  height: vw(646);
+  padding: vw(40) vw(30) vw(30) vw(30);
+  margin: vw(20);
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_number {
+      &_n, &_number, &_bonus {
+        display: inline;
+      }
+      &_bonus{
+        color: #{$Purple};
+      }
+    }
+    &_pricing{
+      &_price, &_per{
+        display: inline;
+      }
+      &_price{
+        color: #{$shade50};
+      }
+    }
+
   }
 }

@@ -32,16 +32,16 @@ div.first_row
 		section.form_elements_buttonCommon
 			h3 Buttons
 			div.form_elements_buttonCommon_wrapp
-				+buttonCommon('Click me', '', 'enable', 'button-purple')
-				+buttonCommon('Click me', '', 'disabled', 'button-purple')(disabled='disabled')
+				+buttonCommon('Click me', '', 'enable', ['button-purple'])
+				+buttonCommon('Click me', '', 'disabled', ['button-purple'])(disabled='disabled')
 			div.form_elements_buttonCommon_wrapp
-				+buttonCommon('Click me', '', 'button-transparent')
-				+buttonCommon('Click me', '', 'button-transparent')(disabled='disabled')
+				+buttonCommon('Click me', '', ['button-transparent'])
+				+buttonCommon('Click me', '', ['button-transparent'])(disabled='disabled')
 			div.form_elements_buttonCommon_wrapp
-				+buttonCommon('Click me', '', 'button-no-borders')
-				+buttonCommon('Click me', '', 'button-no-borders')(disabled='disabled')
+				+buttonCommon('Click me', '', ['button-no-borders'])
+				+buttonCommon('Click me', '', ['button-no-borders'])(disabled='disabled')
 			div.form_elements_buttonCommon_to-pay_wrapp
-				+buttonCommon('Перейти к оплате', 'toAct', 'button-to-do')
+				+buttonCommon('Перейти к оплате', 'toAct', ['button-to-do'])
 
 			section.form_elements_pagination
 				+pagination('pagination')

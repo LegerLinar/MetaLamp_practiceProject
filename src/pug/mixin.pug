@@ -74,18 +74,18 @@ mixin formCheckbox(legend, isExpandable, isExpanded, itemName, isRich, values)
 
 mixin formRadio(legend, itemName, ...values)
 	- var idForCheck = 1
-	form.radio
+	form.radio(class= itemName)
 		h3= legend
 		for value in values
-			input.radio__item(type= 'radio' name= itemName id=itemName + '_' + idForCheck class=itemName + '_' + idForCheck)
+			input.radio__item(type= 'radio' name= itemName id=itemName + '_' + idForCheck class=itemName + '_item')
 			label.radio__item_label(for=itemName + '_' + idForCheck++)= value
 
 mixin formToggle(value, mission, legend)
 	- var idForCheck = 1
-	form.toggle
+	form.toggle(class= mission)
 		if legend
 			h3= legend
-		input.toggle__item(type= 'checkbox' id=mission + '_' + idForCheck class= mission + '_' + idForCheck)
+		input.toggle__item(type= 'checkbox' id=mission + '_' + idForCheck class= mission + '_item')
 		label.toggle__item_label(for= mission + '_' + idForCheck++)= value
 
 
@@ -126,8 +126,8 @@ mixin rangeSlider(min, max, legend)
 
 
 
-mixin buttonCommon(label, isAction, ...classes)
-	div.buttonCommon
+mixin buttonCommon(label, isAction, classes, wrapClass)
+	div.buttonCommon(class= wrapClass)
 		button.buttonCommon__button(class= classes)&attributes(attributes)= label
 			if(isAction === 'toAct')
 				svg(width="18" height="17" viewBox="0 0 18 17" xmlns="http://www.w3.org/2000/svg")

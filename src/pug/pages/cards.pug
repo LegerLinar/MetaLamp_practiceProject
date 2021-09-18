@@ -6,7 +6,7 @@ div.cards_page
 				+formCommon('Прибытие', ['date', 'date_from'], '', 'dateDropdown', 'search_number__arriving_date')(placeholder='ДД.ММ.ГГГГ')
 				+formCommon('Выезд', ['date', 'date_to'], '', 'dateDropdown', 'search_number__departure_date')(placeholder='ДД.ММ.ГГГГ')
 			+dropdown('guests', 'search_number__guests_dropdown', 'гости', '', '', ['Взрослые', 'Дети','Младенцы'])(placeholder='Сколько гостей')
-			+buttonCommon('Подобрать номер', 'toAct', ['button-to-do'])
+			+buttonCommon('Подобрать номер', 'toAct', ['button-to-do'], ['search_number__button_to-do'])
 		section.signup
 			h1.signup__label Регистрация аккаунта
 			+formCommon('', ['textForm', 'textForm_signup'], '')(type='text' placeholder='Имя')
@@ -28,5 +28,31 @@ div.cards_page
 					h1.roomCard__label_number_number 888
 					p.roomCard__label_number_bonus люкс
 				div.roomCard__label_pricing
-					h3.roomCard__label_pricing_price 9 9990&#8381&nbsp
+					h3.roomCard__label_pricing_price 9 9990&#8381 &nbsp
 					span.roomCard__label_pricing_per в сутки
+			div.roomCard__dates_range
+				+formCommon('Прибытие', ['date', 'date_from'], '', 'dateDropdown', 'roomCard__arriving_date')(placeholder='ДД.ММ.ГГГГ')
+				+formCommon('Выезд', ['date', 'date_to'], '', 'dateDropdown', 'roomCard__departure_date')(placeholder='ДД.ММ.ГГГГ')
+			+dropdown('guests', 'roomCard__guests_dropdown', 'гости', '', '', ['Взрослые', 'Дети','Младенцы'])(placeholder='Сколько гостей')
+			section.roomCard__details
+				div.roomCard__details_per-days
+					p.roomCard__details_per-days-count 9 990&#8381 x 4 суток
+					p.roomCard__details_per-days-price 39 690&#8381
+				div.roomCard__details_fees_bonus
+					div.roomCard__details_fees_bonus_wrap
+						p.roomCard__details_fees_bonus-describe Сбор за услуги: скидка 2 179&#8381
+						span.roomCard__details_fees_bonus-info i
+					p.roomCard__details_fees_bonus-price 0&#8381
+				div.roomCard__details_fees
+					div.roomCard__details_fees_wrap
+						p.roomCard__details_fees-describe Сбор за дополнительные<br> услуги
+						span.roomCard__details_fees-info i
+					p.roomCard__details_fees-price 300&#8381
+
+
+
+				div.roomCard__details_total
+					h2.roomCard__details_total_item(class ='roomCard_total') Итого
+					div.roomCard__details_total_separator
+					h2.roomCard__details_total_item(class ='roomCard_total') 38 018&#8381
+			+buttonCommon('Забронировать', 'toAct', ['button-to-do'], ['roomCard__button_to-do'])

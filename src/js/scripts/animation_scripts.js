@@ -364,7 +364,10 @@ function rangeDateDropdown(uniqueId) {
 
   dateDropdown('search_number__arriving_date')
   dateDropdown('search_number__departure_date')
+  dateDropdown('roomCard__arriving_date')
+  dateDropdown('roomCard__departure_date')
   birthDateDropdown('signup_birthdate')
 
   dropDowner('search_number__guests_dropdown')
+  dropDowner('roomCard__guests_dropdown')
 })

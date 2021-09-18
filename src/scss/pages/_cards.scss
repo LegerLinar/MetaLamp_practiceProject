@@ -17,6 +17,13 @@ body{
   &__dates_wrap{
     display: flex;
     justify-content: space-between;
+
+  }
+  &__guests_dropdown{
+    margin-top: vw(20);
+  }
+  &__button_to-do{
+    margin-top: vw(30);
   }
 }
 
@@ -56,13 +63,14 @@ body{
   z-index: 1;
   background-color: #ffffff;
   width: vw(380);
-  height: vw(646);
+  height: vw(512);
   padding: vw(40) vw(30) vw(30) vw(30);
   margin: vw(20);
   &__label {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: vw(20);
     &_number {
       &_n, &_number, &_bonus {
         display: inline;
@@ -79,6 +87,55 @@ body{
         color: #{$shade50};
       }
     }
+  }
+  &__dates_range{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: vw(20);
+  }
+  &__guests_dropdown{
+    margin-bottom: vw(25.56);
+  }
+  &__details{
+    &_per-days, &_fees_bonus, &_fees{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: vw(20);
+    }
+    &_fees_bonus_wrap, &_fees_wrap{
+      display: flex;
+      justify-content: space-between;
+      width: vw(214);
+    }
+    &_fees_bonus-info, &_fees-info{
+      border-radius: 50%;
+      border: 1px solid #{$shade25};
+      width: vw(20);
+      height: vw(20);
+      text-align: center;
+    }
+
+    &_per-days-count, &_per-days-price, &_fees_bonus-describe, &_fees_bonus-info,
+    &_fees_bonus-price, &_fees-describe, &_fees-info, &_fees-price{
+      display: inline-block;
+    }
+    &_roomCard__details_fees-describe{
+      width: vw(214);
+    }
+    &_total{
+      margin-top: vw(30);
+      margin-bottom: vw(25);
+      &_separator{
+        content: '';
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
+        flex-grow: 1;
+      }
+      display: flex;
+      justify-content: space-between;
+    }
 
   }
+
+
 }

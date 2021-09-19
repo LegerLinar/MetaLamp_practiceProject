@@ -144,7 +144,7 @@
   flex: 1;
   font-family: 'Montserrat_Bold', sans-serif;
   text-align: center;
-  font-size: .8em; }
+  font-size: vw(12); }
 
 .datepicker--cell-day {
   width: 14.28571%; }
@@ -206,7 +206,7 @@
   font-family: 'Montserrat_Medium', sans-serif;
   color: #{$shade50};
   font-size: 14px;
-  width: 320px;
+  width: vw(320);
   position: absolute;
   left: -100000px;
   opacity: 0;
@@ -249,7 +249,7 @@
 
 .datepicker--content {
   box-sizing: content-box;
-  padding: 20px;
+  padding: vw(20);
   }
 .-only-timepicker- .datepicker--content {
   display: none; }
@@ -458,7 +458,7 @@
 
 .datepicker--time-label {
   display: none;
-  font-size: 12px; }
+  font-size: vw(12); }
 
 .datepicker--time-current {
   display: -webkit-flex;
@@ -470,7 +470,7 @@
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  font-size: 14px;
+  font-size: vw(14);
   text-align: center;
   margin: 0 0 0 10px; }
 
@@ -481,7 +481,7 @@
 .datepicker--time-current-hours,
 .datepicker--time-current-minutes {
   line-height: 1;
-  font-size: 19px;
+  font-size: vw(19);
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   position: relative;
   z-index: 1; }

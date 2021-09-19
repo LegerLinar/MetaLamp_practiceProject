@@ -19,7 +19,7 @@ div.cards_page
 			+buttonCommon('Перейти к оплате', 'toAct', ['button-to-do'], ['signup__button_to-do'])
 			div.signup__login_wrap
 				p.signup__login_ifExiste Уже есть аккаунт на Toxin
-				+buttonCommon('Войти', '', ['button-transparent'])
+				+buttonCommon('Войти', '', ['button-transparent', 'signup__button-transparent'])
 	div.second_column
 		section.roomCard
 			div.roomCard__label
@@ -48,11 +48,81 @@ div.cards_page
 						p.roomCard__details_fees-describe Сбор за дополнительные<br> услуги
 						span.roomCard__details_fees-info i
 					p.roomCard__details_fees-price 300&#8381
-
-
-
 				div.roomCard__details_total
 					h2.roomCard__details_total_item(class ='roomCard_total') Итого
 					div.roomCard__details_total_separator
 					h2.roomCard__details_total_item(class ='roomCard_total') 38 018&#8381
 			+buttonCommon('Забронировать', 'toAct', ['button-to-do'], ['roomCard__button_to-do'])
+		section.log-in
+			h1.log-in__label Войти
+			+formCommon('', ['textForm'], '')(type='email' placeholder='Email')
+			+formCommon('', ['textForm'], '', '', 'masked_text_example')(type='password' placeholder='Пароль')
+			+buttonCommon('войти', 'toAct', ['button-to-do'], ['log-in__button_to-do'])
+			div.log-in__signup_wrap
+				p.log-in__signup_text Нет аккаунта на Toxin?
+				+buttonCommon('Создать', '', ['button-transparent', 'log-in__button-transparent'])
+
+
+
+	div.third_row
+		section.card_date-field
+			+formCommon('', ['date'], '', '', 'card_date_field')
+		section.room-888
+			img(src='./images/pages_image/room-888.png')
+			div.room-888_general
+				div.room-888__label
+					div.room-888__label_number
+						h3.room-888__label_number_n №
+						h1.room-888__label_number_number 888
+						p.room-888__label_number_bonus люкс
+					div.room-888__label_pricing
+						h3.room-888__label_pricing_price 9 9990&#8381 &nbsp
+						span.room-888__label_pricing_per в сутки
+				hr.room-888_general_hr
+				div.room-888__rate
+					div.range-rate
+						div.range-rate_chunk(id='range-rate_chunk-1')
+							svg( width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
+								|<path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"/>
+								|<defs>
+								|<linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+								|<stop stop-color="#BC9CFF"/>
+								|<stop offset="1" stop-color="#8BA4F9"/>
+								|</linearGradient>
+								|</defs>
+						div.range-rate_chunk(id='range-rate_chunk-2')
+							svg( width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
+								| <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"/>
+								| <defs>
+								| <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+								| <stop stop-color="#BC9CFF"/>
+								| <stop offset="1" stop-color="#8BA4F9"/>
+								| </linearGradient>
+								| </defs>
+						div.range-rate_chunk(id='range-rate_chunk-3')
+							svg( width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
+								| <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"/>
+								| <defs>
+								| <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+								| <stop stop-color="#BC9CFF"/>
+								| <stop offset="1" stop-color="#8BA4F9"/>
+								| </linearGradient>
+								| </defs>
+						div.range-rate_chunk(id='range-rate_chunk-4')
+							svg( width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
+								| <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"/>
+								| <defs>
+								| <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+								| <stop stop-color="#BC9CFF"/>
+								| <stop offset="1" stop-color="#8BA4F9"/>
+								| </linearGradient>
+								| </defs>
+						div.range-rate_chunk(id='range-rate_chunk-5')
+							svg( width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
+								| <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"/>
+								| <defs>
+								| <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+								| <stop stop-color="#BC9CFF"/>
+								| <stop offset="1" stop-color="#8BA4F9"/>
+								| </linearGradient>
+								| </defs>

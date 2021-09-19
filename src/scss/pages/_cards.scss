@@ -134,8 +134,73 @@ body{
       display: flex;
       justify-content: space-between;
     }
-
   }
 
+}
 
+.log-in{
+  width: vw(380);
+  height: vw(358);
+  background-color: #ffffff;
+  padding: vw(40) vw(30) vw(30) vw(30);
+  margin: vw(20);
+  position: relative;
+  z-index: 1;
+  &__label{
+    margin-bottom: vw(20);
+  }
+  &__button_to-do{
+    margin: vw(20) 0 vw(30) 0;
+  }
+  &__signup_wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.card_date-field{
+  margin: vw(20);
+}
+
+.room-888{
+  img{
+    width: 100%;
+  }
+  width: vw(270);
+  margin: vw(20);
+  border-radius: 4px;
+  height: vw(257.5);
+  background-color: #ffffff;
+  &_general{
+    padding: vw(15) vw(15) vw(15) vw(15);
+    &_hr{
+      color: #{$shade10};
+      background-color: #{$shade10};
+      height: 1px;
+      border: none;
+    }
+  }
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: vw(10);
+    &_number {
+      &_n, &_number, &_bonus {
+        display: inline;
+      }
+      &_bonus{
+        color: #{$Purple};
+      }
+    }
+    &_pricing{
+      &_price, &_per{
+        display: inline;
+      }
+      &_price{
+        color: #{$shade50};
+      }
+    }
+
+  }
 }

@@ -900,6 +900,32 @@ li {
   }
 }
 
-.range-rate_chunk{
+.range-rate {
+  &_chunk {
+
+    position: relative;
+    display:  inline-block;
+
+    &_default {
+      //pointer-events: none;
+    }
+
+    &_colored {
+      display:        none;
+      //pointer-events: none;
+    }
+
+  }
+
+  .rated &_chunk_colored {
     display: inline-block;
+  }
+
+  .rated &_chunk_default {
+
+    display: none;
+  }
 }
+
+
+

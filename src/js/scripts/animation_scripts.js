@@ -4,53 +4,53 @@
 
 
 $(function () {
-  $(function() {
-
-    var container = $('.pagination');
-    var sources = function () {
-      var result = [];
-
-      for (var i = 1; i < 150; i++) {
-        result.push(i);
-      }
-
-      return result;
-    }();
-
-    var options = {
-      dataSource: sources,
-      showPrevious: false,
-      pageRange: 1,
-      nextText: '',
-      autoHidePrevious: true,
-      autoHideNext: true,
-      callback: function (response, pagination) {
-        window.console && console.log(response, pagination);
-
-        var dataHtml = '<ul>';
-
-        $.each(response, function (index, item) {
-          dataHtml += '<li>' + item + '</li>';
-        });
-
-        dataHtml += '</ul>';
-
-        container.prev().html(dataHtml);
-      }
-    };
-
-    //$.pagination(container, options);
-
-    container.addHook('beforeInit', function () {
-      window.console && console.log('beforeInit...');
-    });
-    container.pagination(options);
-
-    container.addHook('beforePageOnClick', function () {
-      window.console && console.log('beforePageOnClick...');
-      //return false
-    });
-  });
+  // $(function() {
+  //
+  //   var container = $('.pagination');
+  //   var sources = function () {
+  //     var result = [];
+  //
+  //     for (var i = 1; i < 150; i++) {
+  //       result.push(i);
+  //     }
+  //
+  //     return result;
+  //   }();
+  //
+  //   var options = {
+  //     dataSource: sources,
+  //     showPrevious: false,
+  //     pageRange: 1,
+  //     nextText: '',
+  //     autoHidePrevious: true,
+  //     autoHideNext: true,
+  //     callback: function (response, pagination) {
+  //       window.console && console.log(response, pagination);
+  //
+  //       var dataHtml = '<ul>';
+  //
+  //       $.each(response, function (index, item) {
+  //         dataHtml += '<li>' + item + '</li>';
+  //       });
+  //
+  //       dataHtml += '</ul>';
+  //
+  //       container.prev().html(dataHtml);
+  //     }
+  //   };
+  //
+  //   //$.pagination(container, options);
+  //
+  //   container.addHook('beforeInit', function () {
+  //     window.console && console.log('beforeInit...');
+  //   });
+  //   container.pagination(options);
+  //
+  //   container.addHook('beforePageOnClick', function () {
+  //     window.console && console.log('beforePageOnClick...');
+  //     //return false
+  //   });
+  // });
 
 
 //slideDown
@@ -379,6 +379,15 @@ function rangeDateDropdown(uniqueId) {
 
     })
   }
+
+  $('.range-rate_chunk').click(function (){
+    let currentRate = $(this).attr('id')
+    $('#'+ currentRate).addClass('rated')
+    $('#'+ currentRate).next().removeClass('rated')
+    $('#'+ currentRate).nextAll().removeClass('rated')
+    $('#'+ currentRate).prevAll().addClass('rated')
+
+  })
 
 //*[@id="date_example_2"]
 

@@ -379,7 +379,7 @@ function rangeDateDropdown(uniqueId) {
 
     })
   }
-
+// stars rate
   $('.range-rate_chunk').click(function (){
     let currentRate = $(this).attr('id')
     $('#'+ currentRate).addClass('rated')

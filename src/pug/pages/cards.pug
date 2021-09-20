@@ -80,6 +80,11 @@ div.cards_page
 						span.room-888__label_pricing_per в сутки
 				hr.room-888_general_hr
 				div.room-888__rate
-				+rangeRateQuerry('room-888_range-rate')
-				+rangeRateQuerry('room-888_range-rate2')
+				+rangeRateQuerry('room-888_range-rate', '4')
+
+
+- var n = 0;
+ul
+	while n < 4
+		li= n++
 

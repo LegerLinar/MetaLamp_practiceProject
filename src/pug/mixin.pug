@@ -110,93 +110,114 @@ mixin rangeRate(name)
 				input.rangeRate__item(type= 'radio' name= name id= 'chunk_' + name + '_' + item value= item)
 				label.rangeRate__item_label(for= 'chunk_' + name + '_' + item)
 
-mixin rangeRateQuerry(uniqueId)
+mixin rangeRateQuerry(uniqueId, rated)
+	- var n = 0
 	div.range-rate
-		div.range-rate_chunk(id=uniqueId + '_1')
-			svg(class= 'range-rate_chunk_default' width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
-				| <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"/>
-				| <defs>
-				| <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
-				| <stop stop-color="#BC9CFF"/>
-				| <stop offset="1" stop-color="#8BA4F9"/>
-				| </linearGradient>
-				| </defs>
-			svg(class= 'range-rate_chunk_colored' width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
-				| <path d="M10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25Z" fill="url(#paint0_linear)"/>
-				| <defs>
-				| <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
-				| <stop stop-color="#BC9CFF"/>
-				| <stop offset="1" stop-color="#8BA4F9"/>
-				| </linearGradient>
-				| </defs>
-		div.range-rate_chunk(id=uniqueId + '_2')
-			svg(class= 'range-rate_chunk_default' width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
-				| <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"/>
-				| <defs>
-				| <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
-				| <stop stop-color="#BC9CFF"/>
-				| <stop offset="1" stop-color="#8BA4F9"/>
-				| </linearGradient>
-				| </defs>
-			svg(class= 'range-rate_chunk_colored' width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
-				| <path d="M10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25Z" fill="url(#paint0_linear)"/>
-				| <defs>
-				| <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
-				| <stop stop-color="#BC9CFF"/>
-				| <stop offset="1" stop-color="#8BA4F9"/>
-				| </linearGradient>
-				| </defs>
-		div.range-rate_chunk(id=uniqueId + '_3')
-			svg(class= 'range-rate_chunk_default' width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
-				| <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"/>
-				| <defs>
-				| <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
-				| <stop stop-color="#BC9CFF"/>
-				| <stop offset="1" stop-color="#8BA4F9"/>
-				| </linearGradient>
-				| </defs>
-			svg(class= ['range-rate_chunk_colored'] width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
-				| <path d="M10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25Z" fill="url(#paint0_linear)"/>
-				| <defs>
-				| <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
-				| <stop stop-color="#BC9CFF"/>
-				| <stop offset="1" stop-color="#8BA4F9"/>
-				| </linearGradient>
-				| </defs>
-		div.range-rate_chunk(id=uniqueId + '_4')
-			svg(class= 'range-rate_chunk_default' width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
-				| <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"/>
-				| <defs>
-				| <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
-				| <stop stop-color="#BC9CFF"/>
-				| <stop offset="1" stop-color="#8BA4F9"/>
-				| </linearGradient>
-				| </defs>
-			svg(class= 'range-rate_chunk_colored' width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
-				| <path d="M10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25Z" fill="url(#paint0_linear)"/>
-				| <defs>
-				| <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
-				| <stop stop-color="#BC9CFF"/>
-				| <stop offset="1" stop-color="#8BA4F9"/>
-				| </linearGradient>
-				| </defs>
-		div.range-rate_chunk(id=uniqueId + '_5')
-			svg(class= 'range-rate_chunk_default' width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
-				| <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"/>
-				| <defs>
-				| <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
-				| <stop stop-color="#BC9CFF"/>
-				| <stop offset="1" stop-color="#8BA4F9"/>
-				| </linearGradient>
-				| </defs>
-			svg(class= 'range-rate_chunk_colored' width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
-				| <path d="M10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25Z" fill="url(#paint0_linear)"/>
-				| <defs>
-				| <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
-				| <stop stop-color="#BC9CFF"/>
-				| <stop offset="1" stop-color="#8BA4F9"/>
-				| </linearGradient>
-				| </defs>
+		while n < 5
+			if rated > 0
+				div.range-rate_chunk(class= ['rated', rated--] id=uniqueId + n++)
+					svg(class= 'range-rate_chunk_default' width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
+						| <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"/>
+						| <defs>
+						| <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+						| <stop stop-color="#BC9CFF"/>
+						| <stop offset="1" stop-color="#8BA4F9"/>
+						| </linearGradient>
+						| </defs>
+					svg(class= 'range-rate_chunk_colored' width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
+						| <path d="M10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25Z" fill="url(#paint0_linear)"/>
+						| <defs>
+						| <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+						| <stop stop-color="#BC9CFF"/>
+						| <stop offset="1" stop-color="#8BA4F9"/>
+						| </linearGradient>
+						| </defs>
+			else
+				div.range-rate_chunk(id=uniqueId + n++)
+					svg(class= 'range-rate_chunk_default' width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
+						| <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"/>
+						| <defs>
+						| <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+						| <stop stop-color="#BC9CFF"/>
+						| <stop offset="1" stop-color="#8BA4F9"/>
+						| </linearGradient>
+						| </defs>
+					svg(class= 'range-rate_chunk_colored' width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
+						| <path d="M10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25Z" fill="url(#paint0_linear)"/>
+						| <defs>
+						| <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+						| <stop stop-color="#BC9CFF"/>
+						| <stop offset="1" stop-color="#8BA4F9"/>
+						| </linearGradient>
+						| </defs>
+		//div.range-rate_chunk(id=uniqueId + '_2')
+		//	svg(class= 'range-rate_chunk_default' width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
+		//		| <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"/>
+		//		| <defs>
+		//		| <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+		//		| <stop stop-color="#BC9CFF"/>
+		//		| <stop offset="1" stop-color="#8BA4F9"/>
+		//		| </linearGradient>
+		//		| </defs>
+		//	svg(class= 'range-rate_chunk_colored' width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
+		//		| <path d="M10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25Z" fill="url(#paint0_linear)"/>
+		//		| <defs>
+		//		| <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+		//		| <stop stop-color="#BC9CFF"/>
+		//		| <stop offset="1" stop-color="#8BA4F9"/>
+		//		| </linearGradient>
+		//		| </defs>
+		//div.range-rate_chunk(id=uniqueId + '_3')
+		//	svg(class= 'range-rate_chunk_default' width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
+		//		| <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"/>
+		//		| <defs>
+		//		| <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+		//		| <stop stop-color="#BC9CFF"/>
+		//		| <stop offset="1" stop-color="#8BA4F9"/>
+		//		| </linearGradient>
+		//		| </defs>
+		//	svg(class= ['range-rate_chunk_colored'] width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
+		//		| <path d="M10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25Z" fill="url(#paint0_linear)"/>
+		//		| <defs>
+		//		| <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+		//		| <stop stop-color="#BC9CFF"/>
+		//		| <stop offset="1" stop-color="#8BA4F9"/>
+		//		| </linearGradient>
+		//		| </defs>
+		//div.range-rate_chunk(id=uniqueId + '_4')
+		//	svg(class= 'range-rate_chunk_default' width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
+		//		| <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"/>
+		//		| <defs>
+		//		| <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+		//		| <stop stop-color="#BC9CFF"/>
+		//		| <stop offset="1" stop-color="#8BA4F9"/>
+		//		| </linearGradient>
+		//		| </defs>
+		//	svg(class= 'range-rate_chunk_colored' width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
+		//		| <path d="M10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25Z" fill="url(#paint0_linear)"/>
+		//		| <defs>
+		//		| <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+		//		| <stop stop-color="#BC9CFF"/>
+		//		| <stop offset="1" stop-color="#8BA4F9"/>
+		//		| </linearGradient>
+		//		| </defs>
+		//div.range-rate_chunk(id=uniqueId + '_5')
+		//	svg(class= 'range-rate_chunk_default' width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
+		//		| <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"/>
+		//		| <defs>
+		//		| <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+		//		| <stop stop-color="#BC9CFF"/>
+		//		| <stop offset="1" stop-color="#8BA4F9"/>
+		//		| </linearGradient>
+		//		| </defs>
+		//	svg(class= 'range-rate_chunk_colored' width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg")
+		//		| <path d="M10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25Z" fill="url(#paint0_linear)"/>
+		//		| <defs>
+		//		| <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+		//		| <stop stop-color="#BC9CFF"/>
+		//		| <stop offset="1" stop-color="#8BA4F9"/>
+		//		| </linearGradient>
+		//		| </defs>
 
 mixin rangeSlider(min, max, legend)
 	- var rangeDif = max/1.5

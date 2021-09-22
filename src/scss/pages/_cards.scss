@@ -162,7 +162,7 @@ body{
   margin: vw(20);
 }
 
-.room-888{
+.room-card{
   img{
     width: 100%;
   }
@@ -172,7 +172,7 @@ body{
   height: vw(257.5);
   background-color: #ffffff;
   &_general{
-    padding: vw(15) vw(15) vw(15) vw(15);
+    padding: vw(15) vw(10) vw(20) vw(20);
     &_hr{
       color: #{$shade10};
       background-color: #{$shade10};
@@ -199,8 +199,27 @@ body{
       }
       &_price{
         color: #{$shade50};
+        font-size: vw(14);
+      }
+      &_per{
+        text-transform: none;
       }
     }
-
   }
+  &__rate{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: vw(10);
+    &_reviews{
+     &_count, &_review{
+       display: inline;
+     }
+      &_count{
+        color: #{$shade50};
+        font-size: vw(14);
+      }
+    }
+  }
+
 }

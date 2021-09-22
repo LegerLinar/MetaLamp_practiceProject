@@ -363,7 +363,7 @@ li {
     &:checked + &_label::before{
       border: 1px solid #{#BC9CFF};
 
-      background: url('../images/circle_calored.svg') no-repeat vw(28) 50%;
+      background: url('../images/circle_calored.svg') no-repeat vw(26) 50%;
     }
     &:not(:checked) + &_label:hover::before{
       border-color:     #6FCF97;
@@ -371,7 +371,7 @@ li {
     }
     &:checked + &_label:hover::before{
       border-color:     #E9967A;
-      background: url('../images/circle_red.svg') no-repeat vw(28) 50%;
+      background: url('../images/circle_red.svg') no-repeat vw(26) 50%;
     }
   }
 }

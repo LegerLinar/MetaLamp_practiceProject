@@ -506,13 +506,13 @@ function rangeDateDropdown(uniqueId) {
 //   dateDropdown('search_number__arriving_date_main')
 //   dateDropdown('search_number__departure_date_main')
 //   rangeDateDropdown('search_number__arriving_date_main')
-  // doubleFormDateDropdown('search_number__arriving_date_main')
+  doubleFormDateDropdown('search_number__arriving_date_main')
   doubleFormDateDropdown('search_number__arriving_date_main', 'search_number__departure_date_main')
   dateDropdown('roomCard__arriving_date')
   dateDropdown('roomCard__departure_date')
   birthDateDropdown('signup_birthdate')
 
-  dropDowner('search_number__guests_dropdown')
+  dropDowner('search_number__guests_dropdown_main')
   dropDowner('roomCard__guests_dropdown')
   inlineDateDropdown('card_date_field')
 

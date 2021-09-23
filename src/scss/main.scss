@@ -2,10 +2,10 @@
 @import 'vars';
 @import 'mixins';
 @import 'fonts';
-//@import 'pages/form_elements';
-@import 'pages/cards';
+@import 'ui-kit/form_elements';
+@import 'ui-kit/cards';
 @import 'blocks/datepicker';
-//@import 'pages/colors_types';
+@import 'ui-kit/colors_types';
 *{
   box-sizing: border-box;
 }

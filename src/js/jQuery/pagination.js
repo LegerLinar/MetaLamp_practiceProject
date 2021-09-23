@@ -140,7 +140,7 @@
         return el;
       },
 
-      // Generate HTML of the pages
+      // Generate HTML of the ui-kit
       generatePageNumbersHTML: function(args) {
         var self = this;
         var currentPage = args.currentPage;
@@ -157,7 +157,7 @@
         var activeClassName = attributes.activeClassName;
         var disableClassName = attributes.disableClassName;
 
-        // Disable page range, display all the pages
+        // Disable page range, display all the ui-kit
         if (attributes.pageRange === null) {
           for (i = 1; i <= totalPage; i++) {
             if (i == currentPage) {
@@ -257,7 +257,7 @@
         }
 
         if (showPrevious || showPageNumbers || showNext) {
-          html += '<div class="paginationjs-pages">';
+          html += '<div class="paginationjs-ui-kit">';
 
           if (ulClassName) {
             html += '<ul class="' + ulClassName + '">';
@@ -276,7 +276,7 @@
             }
           }
 
-          // Whether to display the pages
+          // Whether to display the ui-kit
           if (showPageNumbers) {
             html += self.generatePageNumbersHTML(args);
           }
@@ -907,7 +907,7 @@
     // entries of per page
     pageSize: 10,
 
-    // Page range (pages on both sides of the current page)
+    // Page range (ui-kit on both sides of the current page)
     pageRange: 2,
 
     // Whether to display the 'Previous' button

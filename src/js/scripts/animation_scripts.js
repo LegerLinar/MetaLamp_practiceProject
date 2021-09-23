@@ -503,17 +503,16 @@ function rangeDateDropdown(uniqueId) {
 //   dateDropdown('date_example_2')
 //   rangeDateDropdown('date-filter_example')
 //-----------------------CARDS-----------------------------
-//   dateDropdown('search_number__arriving_date_main')
-//   dateDropdown('search_number__departure_date_main')
-//   rangeDateDropdown('search_number__arriving_date_main')
-  doubleFormDateDropdown('search_number__arriving_date_main')
-  doubleFormDateDropdown('search_number__arriving_date_main', 'search_number__departure_date_main')
-  dateDropdown('roomCard__arriving_date')
-  dateDropdown('roomCard__departure_date')
-  birthDateDropdown('signup_birthdate')
+//   doubleFormDateDropdown('search_number__arriving_date_main')
+//   doubleFormDateDropdown('search_number__arriving_date_main', 'search_number__departure_date_main')
+//   dateDropdown('roomCard__arriving_date')
+//   dateDropdown('roomCard__departure_date')
+//   birthDateDropdown('signup_birthdate')
+//
+//   dropDowner('search_number__guests_dropdown_main')
+//   dropDowner('roomCard__guests_dropdown')
+//   inlineDateDropdown('card_date_field')
 
-  dropDowner('search_number__guests_dropdown_main')
-  dropDowner('roomCard__guests_dropdown')
-  inlineDateDropdown('card_date_field')
 
+  //----------------- Headers & Footers block ----------------------------------------------
 })

@@ -493,6 +493,7 @@ function rangeDateDropdown(uniqueId) {
 //   dropDowner('guestsDefault');
 //
 //   checkboxDropDowner('checkbox_expandable')
+//   checkboxDropDowner('checkbox_expandable')
 //   checkboxDropDowner('checkbox_expanded')
 //
 //   likeButton('like_def')

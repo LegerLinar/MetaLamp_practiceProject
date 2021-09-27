@@ -6,6 +6,7 @@
 @import 'ui-kit/cards';
 @import 'blocks/datepicker';
 @import 'ui-kit/colors_types';
+@import 'ui-kit/headers&footers';
 *{
   box-sizing: border-box;
 }
@@ -45,9 +46,9 @@ body{
   font-family: 'Montserrat_Medium', sans-serif;
   //color: #{$shade75};
   font-size: vw(14);
-  padding-top: vw(30);
-  padding-left: vw(30);
-  padding-right: vw(30);
+  //padding-top: vw(30);
+  //padding-left: vw(30);
+  //padding-right: vw(30);
   margin: 0;
 }
 p{
@@ -72,7 +73,7 @@ h2{
   margin: 0;
 }
 h3{
-  font-family: 'Montserrat_Bold', sans-serif;
+  font-family: 'Montserrat_Medium', sans-serif;
   color: #{$shade100};
   font-size: vw(12);
   text-transform: uppercase;
@@ -552,12 +553,13 @@ li {
   &__button {
     cursor: pointer;
     position:       relative;
-    width:          vw(97);
-    height:         vw(42);
+    min-width:          vw(97);
+    padding: vw(9) vw(20);
+    //height:         vw(42);
     border-radius:  22px;
     border:         none;
-    font-family:    'Montserrat_Bold', sans-serif;
-    font-size:      vw(12);
+    font-family:    'Montserrat_Light', sans-serif;
+    font-size:      12px;
     text-transform: uppercase;
     line-height:    vw(14.63);
     font-weight:    700;
@@ -576,12 +578,14 @@ li {
 }
 
 .button-purple {
+  .buttonCommon__button {
+    background: linear-gradient(#BC9CFF, #8BA4F9);
+    color:      #FFFFFF;
 
-  background: linear-gradient(#BC9CFF, #8BA4F9);
-  color:      #FFFFFF;
-  &:hover{
-    background: rgba(255, 255, 255, 1);
-    color: #BC9CFF;
+    &:hover {
+      background: rgba(255, 255, 255, 1);
+      color:      #BC9CFF;
+    }
   }
 }
 
@@ -730,6 +734,7 @@ li {
 }
 
 .dropdown{
+
   &_guests {
 
     width: vw(320);

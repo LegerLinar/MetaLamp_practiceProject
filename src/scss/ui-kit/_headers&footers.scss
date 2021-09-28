@@ -9,52 +9,111 @@ body{
 }
 .blocks-separator{
   margin: 150px 0;
+  padding: 0;
+
 }
 .header-initial{
   z-index: 1;
+  position: relative;
+
   background-color: #ffffff;
   height: vw(70);
   width: 100%;
+  padding: 0 vw(140);
   display: flex;
 
-  align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  &__elements{
+    display: flex;
+    align-items: center;
+  }
   &__logo_wrap{
     display: flex;
     align-items: center;
+
     .logo-purple{
       margin-right: 12px;
     }
   }
-  &__buttons{
-    display: flex;
+  .header-initial__buttons_enter{
+      margin-right: vw(20);
+    }
+
+  &__nav{
+  margin-right: vw(20);
+
+    &__element {
+      cursor:  pointer;
+      display: inline;
+      margin:  0 10px;
+      color:   #{$shade50};
+      &:first-child{
+        color: #{$shade75};
+        cursor: auto;
+        font-family: Montserrat_Bold, sans-serif;
+      }
+      &:hover {
+        color: #{$shade75};
+      }
+    }
   }
-  &__nav__element{
-    display: inline;
-  }
+
 
 }
 
 
-.header-logged{
-  z-index: 1;
+.header-logged {
+  z-index:          1;
   background-color: #ffffff;
-  height: vw(70);
-  width: 100%;
-  display: flex;
+  height:           vw(70);
+  width:            100%;
+  display:          flex;
+  padding:          0 vw(140);
+  justify-content:  space-between;
 
-  align-items: center;
-  justify-content: space-around;
-  &__logo_wrap{
-    display: flex;
+  align-items:      center;
+
+  &__logo_wrap {
+    display:     flex;
     align-items: center;
-    .logo-purple{
+
+    .logo-purple {
       margin-right: 12px;
     }
 
   }
-  &__nav__element{
-    display: inline;
+
+  &__elements {
+    display: flex;
+    align-items: center;
+  }
+
+
+  &__nav {
+    &__element {
+      display: inline;
+      cursor:  pointer;
+      margin:  0 10px;
+      color:   #{$shade50};
+      &:first-child{
+        color: #{$shade75};
+        cursor: auto;
+        font-family: Montserrat_Bold, sans-serif;
+      }
+      &:hover {
+        color: #{$shade75};
+      }
+    }
+  }
+&__separator{
+  width: 1px;
+  height: vw(30);
+  background-color: #{$shade10};
+  margin: 0 10px;
+}
+  &__user{
+    color: #{$shade50};
+    margin: 0 10px;
   }
 }
 
@@ -62,17 +121,110 @@ body{
   background-color: #ffffff;
   height: vw(443);
   width: 100%;
-  //display: flex;
+
   &__first-row{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding: vw(104) vw(140) vw(100) vw(140);
   }
   &__second-row{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: vw(5) vw(140);
+  }
+  &__logos-info {
+    color: #{$shade75};
+    font-family: Montserrat_Medium, sans-serif;
+    line-height: vw(24);
+
+    &__logo_wrap {
+      display:     flex;
+      align-items: center;
+      margin-bottom: vw(20);
+      .logo-purple {
+        margin-right: 12px;
+      }
+    }
+  }
+  &__nav{
+    margin-right: vw(100);
+    &__element{
+      cursor:  pointer;
+        margin-top: vw(20);
+      color:   #{$shade50};
+      &:first-child{
+        color: #{$shade75};
+        cursor: auto;
+        font-family: Montserrat_Bold, sans-serif;
+      }
+      &:hover {
+        color: #{$shade75};
+      }
+    }
+
+  }
+  &__about-us{
+    margin-right: vw(100);
+  &__element {
+      cursor:  pointer;
+      margin-top: vw(20);
+      color:   #{$shade50};
+      &:first-child{
+        color: #{$shade75};
+        cursor: auto;
+        font-family: Montserrat_Bold, sans-serif;
+      }
+      &:hover {
+        color: #{$shade75};
+      }
+    }
+  }
+  &__support{
+    margin-right: vw(100);
+  &__element {
+      cursor:  pointer;
+      margin-top: vw(20);
+      color:   #{$shade50};
+      &:first-child{
+        color: #{$shade75};
+        cursor: auto;
+        font-family: Montserrat_Bold, sans-serif;
+      }
+      &:hover {
+        color: #{$shade75};
+      }
+    }
+  }
+  &__subscribe{
+    margin-right: vw(50);
+      &__element {
+
+      cursor:  pointer;
+          margin-top: vw(20);
+      color:   #{$shade50};
+      &:first-child{
+        color: #{$shade75};
+        cursor: auto;
+        font-family: Montserrat_Bold, sans-serif;
+      }
+      &:hover {
+        color: #{$shade75};
+      }
+    }
+  }
+
+  &__socials{
+    &__item{
+      margin: 0 vw(10);
+    }
   }
 }
 
+.footer-mobile_wrap{
+  display: flex;
+  justify-content: center;
+}
 .footer-mobile{
   background-color: #ffffff;
   height: vw(367);
@@ -81,4 +233,13 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  &__copyright{
+    margin: vw(20) 0;
+    color: #{$shade75};
+  }
+  &__socials{
+    &__item{
+      margin: 0 vw(10);
+    }
+  }
 }

@@ -429,13 +429,15 @@ function rangeDateDropdown(uniqueId) {
       $(`#more_` + endId).css('display', 'block')
 
     })
-
-
-
-
   }
 
+function expanderSimple(uniqueId){
+  $(`#expanders-independent`+ uniqueId).parent().click(function (){
+    $(`#expander__more_`+ uniqueId).toggle()
+    $(`#expander__less_`+ uniqueId).toggle()
 
+  })
+}
 
   function inlineDateDropdown(uniqueId) {
     let myDatePicker = $(`#common_form_input_`+uniqueId).datepicker({
@@ -484,6 +486,7 @@ function rangeDateDropdown(uniqueId) {
 
   })
 
+
 //*[@id="date_example_2"]
 
 //--------------------forms_elements scripts----------------------------------------------------------
@@ -516,4 +519,11 @@ function rangeDateDropdown(uniqueId) {
 
 
   //----------------- Headers & Footers block ----------------------------------------------
+
+expanderSimple('header-initial-services')
+expanderSimple('header-initial-agreements')
+expanderSimple('header-logged-services')
+expanderSimple('header-logged-agreements')
+
+
 })

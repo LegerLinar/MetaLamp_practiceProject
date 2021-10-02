@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack')
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -13,6 +14,9 @@ const isProd = !isDev;
 
 const filename = (ext) => isDev ? `[name].${ext}` : `[name].[hash].${ext}`;
 const dirname = () => isDev ? `development/bundle` : `production/bundle.production[hash]`
+
+
+
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -35,7 +39,7 @@ module.exports = {
   plugins: [
     new HTMLWebpackPlugin({
       template: path.resolve(__dirname, 'src/index.pug'),
-      filename: `${filename('html')}`,
+      filename: `index.html`,
       minify: {
         collapseWhitespace: isProd,
       }
@@ -47,12 +51,19 @@ module.exports = {
     // new CopyWebpackPlugin({
     //   patterns: [
     //     {
-    //       from: path.resolve(__dirname, 'src/assets'),
-    //       to: path.resolve(__dirname, 'app')
+    //       from: path.resolve(__dirname, 'src/images'),
+    //       to: path.resolve(__dirname, 'images')
     //     }
     //   ]
     // })
+    new webpack.ProvidePlugin({
+      $: "jquery/dist/jquery.min.js",
+      jQuery: "jquery/dist/jquery.min.js",
+      "window.jQuery": "jquery/dist/jquery.min.js"
+    })
   ],
+
+  devtool: isProd ? false : 'source-map',
   module: {
     rules: [
       {
@@ -98,6 +109,15 @@ module.exports = {
           filename: 'images/[name][ext][query]'
         }
       },
+      // { // loader of files больше не нужен после webpack 5.0
+      //   test: /\.js/,
+      //   exclude: /node_modules/,
+      //   use: ['babel-loader'],
+      //   type: 'asset/resource',
+      //   generator: {
+      //     filename: 'images/[name][ext][query]'
+      //   }
+      // },
       { // loader of files больше не нужен после webpack 5.0
         test: /\.(?:|woff2)$/,
         type: 'asset/resource',

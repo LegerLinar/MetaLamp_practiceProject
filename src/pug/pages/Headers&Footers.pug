@@ -12,8 +12,9 @@ div(class='blocks-separator__header-initial')
 				li.header-initial__nav__element(class=['header_nav__element_news']) Новости
 				li.header-initial__nav__element(class=['header_nav__element_agreements']) Соглашения
 					+expander_vidget('header-initial-agreements')
-			+buttonCommon('Войти', '', ['button-transparent', 'header-initial__buttons_enter'])
-			+buttonCommon('Зарегестрироваться', '', '', ['button-purple', 'header-initial__buttons_sign-in'])
+			div.header-initial__buttons_wrap
+				+buttonCommon('Войти', '', ['button-transparent', 'header-initial__buttons_enter'])
+				+buttonCommon('Зарегестрироваться', '', '', ['button-purple', 'header-initial__buttons_sign-in'])
 div(class='blocks-separator__header-logged')
 	header.header-logged
 		div.header-logged__logo_wrap
@@ -37,7 +38,7 @@ div(class='blocks-separator__footer-expanded')
 				div.footer-expanded__logos-info__logo_wrap
 					+logoColored()
 					+toxinLogo()
-				p.footer-expanded__logos-title Бронироваение номеров в лучшем<br>отеле 2019 года по версии<br> ассоциации «Отельные взгляды»
+				p.footer-expanded__logos-info__title Бронироваение номеров в лучшем<br>отеле 2019 года по версии<br> ассоциации «Отельные взгляды»
 			ul.footer-expanded__nav
 				li.footer-expanded__nav__element Навигация
 				li.footer-expanded__nav__element <a>О нас</a>
@@ -60,7 +61,7 @@ div(class='blocks-separator__footer-expanded')
 				li.footer-expanded__subscribe__element <a>Получайте специальные<br> предложения и новости сервиса</a>
 				li.footer-expanded__subscribe__element
 					+formCommon('', ['emailInput', 'subscribe_form', 'subscribe_form_footer'], '', 'subscribe')(type='text' placeholder='Email')
-		hr
+		hr.footer-expanded__separator
 		div.footer-expanded__second-row
 			p.footer-expanded__copyright Copyright © 2018 Toxin отель. Все права защищены.
 			div.footer-expanded__socials

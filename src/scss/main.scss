@@ -85,6 +85,11 @@ p{
   margin: 0;
 }
 
+hr{
+  margin: 0;
+  padding: 0;
+}
+
 span{
   color: #{$shade50};
   font-family: Montserrat_Thin, sans-serif;
@@ -551,16 +556,13 @@ li {
 .buttonCommon{
   &__button {
     cursor: pointer;
-    position:       relative;
-    min-width:          vw(97);
-    padding: vw(9) vw(20);
-    //height:         vw(42);
+    padding: vw(8) vw(19);
     border-radius:  22px;
     border:         none;
-    font-family:    'Montserrat_Light', sans-serif;
-    font-size:      12px;
+    font-family:    'Montserrat_Medium', sans-serif;
+    font-size:      vw(12);
     text-transform: uppercase;
-    line-height:    vw(14.63);
+    //line-height:    vw(14.63);
     font-weight:    700;
     margin:         0;
     &:disabled{
@@ -580,6 +582,7 @@ li {
   .buttonCommon__button {
     background: linear-gradient(#BC9CFF, #8BA4F9);
     color:      #FFFFFF;
+    padding: vw(10) vw(22);
 
     &:hover {
       background: rgba(255, 255, 255, 1);
@@ -590,10 +593,11 @@ li {
 }
 
 .button-transparent{
+  margin-top: 1px;
   background: white;
   color: #BC9CFF;
   position: relative;
-  
+
   &:hover{
     background: linear-gradient(#BC9CFF, #8BA4F9);
     color: #FFFFFF;

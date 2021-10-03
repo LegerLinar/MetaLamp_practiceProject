@@ -46,6 +46,7 @@ body{
   }
   .header-initial__buttons_enter{
       margin-right: vw(20);
+
     }
 
   &__nav{
@@ -54,7 +55,7 @@ body{
     &__element {
       cursor:  pointer;
       display: inline;
-      margin:  0 10px;
+      margin:  0 8.5px;
       color:   #{$shade50};
       &:first-child{
         color: #{$shade75};
@@ -64,9 +65,15 @@ body{
       &:hover {
         color: #{$shade75};
       }
+      &:last-child{
+        margin-right: 7px;
+      }
     }
   }
-
+  &__buttons_wrap{
+    display: flex;
+    margin-right: 4px;
+  }
 
 }
 
@@ -102,7 +109,7 @@ body{
     &__element {
       display: inline;
       cursor:  pointer;
-      margin:  0 10px;
+      margin:  0 8.5px;
       color:   #{$shade50};
       &:first-child{
         color: #{$shade75};
@@ -137,6 +144,9 @@ body{
     align-items: flex-start;
     padding: vw(82) vw(140) vw(100) vw(140);
   }
+  &__separator{
+    margin-bottom: 17px;
+  }
   &__second-row{
     display: flex;
     justify-content: space-between;
@@ -147,18 +157,22 @@ body{
     color: #{$shade75};
     font-family: Montserrat_Medium, sans-serif;
     line-height: vw(24);
-
+    margin-right: vw(35);
     &__logo_wrap {
-      display:     flex;
+      display: flex;
       align-items: center;
+      margin-top: vw(15);
       margin-bottom: vw(20);
       .logo-purple {
         margin-right: 12px;
       }
     }
+    &__title{
+      white-space: nowrap;
+    }
   }
   &__nav{
-    margin-right: vw(100);
+    margin-right: vw(55);
     &__element{
       cursor:  pointer;
         margin-top: vw(20);
@@ -175,7 +189,7 @@ body{
 
   }
   &__about-us{
-    margin-right: vw(100);
+    margin-right: vw(92);
   &__element {
       cursor:  pointer;
       margin-top: vw(20);
@@ -191,7 +205,7 @@ body{
     }
   }
   &__support{
-    margin-right: vw(100);
+    margin-right: vw(43);
   &__element {
       cursor:  pointer;
       margin-top: vw(20);
@@ -207,7 +221,7 @@ body{
     }
   }
   &__subscribe{
-    margin-right: vw(50);
+    //margin-right: vw(50);
       &__element {
 
       cursor:  pointer;
@@ -226,7 +240,10 @@ body{
 
   &__socials{
     &__item{
-      margin: 0 vw(10);
+      margin-left: 18px;
+      &:first-child{
+        margin-left: 28px;
+      }
     }
   }
 }
@@ -243,6 +260,13 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  &__logos-info{
+    display: flex;
+    align-items: center;
+    .logo-purple {
+      margin-right: 12px;
+    }
+  }
   &__copyright{
     margin: vw(20) 0;
     color: #{$shade75};
@@ -250,6 +274,7 @@ body{
   &__socials{
     &__item{
       margin: 0 vw(10);
+
     }
   }
 }

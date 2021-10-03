@@ -1,4 +1,4 @@
-div(class='blocks-separator')
+div(class='blocks-separator__header-initial')
 	header.header-initial
 		div.header-initial__logo_wrap
 			+logoColored()
@@ -14,7 +14,7 @@ div(class='blocks-separator')
 					+expander_vidget('header-initial-agreements')
 			+buttonCommon('Войти', '', ['button-transparent', 'header-initial__buttons_enter'])
 			+buttonCommon('Зарегестрироваться', '', '', ['button-purple', 'header-initial__buttons_sign-in'])
-div(class='blocks-separator')
+div(class='blocks-separator__header-logged')
 	header.header-logged
 		div.header-logged__logo_wrap
 			+logoColored()
@@ -30,7 +30,7 @@ div(class='blocks-separator')
 					+expander_vidget('header-logged-agreements')
 			div.header-logged__separator
 			p.header-logged__user Юлий цезарь
-div(class='blocks-separator')
+div(class='blocks-separator__footer-expanded')
 	footer.footer-expanded
 		div.footer-expanded__first-row
 			div.footer-expanded__logos-info
@@ -88,7 +88,7 @@ div(class='blocks-separator')
 				|<stop offset="1" stop-color="#8BA4F9"/>
 				|</linearGradient>
 				|</defs>
-div.footer-mobile_wrap(class='blocks-separator')
+div.footer-mobile_wrap(class='blocks-separator__footer-mobile')
 	footer.footer-mobile
 		div.footer-mobile__logos-info
 			+logoColored()

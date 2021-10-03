@@ -8,9 +8,18 @@ body{
   margin-left: vw(30);
 }
 .blocks-separator{
-  margin: 80px 0;
-  padding: 0;
-
+  &__header-initial {
+    margin-top: 60px;
+  }
+  &__header-logged{
+    margin-top: 37px;
+  }
+  &__footer-expanded{
+    margin-top: 41px;
+  }
+  &__footer-mobile{
+    margin-top: 42px;
+  }
 }
 .header-initial{
   z-index: 1;
@@ -124,8 +133,9 @@ body{
 
   &__first-row{
     display: flex;
-    justify-content: space-between;
-    padding: vw(104) vw(140) vw(100) vw(140);
+    //justify-content: space-between;
+    align-items: flex-start;
+    padding: vw(82) vw(140) vw(100) vw(140);
   }
   &__second-row{
     display: flex;

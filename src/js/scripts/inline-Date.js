@@ -1,4 +1,3 @@
-$(function (){
   function inlineDateDropdown(uniqueId) {
     let myDatePicker = $(`#common_form_input_`+uniqueId).datepicker({
       toggleSelect: false,
@@ -45,4 +44,4 @@ $(function (){
     $('#'+ currentRate).prevAll().addClass('rated')
 
   })
-})
+export { inlineDateDropdown }

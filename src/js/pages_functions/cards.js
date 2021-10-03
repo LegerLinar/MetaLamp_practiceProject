@@ -3,6 +3,7 @@ import {dateDropdown} from '../scripts/date-dropdown';
 import {birthDateDropdown} from '../scripts/birthDateDropdown';
 import {dropDowner} from '../scripts/dropdowner';
 import {inlineDateDropdown} from '../scripts/inline-Date';
+import {rangeStarsRate} from '../scripts/range-rate';
 
 $(function (){
 // doubleFormDateDropdown('search_number__arriving_date_main')
@@ -12,5 +13,6 @@ birthDateDropdown('signup_birthdate_main')
 
 dropDowner('search_number__guests_dropdown_main')
 dropDowner('room-order-card__guests_dropdown_mainOrderCard')
-inlineDateDropdown('card_date_field')
+inlineDateDropdown('card_date_field');
+rangeStarsRate()
 })

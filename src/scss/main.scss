@@ -593,7 +593,7 @@ li {
   background: white;
   color: #BC9CFF;
   position: relative;
-  padding: vw(13) vw(23);
+  padding: vw(13) vw(21);
   &:hover{
     background: linear-gradient(#BC9CFF, #8BA4F9);
     color: #FFFFFF;
@@ -910,6 +910,17 @@ li {
 }
 
 .range-rate {
+  .rated{
+    position: relative;
+    display: inline-block;
+    .range-rate_chunk_colored {
+      display: block;
+    }
+
+    .range-rate_chunk_default {
+
+      display: none;
+    }}
   &_chunk {
 
     position: relative;
@@ -926,14 +937,7 @@ li {
 
   }
 
-  .rated &_chunk_colored {
-    display: inline-block;
-  }
 
-  .rated &_chunk_default {
-
-    display: none;
-  }
 }
 .expanders-independent{
   display: inline-block;

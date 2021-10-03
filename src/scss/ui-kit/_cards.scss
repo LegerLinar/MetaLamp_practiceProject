@@ -174,7 +174,7 @@ body{
   width: vw(380);
   height: vw(358);
   background-color: #ffffff;
-  padding: vw(40) vw(30) vw(30) vw(30);
+  padding: vw(42) vw(30) vw(30) vw(30);
   margin: vw(20);
   position: relative;
   z-index: 1;
@@ -182,12 +182,14 @@ body{
     margin-bottom: vw(20);
   }
   &__button_to-do{
-    margin: vw(20) 0 vw(30) 0;
+    margin: vw(18) 0 vw(30) 0;
   }
   &__signup_wrap{
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    &__text{
+      margin-right: vw(50);
+    }
   }
 }
 .card_date-field{
@@ -204,7 +206,7 @@ body{
   background-color: #ffffff;
   margin-bottom: vw(40);
   &_general{
-    padding: vw(15) vw(10) vw(20) vw(20);
+    padding: vw(17.5) vw(10) vw(20) vw(20);
     &_hr{
       color: #{$shade10};
       background-color: #{$shade10};
@@ -215,17 +217,20 @@ body{
   &__label {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     margin-bottom: vw(10);
     &_number {
-      &_n, &_number, &_bonus {
-        display: inline;
+      display: flex;
+      align-items: center;
+      &_n, &_bonus {
+        align-self: flex-end;
       }
       &_bonus{
         color: #{$Purple};
       }
     }
     &_pricing{
+      padding-top: 3px;
+      padding-right: 4.5px;
       &_price, &_per{
         display: inline;
       }
@@ -243,6 +248,7 @@ body{
     justify-content: space-between;
     align-items: center;
     margin-top: vw(10);
+    padding: 0 10px 0 2px;
     &_reviews{
      &_count, &_review{
        display: inline;

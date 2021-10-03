@@ -29,7 +29,7 @@ mixin logIn()
 		+formCommon('', ['textForm'], '', '', 'masked_text_example-login')(type='password' placeholder='Пароль')
 		+buttonCommon('войти', 'toAct', ['button-to-do'], ['log-in__button_to-do'])
 		div.log-in__signup_wrap
-			p.log-in__signup_text Нет аккаунта на Toxin?
+			p.log-in__signup_wrap__text Нет аккаунта на Toxin?
 			+buttonCommon('Создать', '', ['button-transparent', 'log-in__button-transparent'])
 
 
@@ -75,9 +75,9 @@ mixin roomCard(roomNumber, imgSrc, isLux, price, stars, reviews)
 		div.room-card_general
 			div.room-card__label
 				div.room-card__label_number
-					h3.room-card__label_number_n №
-					h1.room-card__label_number_number= roomNumber
-					p.room-card__label_number_bonus=isLux
+					h3.room-card__label_number_n № &nbsp
+					h2.room-card__label_number_number= roomNumber
+					p.room-card__label_number_bonus!='&nbsp'+isLux
 				div.room-card__label_pricing
 					h3.room-card__label_pricing_price!=price + `&#8381 `
 					span.room-card__label_pricing_per в сутки

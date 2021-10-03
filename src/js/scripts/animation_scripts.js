@@ -1,9 +1,4 @@
-// const flatpickr= require('flatpickr');
-
-
-
-
-$(function () {
+// $(function () {
   // $(function() {
   //
   //   var container = $('.pagination');
@@ -432,13 +427,13 @@ $(function () {
   //   })
   // }
 
-function expanderSimple(uniqueId){
-  $(`#expanders-independent`+ uniqueId).parent().click(function (){
-    $(`#expander__more_`+ uniqueId).toggle()
-    $(`#expander__less_`+ uniqueId).toggle()
-
-  })
-}
+// function expanderSimple(uniqueId){
+//   $(`#expanders-independent`+ uniqueId).parent().click(function (){
+//     $(`#expander__more_`+ uniqueId).toggle()
+//     $(`#expander__less_`+ uniqueId).toggle()
+//
+//   })
+// }
 
 //   function inlineDateDropdown(uniqueId) {
 //     let myDatePicker = $(`#common_form_input_`+uniqueId).datepicker({
@@ -520,11 +515,11 @@ function expanderSimple(uniqueId){
 
 
   //----------------- Headers & Footers block ----------------------------------------------
-
-expanderSimple('header-initial-services')
-expanderSimple('header-initial-agreements')
-expanderSimple('header-logged-services')
-expanderSimple('header-logged-agreements')
-
-
-})
+//
+// expanderSimple('header-initial-services')
+// expanderSimple('header-initial-agreements')
+// expanderSimple('header-logged-services')
+// expanderSimple('header-logged-agreements')
+//
+//
+// })

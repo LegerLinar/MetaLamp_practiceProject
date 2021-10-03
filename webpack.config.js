@@ -39,7 +39,7 @@ module.exports = {
   plugins: [
     new HTMLWebpackPlugin({
       template: path.resolve(__dirname, 'src/index.pug'),
-      filename: `index.html`,
+      filename: `main.html`,
       minify: {
         collapseWhitespace: isProd,
       }

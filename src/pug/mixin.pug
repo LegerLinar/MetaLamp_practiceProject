@@ -114,7 +114,7 @@ mixin formToggle(value, mission, legend)
 	form.toggle(class= mission)
 		if legend
 			h3= legend
-		input.toggle__item(type= 'checkbox' id=mission + '_' + idForCheck class= mission + '_item')
+		input.toggle__item(type= 'checkbox' id=mission + '_' + idForCheck class= mission)
 		label.toggle__item_label(for= mission + '_' + idForCheck++)= value
 
 
@@ -214,14 +214,14 @@ mixin dropdown(dropdownAim, legend, mission, explicitSpan, specialClass, legends
 
 	//- dropdown wrap
 	div.dropdown(class= legend)
-		div.form__legend_wrapper
-			h3= mission
+		div.dropdown__label_wrapper
+			h3.dropdown__label= mission
 			if explicitSpan
 				h3.form_explain
 					span= explicitSpan
 		//- dropdown input field
 		div.dropdown_input_wrap
-			input.dropdown__input(id='dropdown_input_'+legend type='text' class=['dropdown_'+dropdownAim])&attributes(attributes)
+			input.dropdown__input(id='dropdown_input_'+legend type='text' class=['dropdown_'+dropdownAim, ''+ legend])&attributes(attributes)
 			div.expanders_wrap
 				svg.more(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" id='more_'+legend class=[specialClass + '_more'])
 					|<path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.75"/>

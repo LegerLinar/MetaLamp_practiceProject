@@ -4,9 +4,6 @@ function dropDowner(legend) { //dropdown function
     $(`#more_` + legend).toggle()
     $(`#less_` + legend).toggle()
   })
-  $(`#dropdown_input_` + legend).blur(function (){
-    $(`#dropdown__field_` + legend).slideUp()
-  })
 
   //buttons for guests
   $(`#confirm_` + legend).click(function(){

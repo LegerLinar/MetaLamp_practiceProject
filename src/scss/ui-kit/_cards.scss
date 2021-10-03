@@ -1,10 +1,27 @@
-//body{
-//  background-color: #E5E5E5;
-//}
+body{
+  background-color: #E5E5E5;
+  //color: #{$shade75};
+
+}
 
 .cards_page{
   display: flex;
+  padding: vw(48) vw(120) 0;
+
+  &__search_number{
+    margin-bottom: vw(39);
+  }
+  &__room_order{
+    margin-bottom: vw(38);
+  }
+  &__datepicker{
+    margin-bottom: vw(38);
+  }
+  &__rooms{
+    align-items: initial;
+  }
 }
+
 .search_number{
   background: #ffffff;
   width: vw(380);
@@ -12,18 +29,19 @@
   padding: vw(40) vw(30) vw(30) vw(30);
   margin: vw(20);
   &__label{
-    margin-bottom: vw(21);
+    margin-bottom: vw(23);
   }
   &__dates_wrap{
     display: flex;
     justify-content: space-between;
-
+    margin-bottom: vw(20);
   }
-  &__guests_dropdown{
-    margin-top: vw(20);
+
+  .dropdown{
+  margin-bottom: vw(34);
   }
   &__button_to-do{
-    margin-top: vw(30);
+
   }
 }
 
@@ -33,28 +51,39 @@
   background-color: #ffffff;
   width: vw(380);
   height: vw(646);
-  padding: vw(40) vw(30) vw(30) vw(30);
+  padding: vw(42) vw(30) vw(30) vw(30);
   margin: vw(20);
   &__label{
-    margin-bottom: vw(21);
+    margin-bottom: vw(16);
+  }
+  &__name{
+    margin-bottom: vw(2);
+  }
+  &__surname{
+    margin-bottom: vw(4);
   }
   &__sex_radio{
-    margin-bottom: vw(19.56);
+    margin-bottom: vw(25);
   }
   &__birthdate{
-    margin-bottom: vw(20);
+    margin-bottom: vw(19);
+  }
+  &__password{
+    margin-bottom: vw(7);
   }
   &__toggle{
-    margin-top: vw(5);
+    margin-bottom: vw(25);
   }
   &__button_to-do{
-    margin-top: vw(20);
+    margin-bottom: vw(32);
   }
   &__login_wrap{
+    &__ifExiste{
+    margin-right: vw(37);
+    }
     display: flex;
-    justify-content: space-between;
+    //justify-content: space-between;
     align-items: center;
-    margin-top: vw(30);
   }
 }
 
@@ -70,7 +99,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: vw(20);
+    padding-left: 1.05px;
+    margin-bottom: vw(22);
     &_number {
       &_n, &_number, &_bonus {
         display: inline;
@@ -80,6 +110,7 @@
       }
     }
     &_pricing{
+      align-self: flex-end;
       &_price, &_per{
         display: inline;
       }
@@ -93,19 +124,19 @@
     justify-content: space-between;
     margin-bottom: vw(20);
   }
-  &__guests_dropdown{
-    margin-bottom: vw(25.56);
+  .dropdown{
+    margin-bottom: vw(23.5);
   }
   &__details{
     &_per-days, &_fees_bonus, &_fees{
       display: flex;
       justify-content: space-between;
-      margin-bottom: vw(20);
+      margin-bottom: vw(15.5);
     }
     &_fees_bonus_wrap, &_fees_wrap{
       display: flex;
       justify-content: space-between;
-      width: vw(220);
+      width: vw(240);
     }
     &_fees_bonus-info, &_fees-info{
       border-radius: 50%;
@@ -118,13 +149,14 @@
     &_per-days-count, &_per-days-price, &_fees_bonus-describe, &_fees_bonus-info,
     &_fees_bonus-price, &_fees-describe, &_fees-info, &_fees-price{
       display: inline-block;
+
     }
     &__details_fees-describe{
       width: vw(214);
     }
     &_total{
-      margin-top: vw(30);
-      margin-bottom: vw(25);
+      margin-top: vw(27);
+      margin-bottom: vw(23);
       &_separator{
         content: '';
         border-bottom: 1px solid rgba(0, 0, 0, 0.12);
@@ -167,10 +199,10 @@
     width: 100%;
   }
   width: vw(270);
-  margin: vw(20);
   border-radius: 4px;
   height: vw(257.5);
   background-color: #ffffff;
+  margin-bottom: vw(40);
   &_general{
     padding: vw(15) vw(10) vw(20) vw(20);
     &_hr{

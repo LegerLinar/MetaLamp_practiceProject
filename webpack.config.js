@@ -55,7 +55,7 @@ module.exports = {
     //       to: path.resolve(__dirname, 'images')
     //     }
     //   ]
-    // })
+    // }),
     new webpack.ProvidePlugin({
       $: "jquery/dist/jquery.min.js",
       jQuery: "jquery/dist/jquery.min.js",

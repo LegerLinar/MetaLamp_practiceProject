@@ -1,7 +1,5 @@
 body{
   background-color: #E5E5E5;
-  padding-left: 0;
-  padding-right: 0;
 }
 .logo_group{
   margin-top: vw(30);
@@ -73,8 +71,15 @@ body{
   &__buttons_wrap{
     display: flex;
     margin-right: 4px;
-  }
-
+    .button-purple {
+      .buttonCommon__button {
+        padding: vw(10) vw(22);
+      }
+    }
+      .button-transparent {
+        margin-top: 1px;
+      }
+      }
 }
 
 

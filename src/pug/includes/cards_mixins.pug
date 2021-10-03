@@ -1,32 +1,32 @@
 mixin numberSearcher(uniqueId)
 	section.search_number
-		h1.search_number__label Найдем номера под ваши пожелания
+		h1.search_number__label Найдём номера под ваши пожелания
 		div.search_number__dates_wrap
 			+formCommon('Прибытие', ['date', 'date_from'], '', 'dateDropdown', 'search_number__arriving_date_' + uniqueId)(placeholder='ДД.ММ.ГГГГ')
 			+formCommon('Выезд', ['date', 'date_to'], '', 'dateDropdown', 'search_number__departure_date_'+ uniqueId)(placeholder='ДД.ММ.ГГГГ')
-		+dropdown('guests', 'search_number__guests_dropdown_' + uniqueId, 'гости', '', '', ['Взрослые', 'Дети', 'Младенцы'])(placeholder='Сколько гостей')
+		+dropdown('guests', ['search_number__guests_dropdown_' + uniqueId], 'гости', '', '', ['Взрослые', 'Дети', 'Младенцы'])(placeholder='Сколько гостей')
 		+buttonCommon('Подобрать номер', 'toAct', ['button-to-do'], ['search_number__button_to-do'])
 mixin signupCard(uniqueId)
 	section.signup
 		h1.signup__label Регистрация аккаунта
-		+formCommon('', ['textForm', 'textForm_signup'], '')(type='text' placeholder='Имя')
-		+formCommon('', ['textForm', 'textForm_signup'], '')(type='text' placeholder='Фамилия')
-		+formRadio('', 'signup__sex_radio_' + uniqueId, 'Мужчина', 'Женщина')
-		+formCommon('Дата рождения', ['date', 'signup__birthdate', 'birthdate'], '', '', 'signup_birthdate')(placeholder='ДД.ММ.ГГГГ')
-		+formCommon('Данные для входа в сервис', ['textForm'], '')(type='email' placeholder='Email')
-		+formCommon('', ['textForm'], '', '', 'masked_text_example')(type='password' placeholder='Пароль')
-		+formToggle('Получать спецпредложения', 'signup__toggle_' + uniqueId, '')
+		+formCommon('', ['textForm', 'signup__name'], '', '', 'signup-name')(type='text' placeholder='Имя')
+		+formCommon('', ['textForm', 'signup__surname'], '', '', 'signup-surname')(type='text' placeholder='Фамилия')
+		+formRadio('', ['signup__sex_radio_' + uniqueId, 'signup__sex_radio'], 'Мужчина', 'Женщина')
+		+formCommon('Дата рождения', ['date', 'signup__birthdate', 'birthdate'], '', '', 'signup_birthdate_' + uniqueId)(placeholder='ДД.ММ.ГГГГ')
+		+formCommon('Данные для входа в сервис', ['textForm', 'signup__email'], '', '', 'signup-email')(type='email' placeholder='Email')
+		+formCommon('', ['textForm', 'signup__password'], '', '', 'masked_text_signup')(type='password' placeholder='Пароль')
+		+formToggle('Получать спецпредложения', ['signup__toggle', 'signup__toggle_' + uniqueId], '')
 		+buttonCommon('Перейти к оплате', 'toAct', ['button-to-do'], ['signup__button_to-do'])
 		div.signup__login_wrap
-			p.signup__login_ifExiste Уже есть аккаунт на Toxin
+			p.signup__login_wrap__ifExiste Уже есть аккаунт на Toxin
 			+buttonCommon('Войти', '', ['button-transparent', 'signup__button-transparent'])
 
 
 mixin logIn()
 	section.log-in
 		h1.log-in__label Войти
-		+formCommon('', ['textForm'], '')(type='email' placeholder='Email')
-		+formCommon('', ['textForm'], '', '', 'masked_text_example')(type='password' placeholder='Пароль')
+		+formCommon('', ['textForm'], '', '', 'login-email')(type='email' placeholder='Email')
+		+formCommon('', ['textForm'], '', '', 'masked_text_example-login')(type='password' placeholder='Пароль')
 		+buttonCommon('войти', 'toAct', ['button-to-do'], ['log-in__button_to-do'])
 		div.log-in__signup_wrap
 			p.log-in__signup_text Нет аккаунта на Toxin?
@@ -38,23 +38,23 @@ mixin roomOrder(roomNumber, isLux, price, uniqueId)
 	section.room-order-card
 		div.room-order-card__label
 			div.room-order-card__label_number
-				h3.room-order-card__label_number_n №
+				h3.room-order-card__label_number_n №&nbsp
 				h1.room-order-card__label_number_number= roomNumber
-				p.room-order-card__label_number_bonus= isLux
+				p.room-order-card__label_number_bonus!= '&nbsp' + isLux
 			div.room-order-card__label_pricing
 				h3.room-order-card__label_pricing_price!=price + '&#8381 &nbsp'
 				span.room-order-card__label_pricing_per в сутки
 		div.room-order-card__dates_range
-			+formCommon('Прибытие', ['date', 'date_from'], '', 'dateDropdown', 'room-order-card__arriving_date' + uniqueId)(placeholder='ДД.ММ.ГГГГ')
-			+formCommon('Выезд', ['date', 'date_to'], '', 'dateDropdown', 'room-order-card__departure_date' + uniqueId)(placeholder='ДД.ММ.ГГГГ')
-		+dropdown('guests', ['room-order-card__guests_dropdown', 'room-order-card__guests_dropdown' + uniqueId], 'гости', '', '', ['Взрослые', 'Дети', 'Младенцы'])(placeholder='Сколько гостей')
+			+formCommon('Прибытие', ['date', 'date_from'], '', 'dateDropdown', 'room-order-card__arriving_date_' + uniqueId)(placeholder='ДД.ММ.ГГГГ')
+			+formCommon('Выезд', ['date', 'date_to'], '', 'dateDropdown', 'room-order-card__departure_date_' + uniqueId)(placeholder='ДД.ММ.ГГГГ')
+		+dropdown('guests', ['room-order-card__guests_dropdown_' + uniqueId], 'гости', '', '', ['Взрослые', 'Дети', 'Младенцы'])(placeholder='Сколько гостей')
 		section.room-order-card__details
 			div.room-order-card__details_per-days
 				p.room-order-card__details_per-days-count 9 990&#8381 x 4 суток
 				p.room-order-card__details_per-days-price 39 690&#8381
 			div.room-order-card__details_fees_bonus
 				div.room-order-card__details_fees_bonus_wrap
-					p.room-order-card__details_fees_bonus-describe Сбор за услуги: скидка 2 179&#8381
+					p.room-order-card__details_fees_bonus-describe Сбор за услуги: скидка 2&nbsp179&#8381
 					span.room-order-card__details_fees_bonus-info i
 				p.room-order-card__details_fees_bonus-price 0&#8381
 			div.room-order-card__details_fees
@@ -65,13 +65,13 @@ mixin roomOrder(roomNumber, isLux, price, uniqueId)
 			div.room-order-card__details_total
 				h2.room-order-card__details_total_item(class ='room-order-card_total') Итого
 				div.room-order-card__details_total_separator
-				h2.room-order-card__details_total_item(class ='room-order-card_total') 38 018&#8381
+				h2.room-order-card__details_total_item(class ='room-order-card_total') 38 081&#8381
 			+buttonCommon('Забронировать', 'toAct', ['button-to-do'], ['room-order-card__button_to-do' + uniqueId])
 
 
 mixin roomCard(roomNumber, imgSrc, isLux, price, stars, reviews)
 	section.room-card(id= 'room_' + roomNumber)
-		img.room-card__image(src='./images/pages_image/' + imgSrc)
+		img.room-card__image(src= require('./images/pages_image/' + imgSrc))
 		div.room-card_general
 			div.room-card__label
 				div.room-card__label_number

@@ -1,17 +1,23 @@
-div.cards_page
+main.cards_page
 	div.first_column
-		+numberSearcher('main')
-		+signupCard('main')
+		.cards_page__search_number
+			+numberSearcher('main')
+		.cards_page__signup_card
+			+signupCard('main')
 
 	div.second_column
-		+roomOrder('888', 'люкс', '9 990', 'mainOrderCard')
-		+logIn()
+		.cards_page__room_order
+			+roomOrder('888', 'люкс', '9 990', 'mainOrderCard')
+		.cards_page__log-in
+			+logIn()
 
 
 
 
-	div.third_row
+	div.third_column
 		section.card_date-field
-			+formCommon('', ['date'], '', '', 'card_date_field')
-			+roomCard('888', 'room-888.png', 'люкс', '9 990', '5',  '145')
-			+roomCard('840', 'room-840.png', '', '9 900', '4',  '65')
+			.cards_page__datepicker
+				input(type='text' id= 'card_date_field')
+			.cards_page__rooms
+				+roomCard('888', 'room-888.png', 'люкс', '9 990', '5',  '145')
+				+roomCard('840', 'room-840.png', '', '9 900', '4',  '65')

@@ -115,13 +115,10 @@ li {
   }
 }
 
-//little widget   .expanded{
-//    display: initial;
-//    + .expanders_wrap{
-//
-//
-//    }
-//  }
+.logo_group{
+  margin-top: vw(30);
+  margin-left: vw(30);
+}
 
 .expanders_wrap{
   svg{
@@ -302,7 +299,7 @@ li {
     
     &_label {
       display: inline-block;
-      margin-right: vw(20);
+      margin-right: vw(12);
 
       &::before {
         content:             '';
@@ -556,7 +553,6 @@ li {
 .buttonCommon{
   &__button {
     cursor: pointer;
-    padding: vw(8) vw(19);
     border-radius:  22px;
     border:         none;
     font-family:    'Montserrat_Medium', sans-serif;
@@ -582,7 +578,7 @@ li {
   .buttonCommon__button {
     background: linear-gradient(#BC9CFF, #8BA4F9);
     color:      #FFFFFF;
-    padding: vw(10) vw(22);
+    padding: vw(12) vw(22);
 
     &:hover {
       background: rgba(255, 255, 255, 1);
@@ -597,7 +593,7 @@ li {
   background: white;
   color: #BC9CFF;
   position: relative;
-
+  padding: vw(13) vw(23);
   &:hover{
     background: linear-gradient(#BC9CFF, #8BA4F9);
     color: #FFFFFF;
@@ -635,7 +631,6 @@ li {
 }
 .button-no-borders {
   height: 0;
-  padding: 0;
   width: auto;
   overflow: visible;
   border:           none;
@@ -657,9 +652,11 @@ li {
   background: linear-gradient(#BC9CFF, #8BA4F9);
   color:      #FFFFFF;
   position: relative;
+  padding: vw(13) vw(22);
+
   svg{
     position: absolute;
-    right: 5%;
+    right: 4%;
     top: 0;
     height: 100%;
 
@@ -739,6 +736,9 @@ li {
 
 .dropdown{
 
+  &__label_wrapper{
+    margin-bottom: 3px;
+  }
   &_guests {
 
     width: vw(320);
@@ -785,7 +785,7 @@ li {
   }
   &__field{
     background: #ffffff;
-    position: fixed;
+    position: absolute;
     display: none;
     padding-left: vw(15);
     border: 1px solid #{$shade50};
@@ -903,7 +903,7 @@ li {
   width: initial;
 
   &_confirm, &_clear{
-    font-family: Montserrat_Medium;
+    font-family: Montserrat_Medium, sans-serif;
     font-size: 12px;
     color: #{$Purple};
   }

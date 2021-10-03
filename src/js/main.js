@@ -1,10 +1,8 @@
 import '../index.pug'
 import '../scss/main.scss'
 import 'jquery'
-const baseScript = require('./scripts/expander');
-const activatorScript = require('./pages_functions/headers&footres');
-// import $ from 'jquery';
-// const flatpickr = require("flatpickr")
+import 'air-datepicker'
+const cardsScript = require('./pages_functions/cards')
 // const paginationScript = require('./scripts/pagination');
 // const rangeSliderScript = require('./scripts/range_slider');
 // const dropdownScript = require('./scripts/dropdowner');
@@ -18,4 +16,6 @@ const activatorScript = require('./pages_functions/headers&footres');
 // const starsRateScript = require('./scripts/starsRate');
 // const simpleScripts = require
 // import './scripts/simpleScripts';
+// const baseScript = require('./scripts/expander'); // Headers&footers page
+// const activatorScript = require('./pages_functions/headers&footres'); //  Headers&Footers
 

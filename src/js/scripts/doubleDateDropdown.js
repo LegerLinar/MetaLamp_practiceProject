@@ -31,8 +31,8 @@ function doubleFormDateDropdown(startId, endId) {
     myStartDatePicker.hide()
   })
   $(`#common_form_input_` + startId).click(function () {
-    $(`#more_` + uniqueId).css('display', 'none')
-    $(`#less_` + uniqueId).css('display', 'block')
+    $(`#more_` + startId).css('display', 'none')
+    $(`#less_` + startId).css('display', 'block')
 
   }).blur(function () {
     $(`#less_` + startId).css('display', 'none')
@@ -69,8 +69,8 @@ function doubleFormDateDropdown(startId, endId) {
     myEndDatePicker.hide()
   })
   $(`#common_form_input_` + endId).click(function () {
-    $(`#more_` + uniqueId).css('display', 'none')
-    $(`#less_` + uniqueId).css('display', 'block')
+    $(`#more_` + endId).css('display', 'none')
+    $(`#less_` + endId).css('display', 'block')
 
   }).blur(function () {
     $(`#less_` + endId).css('display', 'none')

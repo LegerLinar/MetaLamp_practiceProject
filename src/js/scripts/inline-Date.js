@@ -1,5 +1,5 @@
   function inlineDateDropdown(uniqueId) {
-    let myDatePicker = $(`#common_form_input_`+uniqueId).datepicker({
+    let myDatePicker = $(`#`+uniqueId).datepicker({
       toggleSelect: false,
       position: 'bottom center',
       // minDate: new Date(),
@@ -14,7 +14,7 @@
       clearButton: true,
       range: true,
     }).data('datepicker')
-    $(`#common_form_input_`+uniqueId).css('display', 'none')
+    $(`#`+uniqueId).css('display', 'none')
     $('.datepicker--buttons').replaceWith("<div class='datepicker__ownButtons'><h3 class='datepicker__ownButtons_confirm'>Применить</h3><h3 class='datepicker__ownButtons_clear'>Очистить</h3></div>")
     $('.datepicker__ownButtons_confirm').addClass( `confirm_`+uniqueId)
     $('.datepicker__ownButtons_clear').addClass( `clear_`+uniqueId)
@@ -25,7 +25,7 @@
       myDatePicker.hide()
 
     })
-    $(`#common_form_input_` + uniqueId).click(function () {
+    $(`#` + uniqueId).click(function () {
       $(`#more_` + uniqueId).css('display', 'none')
       $(`#less_` + uniqueId).css('display', 'block')
 

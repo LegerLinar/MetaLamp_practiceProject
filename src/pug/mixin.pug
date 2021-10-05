@@ -4,13 +4,13 @@ mixin img_src(source, ego, identity)
 
 
 mixin logoGroup(color)
-	svg(class=['logo_group'] width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg")
+	svg.logo_group( viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg")
 		|<path d="M23.9989 32.4712C23.2224 32.4712 22.5871 31.8359 22.5871 31.0594C22.5871 25.6241 18.14 21.177 12.7047 21.177C11.9283 21.177 11.293 20.5418 11.293 19.7653C11.293 18.9888 11.9283 18.3535 12.7047 18.3535C19.7283 18.3535 25.4106 24.0359 25.4106 31.0594C25.4106 31.8359 24.7753 32.4712 23.9989 32.4712Z" fill=#{color} fill-opacity="0.25"/>
 		|<path d="M36.7068 19.7653C36.7068 20.5418 36.0715 21.177 35.295 21.177C31.9421 21.177 28.9421 22.8712 27.1774 25.4476C26.7892 24.4594 26.3303 23.5418 25.7656 22.6947C28.095 20.0123 31.5186 18.3535 35.295 18.3535C36.0715 18.3535 36.7068 18.9888 36.7068 19.7653Z" fill=#{color} fill-opacity="0.25"/>
 		|<path d="M24 48C10.7647 48 0 37.2353 0 24C0 10.7647 10.7647 0 24 0C37.2353 0 48 10.7647 48 24C48 37.2353 37.2353 48 24 48ZM24 2.82353C12.3176 2.82353 2.82353 12.3176 2.82353 24C2.82353 35.6824 12.3176 45.1765 24 45.1765C35.6824 45.1765 45.1765 35.6824 45.1765 24C45.1765 12.3176 35.6824 2.82353 24 2.82353Z" fill=#{color} fill-opacity="0.25"/>
 
 mixin logoColored()
-	svg.logo-purple(width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg")
+	svg.logo-purple( viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg")
 		|<path d="M20.0003 27.0587C19.3533 27.0587 18.8239 26.5292 18.8239 25.8822C18.8239 21.3528 15.118 17.6469 10.5886 17.6469C9.94152 17.6469 9.41211 17.1175 9.41211 16.4704C9.41211 15.8234 9.94152 15.2939 10.5886 15.2939C16.4415 15.2939 21.1768 20.0292 21.1768 25.8822C21.1768 26.5292 20.6474 27.0587 20.0003 27.0587Z" fill="url(#paint0_linear)"/>
 		|<path d="M30.5884 16.4704C30.5884 17.1175 30.0589 17.6469 29.4119 17.6469C26.6178 17.6469 24.1178 19.0587 22.6472 21.2057C22.3236 20.3822 21.9413 19.6175 21.4707 18.9116C23.4119 16.6763 26.2648 15.2939 29.4119 15.2939C30.0589 15.2939 30.5884 15.8234 30.5884 16.4704Z" fill="url(#paint1_linear)"/>
 		|<path d="M20 40C8.97059 40 0 31.0294 0 20C0 8.97059 8.97059 0 20 0C31.0294 0 40 8.97059 40 20C40 31.0294 31.0294 40 20 40ZM20 2.35294C10.2647 2.35294 2.35294 10.2647 2.35294 20C2.35294 29.7353 10.2647 37.6471 20 37.6471C29.7353 37.6471 37.6471 29.7353 37.6471 20C37.6471 10.2647 29.7353 2.35294 20 2.35294Z" fill="url(#paint2_linear)"/>
@@ -27,10 +27,11 @@ mixin logoColored()
 		|<stop stop-color="#BC9CFF"/>
 		|<stop offset="1" stop-color="#8BA4F9"/>
 		|</linearGradient>
+		|</defs>
 
 
 mixin toxinLogo()
-	svg.toxinLogo(width="54" height="14" viewBox="0 0 54 14" fill="none" xmlns="http://www.w3.org/2000/svg")
+	svg.toxinLogo( viewBox="0 0 54 14" fill="none" xmlns="http://www.w3.org/2000/svg")
 		|<path d="M10.335 0.368008C10.5567 0.368008 10.7375 0.443841 10.8775 0.595508C11.0292 0.735508 11.105 0.916341 11.105 1.13801C11.105 1.34801 11.0292 1.52884 10.8775 1.68051C10.7375 1.83217 10.5567 1.90801 10.335 1.90801H6.5725V12.408C6.5725 12.6297 6.49667 12.8163 6.345 12.968C6.205 13.108 6.02417 13.178 5.8025 13.178C5.5925 13.178 5.41167 13.108 5.26 12.968C5.10833 12.8163 5.0325 12.6297 5.0325 12.408V1.90801H1.27C1.06 1.90801 0.879167 1.83217 0.7275 1.68051C0.575833 1.52884 0.5 1.34801 0.5 1.13801C0.5 0.916341 0.575833 0.735508 0.7275 0.595508C0.879167 0.443841 1.06 0.368008 1.27 0.368008H10.335Z" fill="#1F2041"/>
 		|<path d="M16.9076 0.368008C17.7943 0.368008 18.6285 0.537175 19.4101 0.875508C20.2034 1.21384 20.8918 1.67467 21.4751 2.25801C22.0701 2.84134 22.5368 3.52967 22.8751 4.32301C23.2134 5.10467 23.3826 5.93884 23.3826 6.82551C23.3826 7.86384 23.1609 8.82051 22.7176 9.69551C22.2743 10.5705 21.6735 11.3055 20.9151 11.9005C20.9151 11.9005 20.9035 11.9122 20.8801 11.9355C20.3201 12.3555 19.7076 12.688 19.0426 12.933C18.3776 13.1663 17.6659 13.283 16.9076 13.283C16.0209 13.283 15.1868 13.1138 14.4051 12.7755C13.6234 12.4372 12.9351 11.9763 12.3401 11.393C11.7568 10.8097 11.2959 10.1272 10.9576 9.34551C10.6193 8.56384 10.4501 7.72384 10.4501 6.82551C10.4501 5.84551 10.6484 4.94134 11.0451 4.11301C11.4418 3.27301 11.9843 2.55551 12.6726 1.96051L12.7426 1.89051C12.7543 1.89051 12.7718 1.87884 12.7951 1.85551C13.3551 1.38884 13.9851 1.02717 14.6851 0.770508C15.3851 0.502175 16.1259 0.368008 16.9076 0.368008ZM16.9076 11.743C17.3509 11.743 17.771 11.6905 18.1676 11.5855C18.576 11.4688 18.9609 11.3113 19.3226 11.113L13.1801 3.64051C12.8068 4.07217 12.5151 4.56217 12.3051 5.11051C12.0951 5.64717 11.9901 6.21884 11.9901 6.82551C11.9901 7.50217 12.1185 8.13801 12.3751 8.73301C12.6318 9.32801 12.9818 9.85301 13.4251 10.308C13.8801 10.7513 14.4051 11.1013 15.0001 11.358C15.5951 11.6147 16.2309 11.743 16.9076 11.743ZM20.5301 10.1505C20.9384 9.70717 21.2535 9.20551 21.4751 8.64551C21.7085 8.07384 21.8251 7.46718 21.8251 6.82551C21.8251 6.14884 21.6968 5.51301 21.4401 4.91801C21.1834 4.32301 20.8276 3.80384 20.3726 3.36051C19.9293 2.90551 19.4101 2.54967 18.8151 2.29301C18.2201 2.03634 17.5843 1.90801 16.9076 1.90801C16.4409 1.90801 15.9918 1.97217 15.5601 2.10051C15.1284 2.21717 14.7259 2.39217 14.3526 2.62551L20.5301 10.1505Z" fill="#1F2041"/>
 		|<path d="M30.351 7.63051C30.1177 7.63051 29.9194 7.53717 29.756 7.35051L25.2585 1.57551C25.1302 1.41218 25.0777 1.23134 25.101 1.03301C25.1244 0.823008 25.2177 0.653842 25.381 0.525508C25.5444 0.397175 25.7252 0.350508 25.9235 0.385508C26.1335 0.408841 26.3027 0.502174 26.431 0.665508L30.351 5.67051L34.1835 0.753008C34.3119 0.589674 34.4752 0.496341 34.6735 0.473008C34.8835 0.449675 35.0702 0.502175 35.2335 0.630508C35.3969 0.758841 35.4902 0.928008 35.5135 1.13801C35.5369 1.33634 35.4844 1.51717 35.356 1.68051L30.946 7.35051C30.7944 7.53717 30.596 7.63051 30.351 7.63051ZM35.2685 13.2655C35.2219 13.2655 35.146 13.2597 35.041 13.248C34.9477 13.2363 34.8369 13.2072 34.7085 13.1605C34.5802 13.1022 34.4402 13.0263 34.2885 12.933C34.1485 12.828 34.0085 12.688 33.8685 12.513L30.351 7.98051L26.5185 12.9155C26.3902 13.0788 26.221 13.1722 26.011 13.1955C25.8127 13.2188 25.6319 13.1663 25.4685 13.038C25.3052 12.9097 25.2119 12.7463 25.1885 12.548C25.1652 12.338 25.2177 12.1513 25.346 11.988L29.756 6.31801C29.896 6.13134 30.0885 6.03801 30.3335 6.03801C30.5902 6.03801 30.7944 6.13134 30.946 6.31801L35.041 11.568C35.0994 11.6497 35.1519 11.7022 35.1985 11.7255C35.2452 11.7488 35.2802 11.7663 35.3035 11.778C35.5019 11.778 35.6652 11.848 35.7935 11.988C35.9335 12.1163 36.0094 12.2797 36.021 12.478C36.0444 12.688 35.986 12.8688 35.846 13.0205C35.706 13.1722 35.531 13.2538 35.321 13.2655H35.2685Z" fill="#1F2041"/>
@@ -48,7 +49,7 @@ mixin formCommon(mission, styleClass, explicitSpan, isOption, uniqueId)
 		div.form__item_wrap
 			input.form__item(id='common_form_input_' + uniqueId)&attributes(attributes)
 			if(isOption ==='subscribe')
-					svg.form__item_arrow(width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
+					svg.form__item_arrow( viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg")
 						|<path d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z" fill="url(#paint0_linear)"/>
 						|<defs>
 						|<linearGradient id="paint0_linear" x1="9" y1="-13" x2="9" y2="31" gradientUnits="userSpaceOnUse">
@@ -58,10 +59,10 @@ mixin formCommon(mission, styleClass, explicitSpan, isOption, uniqueId)
 						|</defs>
 			else if(isOption === 'dateDropdown')
 				div.expanders_wrap
-					svg.more(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" id='more_' + uniqueId)
+					svg.more( viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" id='more_' + uniqueId)
 						| <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.75"/>
 						| </svg>
-					svg.less(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" id='less_' + uniqueId)
+					svg.less( viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" id='less_' + uniqueId)
 						| <path d="M1.40625 7.42187L1.74709e-06 6.01562L6 0.0156231L12 6.01562L10.5938 7.42187L6 2.82812L1.40625 7.42187Z" fill="#1F2041" fill-opacity="0.5"/>
 						| </svg>
 
@@ -73,14 +74,14 @@ mixin formCommon(mission, styleClass, explicitSpan, isOption, uniqueId)
 
 mixin formCheckbox(legend, isExpandable, isExpanded, itemName, isRich, values)
 	-var idForCheck = 1
-	form.checkbox
+	form.checkbox(class='checkbox_exp__block__' + itemName)
 		h3(id='checkbox_' + itemName class=['checkbox_main-label'])= legend
 			if isExpandable === 'expandable'
 				div.expanders_wrap
-					svg.more(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" id='more_' + itemName class=[isExpanded + '_more'])
+					svg.more( viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" id='more_' + itemName class=[isExpanded + '_more'])
 						| <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.75"/>
 						| </svg>
-					svg.less(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" id='less_' + itemName class=[isExpanded + '_less'])
+					svg.less( viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" id='less_' + itemName class=[isExpanded + '_less'])
 						| <path d="M1.40625 7.42187L1.74709e-06 6.01562L6 0.0156231L12 6.01562L10.5938 7.42187L6 2.82812L1.40625 7.42187Z" fill="#1F2041" fill-opacity="0.5"/>
 						| </svg>
 		ul(id='checkbox_dropdown_field_' + itemName class = ['checkbox_dropdown_field_' + isExpandable, '' + isExpanded])
@@ -104,7 +105,7 @@ mixin formCheckbox(legend, isExpandable, isExpanded, itemName, isRich, values)
 mixin formRadio(legend, itemName, ...values)
 	- var idForCheck = 1
 	form.radio(class= itemName)
-		h3= legend
+		h3.radio__header= legend
 		for value in values
 			input.radio__item(type= 'radio' name= itemName id=itemName + '_' + idForCheck class=itemName + '_item')
 			label.radio__item_label(for=itemName + '_' + idForCheck++)= value
@@ -113,35 +114,31 @@ mixin formToggle(value, mission, legend)
 	- var idForCheck = 1
 	form.toggle(class= mission)
 		if legend
-			h3= legend
+			h3.toggle__header= legend
 		input.toggle__item(type= 'checkbox' id=mission + '_' + idForCheck class= mission)
-		label.toggle__item_label(for= mission + '_' + idForCheck++)= value
+		label.toggle__item_label(class='toggle__body__' + mission for= mission + '_' + idForCheck++)= value
 
 
 mixin buttonLike(amount, uniqueId, specialClass)
 		div.buttonLike(id='buttonLike_' + uniqueId class=['like' + specialClass, specialClass])
 			div.buttonLike__like_wrap
-				svg(class=['buttonLike__like_wrap_likeDef', 'likeDef'] width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg")
+				svg(class=['buttonLike__like_wrap_likeDef', 'likeDef']  viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg")
 					|<path d="M5.03906 6.73438C5.66406 6.17448 6.1263 5.7513 6.42578 5.46484C6.72526 5.17839 7.05078 4.83984 7.40234 4.44922C7.75391 4.05859 7.99479 3.71354 8.125 3.41406C8.26823 3.11458 8.33984 2.82161 8.33984 2.53516C8.33984 2.11849 8.19661 1.77344 7.91016 1.5C7.63672 1.22656 7.29167 1.08984 6.875 1.08984C6.54948 1.08984 6.24349 1.18099 5.95703 1.36328C5.68359 1.54557 5.49479 1.77995 5.39062 2.06641H4.60938C4.50521 1.77995 4.3099 1.54557 4.02344 1.36328C3.75 1.18099 3.45052 1.08984 3.125 1.08984C2.70833 1.08984 2.35677 1.22656 2.07031 1.5C1.79688 1.77344 1.66016 2.11849 1.66016 2.53516C1.66016 2.82161 1.72526 3.11458 1.85547 3.41406C1.9987 3.71354 2.24609 4.05859 2.59766 4.44922C2.94922 4.83984 3.27474 5.17839 3.57422 5.46484C3.8737 5.7513 4.33594 6.17448 4.96094 6.73438L5 6.77344L5.03906 6.73438ZM6.875 0.25C7.52604 0.25 8.06641 0.471354 8.49609 0.914062C8.9388 1.35677 9.16016 1.89714 9.16016 2.53516C9.16016 2.91276 9.08854 3.28385 8.94531 3.64844C8.80208 4 8.53516 4.39714 8.14453 4.83984C7.76693 5.28255 7.42188 5.65365 7.10938 5.95312C6.79688 6.2526 6.29557 6.71484 5.60547 7.33984L5 7.88672L4.39453 7.35938C3.49609 6.55208 2.84505 5.94661 2.44141 5.54297C2.05078 5.13932 1.6862 4.66406 1.34766 4.11719C1.00911 3.57031 0.839844 3.04297 0.839844 2.53516C0.839844 1.89714 1.05469 1.35677 1.48438 0.914062C1.92708 0.471354 2.47396 0.25 3.125 0.25C3.88021 0.25 4.50521 0.542969 5 1.12891C5.49479 0.542969 6.11979 0.25 6.875 0.25Z" fill="#1F2041" fill-opacity="0.25"/>
-				svg(class=['buttonLike__like_wrap_likeColor', 'likeColor'] width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg")
+				svg(class=['buttonLike__like_wrap_likeColor', 'likeColor']  viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg")
 					|<path d="M4.93026 7.88672L4.3248 7.33984C3.63469 6.71484 3.13339 6.2526 2.82089 5.95312C2.50839 5.65365 2.15683 5.28255 1.7662 4.83984C1.3886 4.39714 1.12818 4 0.984952 3.64844C0.841723 3.28385 0.770108 2.91276 0.770108 2.53516C0.770108 1.89714 0.984952 1.35677 1.41464 0.914062C1.85735 0.471354 2.40422 0.25 3.05526 0.25C3.81047 0.25 4.43547 0.542969 4.93026 1.12891C5.42506 0.542969 6.05006 0.25 6.80526 0.25C7.45631 0.25 7.99667 0.471354 8.42636 0.914062C8.86907 1.35677 9.09042 1.89714 9.09042 2.53516C9.09042 3.04297 8.92115 3.57031 8.58261 4.11719C8.24407 4.66406 7.87297 5.13932 7.46933 5.54297C7.0787 5.94661 6.43417 6.55208 5.53573 7.35938L4.93026 7.88672Z" fill="url(#paint0_linear)"/>
 					|<defs>
 					|<linearGradient id="paint0_linear" x1="4.93026" y1="-6" x2="4.93026" y2="14" gradientUnits="userSpaceOnUse">
 					|<stop stop-color="#BC9CFF"/>
 					|<stop offset="1" stop-color="#8BA4F9"/>
 					|</linearGradient>
+					|</defs>
 
 			p(id='likeCount_' + uniqueId class=['buttonLike__like_counter_' + specialClass, 'buttonLike__like_counter'])= amount
 
-mixin rangeRate(name)
-	form.rangeRate(name= name)
-			each item in [5, 4, 3, 2, 1]
-				input.rangeRate__item(type= 'radio' name= name id= 'chunk_' + name + '_' + item value= item)
-				label.rangeRate__item_label(for= 'chunk_' + name + '_' + item)
 
 mixin rangeRateQuerry(uniqueId, rated)
 	- var n = 0
-	div.range-rate
+	div.range-rate(class= 'range-rate__block__' + uniqueId)
 		while n < 5
 			if rated > 0
 				div.range-rate_chunk(class= ['rated', rated--] id=uniqueId + n++)
@@ -190,10 +187,10 @@ mixin rangeSlider(min, max, legend)
 			span &#32; - &#32;
 			span(id='range2')
 		div.rangeSlider_wrapper
-			div.rangeSlider_slider-track
+			div.rangeSlider_slider-track(id='rangeSlider_slider-track')
 				div.rangeSlider_slider-track_diff
-				input.rangeSlider__item(type='range' id='slider-1' min=min max=max value=rangeDif/2  oninput=('slideOne()'))
-				input.rangeSlider__item(type='range' id='slider-2' min=min max=max value=rangeDif oninput=('slideTwo()'))
+				input.rangeSlider__item(type='range' id='slider-1' min=min max=max value=rangeDif/2 )
+				input.rangeSlider__item(type='range' id='slider-2' min=min max=max value=rangeDif )
 
 
 
@@ -204,16 +201,16 @@ mixin buttonCommon(label, isAction, classes, wrapClass)
 				svg(width="18" height="17" viewBox="0 0 18 17" xmlns="http://www.w3.org/2000/svg")
 					| <path d="M9 0.426758L17.0156 8.44238L9 16.458L7.59375 15.0518L13.1719 9.42676H0.984375V7.45801H13.1719L7.59375 1.83301L9 0.426758Z"/>
 
-mixin pagination(legend)
+mixin pagination(legend, uniqueId)
 	h3.pagination_wrapper__label= legend
 	div.pagination_wrapper
-		div.pagination
-		p 1-12 из 100+ вариантов аренды
+		div.pagination(id=uniqueId)
+		p.pagination_wrapper__legend 1-12 из 100+ вариантов аренды
 
 mixin dropdown(dropdownAim, legend, mission, explicitSpan, specialClass, legends)
 
 	//- dropdown wrap
-	div.dropdown(class= legend)
+	div.dropdown(class= 'dropdown_block_' + legend)
 		div.dropdown__label_wrapper
 			h3.dropdown__label= mission
 			if explicitSpan
@@ -223,48 +220,48 @@ mixin dropdown(dropdownAim, legend, mission, explicitSpan, specialClass, legends
 		div.dropdown_input_wrap
 			input.dropdown__input(id='dropdown_input_'+legend type='text' class=['dropdown_'+dropdownAim, ''+ legend])&attributes(attributes)
 			div.expanders_wrap
-				svg.more(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" id='more_'+legend class=[specialClass + '_more'])
+				svg.more( viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" id='more_'+legend class=[specialClass + '_more'])
 					|<path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.75"/>
 					|</svg>
-				svg.less(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" id='less_'+legend class=[specialClass + '_less'])
+				svg.less( viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" id='less_'+legend class=[specialClass + '_less'])
 					|<path d="M1.40625 7.42187L1.74709e-06 6.01562L6 0.0156231L12 6.01562L10.5938 7.42187L6 2.82812L1.40625 7.42187Z" fill="#1F2041" fill-opacity="0.5"/>
 					|</svg>
-		//- dropdown slide-down-field
-		div.dropdown__field(id='dropdown__field_' + legend class=['dropdown__field'+ legend, '' + specialClass])
-			//- each dropdown line set
-			div.dropdown__field_item
-				//- dropdown line legend
-				h3(id='amount_legend_1_' + legend)= legends[0]
-				//- calc functions wrap
-				div.calc_wrap
-					//- calc button decrement
-					div.counter_wrap(class=['counter_wrap_' + legend] id='decrement_1_' + legend)
-						span.counter(class= ['decrement'] ) -
-					//- calc results
-					h3(id='amount_1_' + legend) 0
-					//- calc button increment
-					div.counter_wrap(class=['counter_wrap_' + legend] id='increment_1_' + legend)
-						span.counter(class =['increment']  ) +
-			div.dropdown__field_item
-				h3(id='amount_legend_2_' + legend)= legends[1]
-				div.calc_wrap
-					div.counter_wrap(class=['counter_wrap_' + legend] id='decrement_2_' + legend)
-						span.counter(class =['decrement']  ) -
-					h3(id='amount_2_' + legend) 0
-					div.counter_wrap(class=['counter_wrap_' + legend] id='increment_2_' + legend)
-						span.counter(class =['increment']  ) +
-			div.dropdown__field_item
-				h3(id='amount_legend_3_' + legend)= legends[2]
-				div.calc_wrap
-					div.counter_wrap(class=['counter_wrap_' + legend] id='decrement_3_' + legend)
-						span.counter(class =['decrement']  ) -
-					h3(id='amount_3_' + legend) 0
-					div.counter_wrap(class=['counter_wrap_' + legend] id='increment_3_' + legend)
-						span.counter(class =['increment']  ) +
-			if dropdownAim === 'guests'
-				div.dropdown_buttons
-					h3.dropdown_buttons__confirm(id= 'confirm_' + legend) Применить
-					h3.dropdown_buttons__clear(id= 'clear_' + legend) Очистить
+			//- dropdown slide-down-field
+			div.dropdown__field(id='dropdown__field_' + legend class=['dropdown__field'+ legend, '' + specialClass])
+				//- each dropdown line set
+				div.dropdown__field_item
+					//- dropdown line legend
+					h3(id='amount_legend_1_' + legend)= legends[0]
+					//- calc functions wrap
+					div.calc_wrap
+						//- calc button decrement
+						div.counter_wrap(class=['counter_wrap_' + legend] id='decrement_1_' + legend)
+							span.counter(class= ['decrement'] ) -
+						//- calc results
+						h3.counter__value(id='amount_1_' + legend) 0
+						//- calc button increment
+						div.counter_wrap(class=['counter_wrap_' + legend] id='increment_1_' + legend)
+							span.counter(class =['increment']  ) +
+				div.dropdown__field_item
+					h3(id='amount_legend_2_' + legend)= legends[1]
+					div.calc_wrap
+						div.counter_wrap(class=['counter_wrap_' + legend] id='decrement_2_' + legend)
+							span.counter(class =['decrement']  ) -
+						h3.counter__value(id='amount_2_' + legend) 0
+						div.counter_wrap(class=['counter_wrap_' + legend] id='increment_2_' + legend)
+							span.counter(class =['increment']  ) +
+				div.dropdown__field_item
+					h3(id='amount_legend_3_' + legend)= legends[2]
+					div.calc_wrap
+						div.counter_wrap(class=['counter_wrap_' + legend] id='decrement_3_' + legend)
+							span.counter(class =['decrement']  ) -
+						h3.counter__value(id='amount_3_' + legend) 0
+						div.counter_wrap(class=['counter_wrap_' + legend] id='increment_3_' + legend)
+							span.counter(class =['increment']  ) +
+				if dropdownAim === 'guests'
+					div.dropdown_buttons
+						h3.dropdown_buttons__confirm(id= 'confirm_' + legend) Применить
+						h3.dropdown_buttons__clear(id= 'clear_' + legend) Очистить
 
 
 mixin bulletList(legend, values)
@@ -272,36 +269,52 @@ mixin bulletList(legend, values)
 	ul.bulletList
 		for option in values
 			li.bulletList__item
-				p!=option
+				p.bulletList__item__legend!=option
 
-mixin someGoods(legend, describe)
-	div.good_wrap
+mixin someGoods(legend, describe, identity)
+	div.good_wrap(class='good__block__'+ identity)
 		div.good
-			if block
-				block
+			if identity === 'head'
+				svg.good__image(class='good__image__head' viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg")
+					| <path d="M26.1875 29.0938C24.375 30.3438 22.3125 30.9688 20 30.9688C17.6875 30.9688 15.5938 30.3438 13.7188 29.0938C11.9062 27.7812 10.5938 26.0938 9.78125 24.0312H30.2188C29.4062 26.0938 28.0625 27.7812 26.1875 29.0938ZM15.0312 17.1875C14.4688 17.75 13.7812 18.0312 12.9688 18.0312C12.1562 18.0312 11.4375 17.75 10.8125 17.1875C10.25 16.5625 9.96875 15.8438 9.96875 15.0312C9.96875 14.2188 10.25 13.5312 10.8125 12.9688C11.4375 12.3438 12.1562 12.0312 12.9688 12.0312C13.7812 12.0312 14.4688 12.3438 15.0312 12.9688C15.6562 13.5312 15.9688 14.2188 15.9688 15.0312C15.9688 15.8438 15.6562 16.5625 15.0312 17.1875ZM29.0938 17.1875C28.5312 17.75 27.8438 18.0312 27.0312 18.0312C26.2188 18.0312 25.5 17.75 24.875 17.1875C24.3125 16.5625 24.0312 15.8438 24.0312 15.0312C24.0312 14.2188 24.3125 13.5312 24.875 12.9688C25.5 12.3438 26.2188 12.0312 27.0312 12.0312C27.8438 12.0312 28.5312 12.3438 29.0938 12.9688C29.7188 13.5312 30.0312 14.2188 30.0312 15.0312C30.0312 15.8438 29.7188 16.5625 29.0938 17.1875ZM8.65625 31.3438C11.8438 34.4688 15.625 36.0312 20 36.0312C24.375 36.0312 28.125 34.4688 31.25 31.3438C34.4375 28.1562 36.0312 24.375 36.0312 20C36.0312 15.625 34.4375 11.875 31.25 8.75C28.125 5.5625 24.375 3.96875 20 3.96875C15.625 3.96875 11.8438 5.5625 8.65625 8.75C5.53125 11.875 3.96875 15.625 3.96875 20C3.96875 24.375 5.53125 28.1562 8.65625 31.3438ZM5.84375 5.9375C9.78125 2 14.5 0.03125 20 0.03125C25.5 0.03125 30.1875 2 34.0625 5.9375C38 9.8125 39.9688 14.5 39.9688 20C39.9688 25.5 38 30.2188 34.0625 34.1562C30.1875 38.0312 25.5 39.9688 20 39.9688C14.5 39.9688 9.78125 38.0312 5.84375 34.1562C1.96875 30.2188 0.03125 25.5 0.03125 20C0.03125 14.5 1.96875 9.8125 5.84375 5.9375Z" fill="url(#paint0_linear)"/>
+					| <defs>
+					| <linearGradient id="paint0_linear" x1="20" y1="-4" x2="20" y2="44" gradientUnits="userSpaceOnUse">
+					| <stop stop-color="#BC9CFF"/>
+					| <stop offset="1" stop-color="#8BA4F9"/>
+					| </linearGradient>
+					| </defs>
+			if identity === 'house'
+				svg.good__image(class='good__image__house' viewBox="0 0 36 38" fill="none" xmlns="http://www.w3.org/2000/svg")
+					| <path d="M31.9688 26V21.9688H28.0312V26H31.9688ZM31.9688 33.9688V30.0312H28.0312V33.9688H31.9688ZM19.9688 9.96875V6.03125H16.0312V9.96875H19.9688ZM19.9688 18.0312V14H16.0312V18.0312H19.9688ZM19.9688 26V21.9688H16.0312V26H19.9688ZM19.9688 33.9688V30.0312H16.0312V33.9688H19.9688ZM7.96875 18.0312V14H4.03125V18.0312H7.96875ZM7.96875 26V21.9688H4.03125V26H7.96875ZM7.96875 33.9688V30.0312H4.03125V33.9688H7.96875ZM24 18.0312H36V38H0V9.96875H12V6.03125L18 0.03125L24 6.03125V18.0312Z" fill="url(#paint0_linear)"/>
+					| <defs>
+					| <linearGradient id="paint0_linear" x1="18" y1="-4" x2="18" y2="44" gradientUnits="userSpaceOnUse">
+					| <stop stop-color="#BC9CFF"/>
+					| <stop offset="1" stop-color="#8BA4F9"/>
+					| </linearGradient>
+					| </defs>
 			div.good__label_wrap
 				h3.good__label= legend
 				p.good__describe= describe
 		hr.good__line/
 
-mixin comment(name, imgSrc, date, text)
+mixin comment(uniqueId, name, imgSrc, date, text)
 	div.comment_wrap
 		div.comment__header
-			img.comment__pic(src=imgSrc)
+			img.comment__pic(src= require('./images/' + imgSrc))
 			div.comment__info
 				h2.comment__name= name
 				p.comment_data= date
 		div.comment__body
 			div.comment__like_wrap
-				+buttonLike('12', 'like_checked_comment_' + name, 'buttonLike_done')
+				+buttonLike('12', 'like_checked_comment_' + uniqueId, 'buttonLike_done')
 			p.comment__text= text
 
 
 mixin expander_vidget(uniqueId)
 	div.expanders-independent(id='expanders-independent' + uniqueId)
-		svg.expanders-independent__more(id='expander__more_' + uniqueId width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg")
+		svg.expanders-independent__more(id='expander__more_' + uniqueId  viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg")
 			| <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.75"/>
 			| </svg>
-		svg.expanders-independent__less(id='expander__less_' + uniqueId width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg")
+		svg.expanders-independent__less(id='expander__less_' + uniqueId  viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg")
 			| <path d="M1.40625 7.42187L1.74709e-06 6.01562L6 0.0156231L12 6.01562L10.5938 7.42187L6 2.82812L1.40625 7.42187Z" fill="#1F2041" fill-opacity="0.5"/>
 			| </svg>

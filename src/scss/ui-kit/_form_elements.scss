@@ -1,19 +1,79 @@
+.form_elements{
+  padding: vw(62) vw(140) 0;
+}
 .first_row{
   display: flex;
-  padding-top: vw(62);
   justify-content: space-between;
-
+  margin-bottom: vw(104);
 }
-.forms-section{
-  padding-left: vw(109.8);
+.commonForms{
+  .textForm{
+    margin-bottom: vw(24);
+  }
+  .common_form_input_2{
+    margin-bottom: vw(24);
+  }
+  .dropdown_block_guestsDefault_first{
+    margin-bottom: vw(25);
+  }
+  .dropdown_date_wrapper{
+    margin-bottom: vw(42);
+  }
+  .dropdown_date_filter{
+    margin-bottom: vw(44);
+  }
 }
 
 .checkboxes-section{
-  padding-left: vw(24.8);
+  margin-right: vw(4);
+  .checkbox{
+    margin-bottom: vw(42);
+  }
+  .form_elements{
+    &__radio {
+      //padding-left:  vw(10);
+      margin-bottom: vw(43);
+    }
+    &__toggle{
+      //padding-left: vw(8);
+      margin-bottom: vw(44);
+      .toggle__body__example{
+        margin-bottom: vw(12);
+      }
+    }
+    &__likes{
+      //padding-left: vw(9);
+      margin-bottom: vw(42);
+      &__header{
+        margin-bottom: vw(16);
+      }
+      &_buttons__wrap{
+        display: flex;
+      }
+      #buttonLike_like_def{
+        margin-right: vw(10);
+      }
+    }
+    &__rate{
+      //padding-left: vw(9);
+      &__header{
+        margin-bottom: vw(16);
+      }
+      &__wrap{
+        display: flex;
+        padding-left: vw(1);
+        .range-rate__block__form-element__rangeRate{
+          margin-right: vw(26);
+        }
+      }
+    }
+  }
+
+
 }
 
 .buttons-section{
-  padding-right: vw(111);
+
 }
 
 .dropdown_date_wrapper{
@@ -25,17 +85,22 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-
+  &__buttons-header{
+    margin-bottom: 1px;
+  }
   padding-top: vw(20);
   &_wrapp{
+
     display: flex;
-    padding: vw(16) 0;
+    padding: vw(16.5) 0;
     div{
-      margin-right: vw(21.5);
+      margin-right: vw(20);
     }
+
   }
+
   &_to-pay_wrapp{
-    padding: vw(13) 0;
+    padding: vw(14) 0;
   }
 }
 
@@ -45,13 +110,38 @@
 }
 .dropdowns{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+
+  margin-bottom: vw(175);
+  .dropdown_block_roomsDefault{
+    margin-bottom: vw(22);
+  }
+  .dropdown_block_guestsDefault{
+    margin-left: vw(109);
+  }
 }
 .third_row{
   display: flex;
-  justify-content: space-around;
+  padding-left: vw(1);
+  margin-bottom: vw(44);
+  .checkbox_exp__block__checkbox_expandable{
+    margin-bottom: vw(51);
+  }
+  .checkboxes-expendable_section{
+    margin-right: vw(211);
+  }
+  .checkbox_rich{
+    margin-right: vw(98);
+  }
 }
 .forth_row{
+  padding-top: vw(2);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  .someGood_block{
+    padding-left: vw(2);
+    .good__block__head{
+      margin-bottom: vw(30);
+    }
+  }
 }

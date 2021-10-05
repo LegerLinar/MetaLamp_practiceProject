@@ -10,6 +10,7 @@
 *{
   box-sizing: border-box;
 }
+
 input {
   margin: 0;
   height:        vw(42);
@@ -114,12 +115,48 @@ li {
     line-height: vw(14);
   }
 }
-
+button{
+  padding: 0;
+}
 .logo_group{
   margin-top: vw(30);
   margin-left: vw(30);
 }
+// svg block
+.logo_group{
+  width:vw(48);
+  height:vw(48) ;
+};
+.logo-purple{
+  width:vw(40);
+  height:vw(40) ;
+};
+.toxinLogo{
+  width:vw(54);
+  height:vw(14) ;
+};
+.form__item_arrow{
+  width:vw(18);
+  height:vw(18) ;
+};
+.more{
+  width:vw(12);
+  height:vw(8) ;
+}
+.less{
+  width:vw(12);
+  height:vw(8) ;
+}
+.expanders-independent__more{
+  width:vw(12);
+  height:vw(8) ;
+};
+.expanders-independent__less{
+  width:vw(12);
+  height:vw(8) ;
+};
 
+// svg block end
 .expanders_wrap{
   svg{
     position: absolute;
@@ -134,7 +171,6 @@ li {
 //}
 
 .form {
-  padding-bottom: vw(5);
   .form__legend_wrapper {
     display:         flex;
     justify-content: space-between;
@@ -208,8 +244,8 @@ li {
   }
   .expanders_wrap{
     display: inline-block;
-    vertical-align: middle;
-    margin-left: 40px;
+    vertical-align: 50%;
+    margin-left: vw(45);
   }
   &_dropdown_field_expandable{
     display:none;
@@ -226,7 +262,7 @@ li {
   }
   &__group {
     
-    margin-bottom: vw(10.56);
+    margin-bottom: vw(10);
 
     &:last-child {
       margin-bottom: 0;
@@ -234,7 +270,6 @@ li {
   }
 
   position:     relative;
-  padding-left: vw(10);
 
   input {
     cursor: pointer;
@@ -249,12 +284,13 @@ li {
 
   &__item__label {
     cursor: pointer;
+    align-items: start;
     display: flex;
     h3{
       margin-bottom: 5px;
     }
     p{
-      //line-height: vw(24);
+      line-height: vw(18);
       color:         #{$shade50};
     }
     &:before {
@@ -263,8 +299,8 @@ li {
       vertical-align: top;
 
       margin-right:   vw(9.74);
-      height:         vw(20);
-      width:          vw(20);
+      height:         vw(18);
+      width:          vw(18);
 
       border:         1px solid #{$shade25};
       border-radius:  vw(4);
@@ -274,8 +310,7 @@ li {
   input:checked + label:before {
     content:    '';
     border:     1px solid #BC9CFF;
-    background: url('../images/Confirm_check.svg') no-repeat center center;
-
+    background: url('../images/Confirm_check.svg')  no-repeat center center;
   }
 
   input:not(:checked) + label:hover::before {
@@ -290,6 +325,9 @@ li {
 }
 
 .radio {
+  &__header{
+    margin-bottom: vw(15);
+  }
   &__item {
     cursor:   pointer;
 
@@ -304,8 +342,8 @@ li {
       &::before {
         content:             '';
         display:             inline-block;
-        width:               vw(20);
-        height:              vw(20);
+        width:               vw(18);
+        height:              vw(18);
         vertical-align:      middle;
         border:              1px solid #{$shade25};
         border-radius:       50%;
@@ -337,6 +375,9 @@ li {
 }
 .toggle{
   color: #{$shade75};
+  &__header{
+    margin-bottom: vw(15);
+  }
   &__item{
     cursor:pointer;
 
@@ -385,10 +426,15 @@ li {
     width: vw(39.72);
     height: vw(20);
     border: 1px solid #{$shade25};
-    border-radius: 10px;
+    border-radius: vw(10);
+      &__like_wrap_likeDef, &__like_wrap_likeColor{
+        width: vw(10);
+        height: vw(10);
+      }
       &__like_wrap_likeColor{
         display: none;
       }
+      
 }
 .buttonLike_done{
   border: 1px solid #{$Purple};
@@ -481,43 +527,43 @@ li {
   }
   &_slider-track{
     width: 100%;
-    height: 6px;
+    height: vw(6);
     position: absolute;
     margin: auto;
     top: 0;
     bottom: 0;
     background: rgba(255, 255, 255, 0);
     border: 1px solid #{$shade25};
-    border-radius: 5px;
+    border-radius: vw(5);
     &_diff{
       width: 100%;
-      height: 6px;
+      height: vw(6);
       background: linear-gradient(#6FCF97, #66D2EA);
       position: absolute;
       margin: auto;
       top: 0;
       bottom: 0;
       //border: 1px solid #{$shade25};
-      border-radius: 5px;
+      border-radius: vw(5);
       z-index: -1;
     }
   }
   &__item::-webkit-slider-runnable-track{
     -webkit-appearance: none;
-    height: 5px;
+    height: vw(6);
   }
   &__item::-moz-range-track{
     -moz-appearance: none;
-    height: 5px;
+    height: vw(6);
   }
   &__item::-ms-track{
     appearance: none;
-    height: 5px;
+    height: vw(6);
   }
   &__item::-webkit-slider-thumb{
     -webkit-appearance: none;
-    height: 15px;
-    width: 15px;
+    height: vw(15);
+    width: vw(15);
     background: linear-gradient(#6FCF97, #66D2EA);
     cursor: pointer;
     border-radius: 50%;
@@ -528,8 +574,8 @@ li {
   &__item::-moz-range-thumb{
     -moz-appearance: none;
     cursor: pointer;
-    height: 15px;
-    width: 15px;
+    height: vw(15);
+    width: vw(15);
     background: linear-gradient(#6FCF97, #66D2EA);
     border-radius: 50%;
     pointer-events: auto;
@@ -537,8 +583,8 @@ li {
   &__item::-ms-thumb{
     appearance: none;
     cursor: pointer;
-    height: 15px;
-    width: 15px;
+    height: vw(15);
+    width: vw(15);
     background: linear-gradient(#6FCF97, #66D2EA);
     border-radius: 50%;
     pointer-events: auto;
@@ -553,7 +599,7 @@ li {
 .buttonCommon{
   &__button {
     cursor: pointer;
-    border-radius:  22px;
+    border-radius:  vw(22);
     border:         none;
     font-family:    'Montserrat_Medium', sans-serif;
     font-size:      vw(12);
@@ -564,13 +610,7 @@ li {
     &:disabled{
       opacity: 0.5;
     }
-    //overflow:       hidden;
 
-
-    //
-    ////&:hover:before {
-    //  width: 100%
-    //}
   }
 }
 
@@ -578,7 +618,7 @@ li {
   .buttonCommon__button {
     background: linear-gradient(#BC9CFF, #8BA4F9);
     color:      #FFFFFF;
-    padding: vw(12) vw(22);
+    padding: vw(13) vw(20);
 
     &:hover {
       background: rgba(255, 255, 255, 1);
@@ -593,7 +633,7 @@ li {
   background: white;
   color: #BC9CFF;
   position: relative;
-  padding: vw(13) vw(21);
+  padding: vw(11) vw(18);
   &:hover{
     background: linear-gradient(#BC9CFF, #8BA4F9);
     color: #FFFFFF;
@@ -608,7 +648,7 @@ li {
     z-index: -1;
     //width: vw(99);
     //height: vw(44);
-    border-radius: 22px;
+    border-radius: vw(22);
     background: linear-gradient(#BC9CFF, #8BA4F9);
   }
 
@@ -616,7 +656,8 @@ li {
     color: rgba(168, 156, 255, 0.5);
     opacity: 1;
     &:hover{
-      opacity: 0.5;
+      opacity: 1;
+      color: rgba(168, 156, 255, 0.5);
     }
     &:after{
       opacity: 0.5;
@@ -630,7 +671,6 @@ li {
 
 }
 .button-no-borders {
-  height: 0;
   width: auto;
   overflow: visible;
   border:           none;
@@ -681,11 +721,11 @@ li {
 
 .pagination_wrapper {
   &__label {
-    margin-bottom: vw(17);
+    margin-bottom: vw(16);
   }
-  p{
-    padding-top: vw(7);
-    padding-left: vw(10);
+  &__legend{
+    margin-top: vw(10);
+    padding-left: vw(6);
   }
   .pagination {
 
@@ -722,12 +762,14 @@ li {
       background:    #{$Green_gradient};
       border-radius: 50%;
       position:      relative;
-
-      &:before {
-        display: inline-block;
-        margin:  2px;
-        //margin: auto;
-        content: url('../images/arrow_forward.svg');
+      display: inline-block;
+      svg{
+        //display: block;
+        //margin:  2px;
+        margin: auto;
+        //content: url('../images/arrow_forward.svg');
+        width: vw(18);
+        height: vw(18);
       }
     }
 
@@ -738,6 +780,8 @@ li {
 
   &__label_wrapper{
     margin-bottom: 3px;
+    display: flex;
+    justify-content: space-between;
   }
   &_guests {
 
@@ -775,7 +819,7 @@ li {
     position: relative;
     height: vw(44);
     border: 1px solid #{$shade25};
-    border-radius: 2px;
+    border-radius: vw(2);
     &:hover{
       border: 1px solid #{$shade50};
     }
@@ -788,10 +832,11 @@ li {
     position: absolute;
     display: none;
     padding-left: vw(15);
+    padding-bottom: vw(5);
     border: 1px solid #{$shade50};
-    border-radius: 2px;
+    border-radius: vw(2);
     z-index: 100;
-
+    width: 100%;
     &_item{
       display: flex;
       justify-content: space-between;
@@ -802,7 +847,7 @@ li {
         display:flex;
         align-items: center;
         .counter_wrap{
-          margin: vw(7);
+          margin:          vw(8) vw(8) vw(8) vw(11);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -814,13 +859,16 @@ li {
             font-size: vw(18);
           }
         }
+        .counter__value{
+          margin-left: vw(2);
+        }
         }
       }
     }
     &_buttons{
-      margin-top: 20px;
-      margin-bottom: 13px;
-      padding-right: 4px;
+      margin-top: vw(20);
+      margin-bottom: vw(8);
+      padding-right: vw(4);
       display: flex;
       justify-content: space-between;
       flex-direction: row-reverse;
@@ -835,24 +883,32 @@ li {
   }
   .bulletList{
     &_main_label{
-      margin-bottom: vw(20);
+      margin-bottom: vw(13);
     }
     &__item{
       display: flex;
-      align-items: center;
+      align-items: first baseline;
+      margin-bottom: vw(10);
       &:before{
         content: url('../images/Ellipse.svg');
+      }
+      &__legend{
+        margin-left: vw(10);
+        line-height: vw(24);
       }
     }
   }
 
   .good{
     display: flex;
+    align-items: start;
+    margin-bottom: vw(20);
     &_wrap{
       width: vw(280);
     }
     &__label_wrap{
-      margin-left: vw(10);
+      margin-left: vw(16);
+      line-height: vw(24);
     }
     &__line{
       color: #{$shade10};
@@ -860,18 +916,33 @@ li {
       height: 1px;
       border: none;
     }
+    &__image{
+      &__head{
+        width:vw(40) ;
+        height:vw(40) ;
+      }
+      &__house{
+        margin-left: vw(4);
+        width:vw(36) ;
+        height:vw(38) ;
+      }
+    }
   }
 
   .comment{
     &_wrap{
       width: vw(711);
       height: vw(133);
+      padding-top: vw(6);
     }
     &__header{
       display: flex;
+      margin-bottom: vw(9);
     }
     &__body{
       display: flex;
+      align-items: first baseline;
+      line-height: vw(24);
     }
     &__pic{
       width: 47.67px;
@@ -880,7 +951,7 @@ li {
       border-radius: 50%;
     }
     &__like_wrap{
-      margin-right: vw(9.93);
+      margin-right: vw(16);
     }
     &__text{
       color:#{$shade75}

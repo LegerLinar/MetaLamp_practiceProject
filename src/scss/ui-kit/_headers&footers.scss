@@ -1,9 +1,13 @@
-body{
-  background-color: #E5E5E5;
-}
+//body{
+//  background-color: #E5E5E5;
+//}
 .logo_group{
   margin-top: vw(30);
   margin-left: vw(30);
+}
+.social-icon{
+  width: vw(22);
+  height: vw(22);
 }
 .blocks-separator{
   &__header-initial {

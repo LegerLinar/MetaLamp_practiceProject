@@ -1,6 +1,6 @@
-$(function (){
-  var container = $('.pagination');
-  var sources = function () {
+  function paginator(uniqueId) {
+    var container = $('#'+ uniqueId);
+    var sources = function () {
       var result = [];
 
       for (var i = 1; i < 150; i++) {
@@ -43,4 +43,6 @@ $(function (){
       window.console && console.log('beforePageOnClick...');
       //return false
     });
-})
+  }
+
+  export { paginator}

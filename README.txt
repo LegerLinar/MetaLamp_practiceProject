@@ -21,5 +21,5 @@ To start local-server run $npm run start
 Colors & Types - https://legerlinar.github.io/MetaLamp_practiceProject/production/bundle.production_Colors&Type/main.772735d0fb7f7eeeb9a5.html
 Headers & Footers - https://legerlinar.github.io/MetaLamp_practiceProject/production/bundle.production_headers&footers/main.html
 Cards https://legerlinar.github.io/MetaLamp_practiceProject/production/bundle.production_cards/main.html
-
+Forms & Elements https://legerlinar.github.io/MetaLamp_practiceProject/production/bundle.production_forms/main.html
 

@@ -25,8 +25,8 @@ mixin signupCard(uniqueId)
 mixin logIn()
 	section.log-in
 		h1.log-in__label Войти
-		+formCommon('', ['textForm'], '', '', 'login-email')(type='email' placeholder='Email')
-		+formCommon('', ['textForm'], '', '', 'masked_text_example-login')(type='password' placeholder='Пароль')
+		+formCommon('', ['textForm', 'log-in__email'], '', '', 'login-email')(type='email' placeholder='Email')
+		+formCommon('', ['textForm', 'log-in__password'], '', '', 'masked_text_example-login')(type='password' placeholder='Пароль')
 		+buttonCommon('войти', 'toAct', ['button-to-do'], ['log-in__button_to-do'])
 		div.log-in__signup_wrap
 			p.log-in__signup_wrap__text Нет аккаунта на Toxin?
@@ -70,8 +70,21 @@ mixin roomOrder(roomNumber, isLux, price, uniqueId)
 
 
 mixin roomCard(roomNumber, imgSrc, isLux, price, stars, reviews)
+	-	var n = 0
 	section.room-card(id= 'room_' + roomNumber)
-		img.room-card__image(src= require('./images/pages_image/' + imgSrc))
+		div.room-card__image__wrap
+			img.room-card__image(src= require('./images/pages_image/' + imgSrc))
+			div.room-card__image__wrap__shadowmaker
+			div.room-card__image__wrap__expanders
+				svg.room-card__image__wrap__expanders__less(width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg")
+					|<path d="M7.42188 11.0928L6.01563 12.499L0.0156253 6.49902L6.01563 0.499024L7.42188 1.90527L2.82813 6.49902L7.42188 11.0928Z" fill="white"/>
+				svg.room-card__image__wrap__expanders__more(width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg")
+					|<path d="M0.578125 1.90527L1.98438 0.499024L7.98438 6.49902L1.98438 12.499L0.578125 11.0928L5.17188 6.49902L0.578125 1.90527Z" fill="white"/>
+			div.room-card__image__wrap__counters
+				div.room-card__image__wrap__counters__counter(class='image__counter__full')
+					|<circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+				while n < 3
+					div.room-card__image__wrap__counters__counter(class=['image__counter__empty', 'image__counter__empty'+ n++])
 		div.room-card_general
 			div.room-card__label
 				div.room-card__label_number

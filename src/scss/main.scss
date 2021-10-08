@@ -115,6 +115,11 @@ li {
     line-height: vw(14);
   }
 }
+img{
+  padding: 0;
+  margin: 0;
+  display: block;
+}
 button{
   padding: 0;
 }
@@ -981,9 +986,11 @@ button{
 }
 
 .range-rate {
+  white-space: nowrap;
   .rated{
     position: relative;
     display: inline-block;
+
     .range-rate_chunk_colored {
       display: block;
     }

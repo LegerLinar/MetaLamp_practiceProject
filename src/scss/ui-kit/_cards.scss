@@ -1,5 +1,5 @@
 body{
-  //background-color: #E5E5E5;
+  background-color: #E5E5E5;
   //color: #{$shade75};
 
 }
@@ -54,10 +54,10 @@ body{
   padding: vw(42) vw(30) vw(30) vw(30);
   margin: vw(20);
   &__label{
-    margin-bottom: vw(16);
+    margin-bottom: vw(21);
   }
   &__name{
-    margin-bottom: vw(2);
+    margin-bottom: vw(17);
   }
   &__surname{
     margin-bottom: vw(4);
@@ -66,7 +66,10 @@ body{
     margin-bottom: vw(25);
   }
   &__birthdate{
-    margin-bottom: vw(19);
+    margin-bottom: vw(24);
+  }
+  &__email{
+    margin-bottom: vw(14)
   }
   &__password{
     margin-bottom: vw(7);
@@ -75,7 +78,7 @@ body{
     margin-bottom: vw(25);
   }
   &__button_to-do{
-    margin-bottom: vw(32);
+    margin-bottom: vw(35);
   }
   &__login_wrap{
     &__ifExiste{
@@ -155,7 +158,7 @@ body{
       width: vw(214);
     }
     &_total{
-      margin-top: vw(27);
+      margin-top: vw(33);
       margin-bottom: vw(23);
       &_separator{
         content: '';
@@ -181,14 +184,17 @@ body{
   &__label{
     margin-bottom: vw(20);
   }
+  &__email{
+    margin-bottom: vw(13);
+  }
   &__button_to-do{
-    margin: vw(18) 0 vw(30) 0;
+    margin: vw(26) 0 vw(35) 0;
   }
   &__signup_wrap{
     display: flex;
     align-items: center;
     &__text{
-      margin-right: vw(50);
+      margin-right: vw(55);
     }
   }
 }
@@ -197,8 +203,64 @@ body{
 }
 
 .room-card{
-  img{
+  &__image__wrap{
+    position: relative;
+
+
+    &__shadowmaker{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 5%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 75%, rgba(0, 0, 0, 0.6)95%);
+    }
+    &__expanders{
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      top: 42%;
+      left: 7%;
+      width: 86%;
+      z-index: 3;
+    }
+    &__counters{
+      position: absolute;
+      bottom: 12.5%;
+      right: 5.5%;
+      z-index: 3;
+      display: flex;
+      &__counter{
+        display: inline-block;
+        width: vw(7);
+        height: vw(7);
+        border-radius: 50%;
+        margin-left: vw(5);
+
+      }
+      .image__counter__full{
+        background-color: #FFFFFF;
+        border: 1px solid #ffffff;
+      }
+      .image__counter__empty{
+        border: 1px solid #ffffff;
+      }
+    }
+    &__shadowmaker, &__expanders, &__counters{
+      visibility: hidden;
+    }
+    &:hover{
+      .room-card__image__wrap__shadowmaker,
+      .room-card__image__wrap__expanders,
+      .room-card__image__wrap__counters{
+        visibility: visible;
+      }
+    }
+  }
+  &__image{
     width: 100%;
+    //position: relative;
+    z-index: 0;
   }
   width: vw(270);
   border-radius: 4px;
@@ -258,6 +320,11 @@ body{
         font-size: vw(14);
       }
     }
-  }
 
+  }
+  .range-rate{
+    &_chunk{
+      margin-right: vw(5);
+    }
+  }
 }

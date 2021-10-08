@@ -41,11 +41,14 @@ mixin toxinLogo()
 
 mixin formCommon(mission, styleClass, explicitSpan, isOption, uniqueId)
 	form.form(class= styleClass)
-		div.form__legend_wrapper
-			h3= mission
-			if explicitSpan
-				h3.form_explain
-					span= explicitSpan
+		if mission === ''
+			div
+		else
+			div.form__legend_wrapper
+				h3= mission
+				if explicitSpan
+					h3.form_explain
+						span= explicitSpan
 		div.form__item_wrap
 			input.form__item(id='common_form_input_' + uniqueId)&attributes(attributes)
 			if(isOption ==='subscribe')
@@ -105,7 +108,10 @@ mixin formCheckbox(legend, isExpandable, isExpanded, itemName, isRich, values)
 mixin formRadio(legend, itemName, ...values)
 	- var idForCheck = 1
 	form.radio(class= itemName)
-		h3.radio__header= legend
+		if legend === ''
+			div
+		else
+			h3.radio__header= legend
 		for value in values
 			input.radio__item(type= 'radio' name= itemName id=itemName + '_' + idForCheck class=itemName + '_item')
 			label.radio__item_label(for=itemName + '_' + idForCheck++)= value

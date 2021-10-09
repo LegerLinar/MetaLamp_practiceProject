@@ -7,7 +7,7 @@ import 'air-datepicker'
 // const formElementSliderRange = require('./scripts/range_slider')
 // import './jQuery/pagination'
 //form__elements -----
-// const cardsScript = require('./pages_functions/cards') //Cards page
+const cardsScript = require('./pages_functions/cards') //Cards page
 //headers&footers -------------
-const activatorScript = require('./pages_functions/headers&footres'); //  Headers&Footers
+// const activatorScript = require('./pages_functions/headers&footres'); //  Headers&Footers
 
